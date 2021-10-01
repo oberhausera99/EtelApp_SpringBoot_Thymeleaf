@@ -43,21 +43,13 @@ azaz nem feltétlen mindenki, aki módosította a dokumentumot pl. egy elírás 
 
 ## 3. A projekt bemutatása
 
-`Ez a projektterv a Szallítmányozás projektet mutatja be, mely 2021-09-20-től 2021-11-27-ig tart. A projekt célja, hogy megfelelő felületet biztosítson a szállítmányozási feladatok online elvégézésére és az adatok nyilvántartására. Mindezért egy egyszerűen használható, átlátható és hatékonyan működő webalkalmazás fog felelni. A projekten három fő fejlesztő fog dolgozni, az elvégzett feladatokat pedig négy alkalommal fogjuk prezentálni a megrendelőnek. `
+Ez a projektterv az Étel projektet mutatja be, mely 2021-09-20-től 2021-11-27-ig tart. A projekt célja, hogy megfelelő felületet biztosítson online ételrendelésre és az adatok nyilvántartására. Mindezért egy egyszerűen használható, átlátható és hatékonyan működő webalkalmazás fog felelni. A projekten öt fő fejlesztő fog dolgozni, az elvégzett feladatokat pedig négy alkalommal fogjuk prezentálni a megrendelőnek.
 
-```
-A megvalósítás további általános leírása, pl. mennyi főből áll a csapat, mennyi átadandó lesz a megrendelőnek a félév során, 
-szintén 4-6 mondattal leírva.
-```
 
 ### 3.1. Rendszerspecifikáció
 
-`A rendszernek képesnek kell lennie arra, hogy adott cég raktárait illetve a raktárak állapotát (telítettség, fizikai pozíció, speciális tulajdonság pl. veszélyes anyag tárolása) nyilvántartsa. Ezenkívül a szállítmányozó cég alkalmazásában álló sofőröket, illetve azok kamionjait is kezelnie kell. A kamionok aktuális és korábbi szállítmányait ki tudjuk listázni. Minden funkció a megfelelő felhasználói jogosultság mellett használható, annak függvényében írható, olvasható vagy nem megtekinthető az adat.`
+A rendszernek képesnek kell lennie ételrendelés fogadására és feldolgozására, miközben a felhasználót megfelelően tájékoztatja rendelése menetéről. Továbbá képes lesz tárolni és kilistázni a korábbi rendeléseket. Ezenkívül a cég futárait is számon tartja és jelzi azok státuszát(ki dolgozik, ki nincs éppen kiszállításban). Minden funkció a megfelelő felhasználói jogosultság mellett lesz használható.
 
-```
-Ide írd le részletesen, hogy mit fog tudni a rendszer (4-6 mondatban), amit a projekt keretében kerül megvalósításra. 
-Mik a megrendelő és a felhasználók igényei? Miért van szükség a projektre?
-```
 
 ### 3.2. Funkcionális követelmények
 
@@ -125,7 +117,8 @@ A projekt a következő emberekből áll:
 
 ### 6.1. Munkakörnyezet
 A projekt a következő munkaállomásokat fogja használni a munka során:
- - `Munkaállomások: 3 db PC Windows 10-es operációs rendszerrel`
+ - Munkaállomások: 5 db PC Windows 10-es operációs rendszerrel
+ - ASUS ROG Strix laptop (CPU: i7-6700HQ, RAM: 8 GB, GPU: Nvidia GTX 960M)
  - `Dell Inspiron 5558 laptop (CPU: i5 5200U, RAM: 8 GB, GPU: Nvidia 920M)`
  - `Acer Aspire 573g laptop (CPU: i3 5005U, RAM: 4 GB, GPU: Nvidia 920M)`
  - `Asztali számítógép (CPU: i7 7700k, RAM: 16GB, GPU: Nvidia GTX1070)`
@@ -197,7 +190,7 @@ Minden leadásnál a projektmenedzser jelentést tesz a projekt haladásáról, 
 
 ### 8.1. Tervezett szoftverfolyamat modell és architektúra
 
-A szoftver fejlesztése során az iteratív és inkrementális fejlesztési modellt alkalmazzuk. A fejlesztés során nagy hangsúlyt fektetünk a folyamatos kommunikcióra. A fejlesztés során a szoftver specifikációi rugalmasan vátozhatnak, és ezzel a módszertannal tudunk a leggyorsabban alkalmazkodni az új elvárásokhoz.`
+A szoftver fejlesztése során az iteratív és inkrementális fejlesztési modellt alkalmazzuk. A fejlesztés során nagy hangsúlyt fektetünk a folyamatos kommunikcióra. A fejlesztés során a szoftver specifikációi rugalmasan vátozhatnak, és ezzel a módszertannal tudunk a leggyorsabban alkalmazkodni az új elvárásokhoz.
 
 `A szoftver MVC alapú REST webszolgáltatásként működik. A szerver és a kliens függetlenek, csupán API végpontok segítségével kommunikálnak.`
 
@@ -346,7 +339,7 @@ Felelős: Nagy Eliot
 
 Tartam:  4 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  3 személynap
 
 #### 9.3.5.  Felhasználók kezeléséhez kapcsolódó GUI megvalósítása
 
@@ -386,7 +379,7 @@ Felelős: Nagy Eliot
 
 Tartam:  5 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  3 személynap
 
 #### 9.3.10.  Ételek, menük készítéséhez kapcsolódó GUI megvalósítása
 
@@ -450,7 +443,7 @@ Felelős: Nagy Eliot
 
 Tartam:  3 nap
 
-Erőforrásigény:  1 személynap
+Erőforrásigény:  2 személynap
 
 #### 9.3.18.  Értesítés sikeres rendelés esetén
 
@@ -540,7 +533,7 @@ Tartam:  1 nap
 
 Erőforrásigény:  0.3 személynap
 
-#### 9.4.5. Étel rendelés tesztelése (TP, TC, TR)`
+#### 9.4.5. Étel rendelés tesztelése (TP, TC, TR)
 
 Felelős: Nagy Dominik
 
@@ -580,7 +573,7 @@ Tartam:  1 nap
 
 Erőforrásigény:  0.3 személynap
 
-#### 9.4.10. Fuvar idejének tesztelése (TP, TC, TR)`
+#### 9.4.10. Fuvar idejének tesztelése (TP, TC, TR)
 
 Felelős: Nagy Dominik
 
@@ -634,7 +627,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     Nagy György            |           `2`          |             `3`            |           `16`          |            `4`           |    `25`   |
-|                     `Remek Elek`           |           `1`          |             `4`            |           `13`          |            `4`           |    `22`   |
+|                     Nagy Eliot             |            1           |              2             |             9           |             5            |     17    |
 |                     `Lev Elek`             |           `1`          |             `3`            |           `12`          |            `4`           |    `20`   |
 
 
@@ -643,7 +636,7 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     `Teszt Elek`           |           `2`          |             `3`            |           `9`           |            `6`           |    `20`   |
-|                     `Remek Elek`           |           `1`          |             `2`            |           `7`           |            `5`           |    `15`   |
+|                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
 |                     `Lev Elek`             |           `1`          |             `2`            |           `8`           |            `5`           |    `16`   |
 
 ### 11.3. Részletes költségvetés
