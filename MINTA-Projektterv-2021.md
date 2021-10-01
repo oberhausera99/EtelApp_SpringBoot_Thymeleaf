@@ -164,16 +164,16 @@ A munkát `Teszt Elek` koordinálja. `Fő feladata, hogy folyamatosan egyeztesse
 A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problémáit, illetve hogy megbeszéljék a következő hét feladatait.
 
  1. megbeszélés:
- - Időpont: 2021.09.23.
- - Hely: SZTE Irinyi épület - Szeged, Tisza Lajos krt. 103
- - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
- - Érintett témák: Ismerkedés, projekttéma kiválasztása`
+	- Időpont: 2021.09.23.
+	- Hely: SZTE Irinyi épület - Szeged, Tisza Lajos krt. 103
+	- Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
+	- Érintett témák: Ismerkedés, projekttéma kiválasztása
 
- 2. megbeszélés:`
- - Időpont: 2021.10.01.
- - Hely: Discord
- - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
- - Érintett témák: A projektben használt technológiák, szerepkörök kiosztása, projektterv kisebb részekre felosztása
+ 2. megbeszélés:
+	- Időpont: 2021.10.01.
+	- Hely: Discord
+	- Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
+	- Érintett témák: A projektben használt technológiák, szerepkörök kiosztása, projektterv kisebb részekre felosztása
 
 ### 7.3. Minőségbiztosítás
 
