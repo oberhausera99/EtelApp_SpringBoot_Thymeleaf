@@ -123,6 +123,8 @@ A projekt a következő munkaállomásokat fogja használni a munka során:
  - `Acer Aspire 573g laptop (CPU: i3 5005U, RAM: 4 GB, GPU: Nvidia 920M)`
  - `Asztali számítógép (CPU: i7 7700k, RAM: 16GB, GPU: Nvidia GTX1070)`
  - HP Pavilion 14 laptop (CPU: i5 8250U, RAM: 8 GB, GPU: Nvidia GeForce)
+ - ASUS Vivobook 15 laptop (CPU: Ryzen 5 3500, RAM : 8GB, GPU: Vega 8)
+ - Windows 10 PC (CPU: FX6300, RAM : 16gb, GPU: GTX750Ti)
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
  - `Heroku platformszolgáltatás`
