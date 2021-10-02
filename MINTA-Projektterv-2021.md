@@ -2,7 +2,7 @@
 
 ## 1. Összefoglaló 
 
-Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb költséggel, legbiztonságosabban és megfelelő időben. A projekt lényege, hogy összeszedje az éttermeket, így mindent megtalálhatsz egy helyen. Az oldal lehetővé teszi az étel kiszállítását bármerre az országban.  A kiszállítás lehető leggyorsabb módon működik, hiszen rengeteg fuvarozó dolgozik nekünk. Mindezen funkciókat egy letisztult felületen keresztül tudja elérni a felhasználó.`
+Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb költséggel, legbiztonságosabban és megfelelő időben. A projekt lényege, hogy összeszedje az éttermeket, így mindent megtalálhatsz egy helyen. Az oldal lehetővé teszi az étel kiszállítását bármerre az országban.  A kiszállítás lehető leggyorsabb módon működik, hiszen rengeteg fuvarozó dolgozik nekünk. Mindezen funkciókat egy letisztult felületen keresztül tudja elérni a felhasználó.
 
 ## 2. Verziók
 
@@ -224,7 +224,7 @@ Felelős: Nagy Dominik
 
 Tartam:  3 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  1 személynap
 
 
 ### 9.2. UML és adatbázis tervek (2. mérföldkő)
@@ -514,7 +514,7 @@ Erőforrásigény:  2 személynap
 
 #### 9.4.4. Felhasználói munkamenet tesztelése (TP, TC, TR)
 
-Felelős: Oberhauser Attila
+Felelős: Nagy Eliot
 
 Tartam:  1 nap
 
