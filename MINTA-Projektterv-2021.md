@@ -2,17 +2,7 @@
 
 ## 1. Összefoglaló 
 
-`A szállítmányozás lényege, hogy a küldemény a lehető legkisebb költséggel, legbiztonságosabban, a megfelelő időben optimálisan jusson el a rendeltetési helyre. Ez megköveteli az online is elérhető nyilvántartást, épp ezért ennek a projektnek a célja, hogy a szállítmányozással foglalkozó cégek számára egy webalkalmazást fejlesszünk. Az oldal lehetővé teszi tetszőleges árukészlet nyilvántartását, amelyek akár több raktárban, szétszorva vannak tárolva. Ezenkívül az árumozgatás online nyilvántartására is alkalmas lesz az elkészült weboldal. Mindezen funkciókat egy letisztult felületen keresztül tudja elérni a felhasználó.`
-
-```
-Ide írd le tömören (4-6 mondatban), hogy miről szól a projekt, amit a gyakorlatvezetőtől kaptatok. 
-Írd le, hogy mik a fő célok, miért van a weboldalra szükség. 
-A dokumentumban a pirossal illetve a blokkokkal kiemelt szövegeknek két jelentése van: 
-(a) minta/sablon szöveg, amit le kell cserélni, pl. gyakorlatvezető neve; 
-(b) segítő/magyarázó szöveg. 
-Az átadott dokumentumban nem szerepelhetnek se pirossal kiemelt, se blokkban szereplő részek! A
-feketével írt részek törlése tilos, azok közösek.
-```
+Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb költséggel, legbiztonságosabban és megfelelő időben. A projekt lényege, hogy összeszedje az éttermeket, így mindent megtalálhatsz egy helyen. Az oldal lehetővé teszi az étel kiszállítását bármerre az országban.  A kiszállítás lehető leggyorsabb módon működik, hiszen rengeteg fuvarozó dolgozik nekünk. Mindezen funkciókat egy letisztult felületen keresztül tudja elérni a felhasználó.`
 
 ## 2. Verziók
 
@@ -86,10 +76,6 @@ Az erőforrásigényünk összesen kb. `22` személynap/fő.
 
 A rendelkezésünkre áll összesen 5 * 70 = 350 pont.
 
-```
-Becsült sarokszámok, a rendelkezésre álló erőforrás fejenként általában 17-25 személynap, 
-a pontok száma = fejenként a projektre kapható maxpont * tagok száma.
-```
 
 ## 5. Szervezeti felépítés és felelősségmegosztás
 A projekt megrendelője Márkus András. Az Étel projektet a projektcsapat fogja végrehajtani, amely jelenleg öt fejlesztőből áll. A csapatban pályakezdő webprogramozók vannak, mindenkinek van legalább egy év egyetemi tapasztalata.
@@ -119,6 +105,7 @@ A projekt a következő emberekből áll:
 A projekt a következő munkaállomásokat fogja használni a munka során:
  - Munkaállomások: 5 db PC Windows 10-es operációs rendszerrel
  - ASUS ROG Strix laptop (CPU: i7-6700HQ, RAM: 8 GB, GPU: Nvidia GTX 960M)
+ - Acer Apsire V 15 V5-591G-55TU laptop (CPU: Intel core i5-6300HQ, RAM: 8 GB, GPU: Nvidia GeForce GTX 950M)
  - `Dell Inspiron 5558 laptop (CPU: i5 5200U, RAM: 8 GB, GPU: Nvidia 920M)`
  - `Acer Aspire 573g laptop (CPU: i3 5005U, RAM: 4 GB, GPU: Nvidia 920M)`
  - `Asztali számítógép (CPU: i7 7700k, RAM: 16GB, GPU: Nvidia GTX1070)`
@@ -133,12 +120,11 @@ A projekt a következő technológiákat/szoftvereket fogja használni a munka s
  - `React.js (frontend)`
  - `Maven szoftverprojekt menedzselő szoftver`
  - `Eclipse IDE`
+ - Clion
  - Git verziókövető (GitLab)
  - IntelliJ IDEA
 
-```
-Milyen gépet használnak a projekttagok, milyen OS-t használnak, milyen szoftverkörnyezetben, stb.
-```
+
 
 ### 6.2. Rizikómenedzsment
 
@@ -153,7 +139,7 @@ Milyen gépet használnak a projekttagok, milyen OS-t használnak, milyen szoftv
 ## 7. Jelentések
 
 ### 7.1. Munka menedzsment
-A munkát `Teszt Elek` koordinálja. `Fő feladata, hogy folyamatosan egyeztessen a csapattagokkal az előrehaladásról és a fellépő problémákról, esetlegesen a megoldásban is segítséget nyújhat a projekt csúszásának elkerülése végett. További feladata a heti szinten tartandó csoportgyűlések időpontjának és helyszínének leszervezése, erről email-ben tájékoztatja a projektcsapatot.`
+A munkát Nagy György koordinálja. Fő feladata, hogy folyamatosan egyeztessen a csapattagokkal az előrehaladásról és a fellépő problémákról, esetlegesen a megoldásban is segítséget nyújthat a projekt csúszásának elkerülése végett. További feladata a heti szinten tartandó csoportgyűlések időpontjának és helyszínének leszervezése, erről Discordon tájékoztatja a projektcsapatot. 
 
 
 ### 7.2. Csoportgyűlések
@@ -216,13 +202,10 @@ A főbb átadandók és határidők a projekt időtartama alatt a következők:
 
 A következőkben a tervezett feladatok részletes összefoglalása található.
 
-```
-Alapvetően egy feladatnak 1 felelőse lehet, de kivételt képez pl. a 9.1.1. részfeladat.`
-```
 
 ### 9.1. Projektterv (1. mérföldkő)
 
-Ennek a feladatnak az a célja, hogy `megvalósításhoz szükséges lépéseket, az ütemzést és a felelősöket meghatározzuk.`
+Ennek a feladatnak az a célja, hogy megvalósításhoz szükséges lépéseket, az ütemzést és a felelősöket meghatározzuk.
 
 Részfeladatai a következők:
 
@@ -241,7 +224,7 @@ Felelős: Nagy Dominik
 
 Tartam:  3 nap
 
-Erőforrásigény:  1 személynap
+Erőforrásigény:  2 személynap
 
 
 ### 9.2. UML és adatbázis tervek (2. mérföldkő)
@@ -302,7 +285,7 @@ Erőforrásigény:  2 személynap
 
 Felelős: Nagy Dominik
 
-Tartam:  1 nap
+Tartam:  2 nap
 
 Erőforrásigény: 2 személynap
 
@@ -323,7 +306,7 @@ Erőforrásigény:  2 személynap
 
 #### 9.3.2.  Felhasználói munkamenethez kapcsolódó GUI megvalósítása
 
-Felelős: Nagy György
+Felelős: Oberhauser Attila
 
 Tartam:  4 nap
 
@@ -351,7 +334,7 @@ Felelős: Nagy György
 
 Tartam:  3 nap
 
-Erőforrásigény:  1 személynap
+Erőforrásigény:  2 személynap
 
 #### 9.3.6.  Étel rendeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
 
@@ -363,11 +346,11 @@ Erőforrásigény:  2 személynap
 
 #### 9.3.7.   Étel rendeléséhez kapcsolódó GUI megvalósítása
 
-Felelős: Nagy György
+Felelős: Nagy Dominik
 
 Tartam:  4 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  3 személynap
 
 #### 9.3.8.  Étel rendeléséhez  szükséges adatok létrehozása az adatbázisban
 
@@ -387,7 +370,7 @@ Erőforrásigény:  3 személynap
 
 #### 9.3.10.  Ételek, menük készítéséhez kapcsolódó GUI megvalósítása
 
-Felelős: Nagy György
+Felelős: Oberhauser Attila
 
 Tartam:  5 nap
 
@@ -433,7 +416,7 @@ Tartam:  4 nap
 
 Erőforrásigény:  2 személynap
 
-#### 9.3.16.  `Fuvarok kezeléshez kapcsolódó GUI megvalósítása`
+#### 9.3.16.  Fuvarok kezeléshez kapcsolódó GUI megvalósítása
 
 Felelős: Nagy György
 
@@ -467,7 +450,7 @@ Erőforrásigény:  1 személynap
 
 #### 9.3.20.  Kapcsolatfelvételi űrlap biztosítása új ügyfelek számára (üzleti logika és GUI)
 
-Felelős: Nagy György
+Felelős: Nagy Dominik
 
 Tartam:  4 nap
 
@@ -523,7 +506,7 @@ Erőforrásigény:  2 személynap
 
 #### 9.4.3. Javított minőségű prototípus a korábbi hiányzó funkciókkal
 
-Felelős: Nagy Eliot
+Felelős: Oberhauser Attila
 
 Tartam:  5 nap
 
@@ -547,7 +530,7 @@ Erőforrásigény:  0.3 személynap
 
 #### 9.4.6. Ételek, menük készítésének tesztelése (TP, TC, TR)
 
-Felelős: Rózsa Kristóf
+Felelős: Nagy Dominik
 
 Tartam:  1 nap
 
@@ -571,7 +554,7 @@ Erőforrásigény:  0.3 személynap
 
 #### 9.4.9. Értesítések tesztelése (TP, TC, TR)
 
-Felelős: Oberhauser Attila
+Felelős: Nagy Eliot
 
 Tartam:  1 nap
 
@@ -620,10 +603,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 
 ## 11. Projekt költségvetés
 
-```
-Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt feladatok számát 
-és az adott mérföldkőben végzett munkáért szerezhető pontszámot kell beírni minden emberre külön-külön.
-```
+
 
 ### 11.1. Részletes erőforrásigény (személynap)
 
