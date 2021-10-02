@@ -127,13 +127,14 @@ A projekt a következő munkaállomásokat fogja használni a munka során:
  - Windows 10 PC (CPU: FX6300, RAM : 16gb, GPU: GTX750Ti)
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
- - `Heroku platformszolgáltatás`
- - `Heroku által biztosított PostgreSQL adatbázisszerver`
- - `Spring Boot (backend)`
+ - Heroku platformszolgáltatás
+ - Heroku által biztosított PostgreSQL adatbázisszerver
+ - Spring Boot (backend)
  - `React.js (frontend)`
  - `Maven szoftverprojekt menedzselő szoftver`
  - `Eclipse IDE`
- - `Git verziókövető (GitLab)`
+ - Git verziókövető (GitLab)
+ - IntelliJ IDEA
 
 ```
 Milyen gépet használnak a projekttagok, milyen OS-t használnak, milyen szoftverkörnyezetben, stb.
@@ -631,24 +632,20 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     Nagy György            |           `2`          |             `3`            |           `16`          |            `4`           |    `25`   |
 |                     Nagy Eliot             |            1           |              2             |             9           |             5            |     17    |
-|                     `Lev Elek`             |           `1`          |             `3`            |           `12`          |            `4`           |    `20`   |
-
+|					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.6			|	  ?		|
 
 ### 11.2. Részletes feladatszámok
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
-|                     `Teszt Elek`           |           `2`          |             `3`            |           `9`           |            `6`           |    `20`   |
 |                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
-|                     `Lev Elek`             |           `1`          |             `2`            |           `8`           |            `5`           |    `16`   |
+| 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   2			|	 11		|
 
 ### 11.3. Részletes költségvetés
 
 |                     Név                       | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:---------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |        Maximálisan választható pontszám %-ban |         10% (7)        |            30% (21)        |          50% (35)       |          30% (21)        | 100% (70) |
-|                     `Teszt Elek`              |           `7`          |             `13`           |          `35`           |            `15`          |    `70`   |
-|                     `Remek Elek`              |           `4`          |             `21`           |          `30`           |            `15`          |    `70`   |
-|                     `Lev Elek`                |           `4`          |             `21`           |          `30`           |            `15`          |    `70`   |
+|					   Rózsa Kristóf			| 			4			 |				16			  |			  35			|			  15		   |	 70	   |
 
 Szeged, `2021-10-25`.
