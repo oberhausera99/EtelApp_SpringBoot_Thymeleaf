@@ -607,7 +607,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     Nagy György            |           `2`          |             `3`            |           `16`          |            `4`           |    `25`   |
 |                     Nagy Eliot             |            1           |              2             |             9           |             3.2          |     15.2  |
-|					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.6			|	  ?		|
+|					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.3			|	  ?		|
 |					  Nagy Dominik			 |			  2 		  |				 2			   |			10			 |			   1.9			|	  15.9	|
 
 
@@ -615,8 +615,8 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
-|                     Nagy Eliot             |            1           |              1             |            4            |             5            |    11     |
-| 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   2			|	 11		|
+|                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
+| 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   1			|	 11		|
 | 					  Nagy Dominik			 |			  2			  |				1			   |			5			 |			   4			|	 12		|
 
 ### 11.3. Részletes költségvetés
