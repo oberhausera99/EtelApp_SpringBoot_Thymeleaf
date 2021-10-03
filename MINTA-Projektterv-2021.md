@@ -100,12 +100,9 @@ A projekt a következő emberekből áll:
 
 ### 6.1. Munkakörnyezet
 A projekt a következő munkaállomásokat fogja használni a munka során:
- - Munkaállomások: 5 db PC Windows 10-es operációs rendszerrel
+ - Munkaállomások: 6 db PC Windows 10-es operációs rendszerrel
  - ASUS ROG Strix laptop (CPU: i7-6700HQ, RAM: 8 GB, GPU: Nvidia GTX 960M)
  - Acer Apsire V 15 V5-591G-55TU laptop (CPU: Intel core i5-6300HQ, RAM: 8 GB, GPU: Nvidia GeForce GTX 950M)
- - `Dell Inspiron 5558 laptop (CPU: i5 5200U, RAM: 8 GB, GPU: Nvidia 920M)`
- - `Acer Aspire 573g laptop (CPU: i3 5005U, RAM: 4 GB, GPU: Nvidia 920M)`
- - `Asztali számítógép (CPU: i7 7700k, RAM: 16GB, GPU: Nvidia GTX1070)`
  - Asztali számítógép (CPU: i7 8700k, RAM: 16GB, GPU: ASUS GeForce GTX 1070 OC 8GB)
  - HP Pavilion 14 laptop (CPU: i5 8250U, RAM: 8 GB, GPU: Nvidia GeForce)
  - ASUS Vivobook 15 laptop (CPU: Ryzen 5 3500, RAM : 8GB, GPU: Vega 8)
@@ -609,7 +606,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     Nagy György            |           `2`          |             `3`            |           `16`          |            `4`           |    `25`   |
-|                     Nagy Eliot             |            1           |              2             |             9           |             5            |     17    |
+|                     Nagy Eliot             |            1           |              2             |             9           |             3.2          |     15.2  |
 |					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.6			|	  ?		|
 |					  Nagy Dominik			 |			  2 		  |				 2			   |			10			 |			   1.9			|	  15.9	|
 
@@ -618,7 +615,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
-|                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
+|                     Nagy Eliot             |            1           |              1             |            4            |             5            |    11     |
 | 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   2			|	 11		|
 | 					  Nagy Dominik			 |			  2			  |				1			   |			5			 |			   4			|	 12		|
 
