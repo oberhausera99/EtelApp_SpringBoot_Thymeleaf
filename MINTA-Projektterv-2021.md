@@ -43,31 +43,28 @@ A rendszernek képesnek kell lennie ételrendelés fogadására és feldolgozás
 
 ### 3.2. Funkcionális követelmények
 
- - `Felhasználói munkamenet megvalósítása több jogosultsági szinttel (admin, raktáros, sofőr)`
- - `Felhasználók kezelése (CRUD)`
- - `Raktárak kezelése (CRUD)`
- - `Árukészletek kezelése (CRUD)`
- - `Járművek kezelése (CRUD)`
- - `Fuvarok/szállítmányok kezelése (CRUD)`
- - `Email-es kiértesítés új szállítmány esetén az adott raktárosnak és sofőrnek`
- - `Fuvar útvonalának megjelenítése térképen a kezdő és a végponttal együtt`
- - `Kapcsolatfelvételi űrlap biztosítása új cégek számára`
- - `Biztonsági mentés automatikus létrehozása`
+ - Felhasználói munkamenet megvalósítása több jogosultsági szinttel (admin, user)
+ - Felhasználók kezelése (CRUD)
+ - Rendelők kezelése (CRUD)
+ - Élelmiszer raktárak kezelése (CRUD)
+ - Futárok kezelése (CRUD)
+ - Rendelések kezelése (CRUD)
+ - Rendelés folyamatának megjelenítése
+ - Biztonsági mentés automatikus létrehozása
  
 ```
-Ide kerülnek a rendszerrel szemben támasztott funkcionális igények: azaz amit a rendszernek tudnia kell.
+Felhasználók, rendelők, élelmiszerek, futárok és rendelések beszúrása, törlése, nyílvántartása, illetve kezelése.
+Reszponzív grafikus felhasználói felület biztosítása a rendszer felhasználója számára.
 ```
 
 ### 3.3. Nem funkcionális követelmények
 
- - `A kliens oldal platform- és böngészőfüggetlen legyen`
- - `Reszponzív megjelenés`
- - `Szenzitív adatokat biztonságosan tároljuk`
- - `A legfrissebb technológiákat használja a rendszer`
+ - A kliens oldal platform- és böngészőfüggetlen legyen
+ - Reszponzív megjelenés
+ - Szenzitív adatokat biztonságosan tároljuk
 
 ```
-A rendszer nem funkcionális követelményei, pl.: milyen környezetben fusson, milyen teljesítményt kell produkálnia, 
-milyen megjelenéssel kell rendelkeznie.
+A rendszer Windows 10 operációs rendszeren fut, Chromium alapú böngészőkön, modern minimalista megjelenést célozva.
 ```
 
 ## 4. Költség- és erőforrás-szükségletek
@@ -109,6 +106,7 @@ A projekt a következő munkaállomásokat fogja használni a munka során:
  - `Dell Inspiron 5558 laptop (CPU: i5 5200U, RAM: 8 GB, GPU: Nvidia 920M)`
  - `Acer Aspire 573g laptop (CPU: i3 5005U, RAM: 4 GB, GPU: Nvidia 920M)`
  - `Asztali számítógép (CPU: i7 7700k, RAM: 16GB, GPU: Nvidia GTX1070)`
+ - Asztali számítógép (CPU: i7 8700k, RAM: 16GB, GPU: ASUS GeForce GTX 1070 OC 8GB)
  - HP Pavilion 14 laptop (CPU: i5 8250U, RAM: 8 GB, GPU: Nvidia GeForce)
  - ASUS Vivobook 15 laptop (CPU: Ryzen 5 3500, RAM : 8GB, GPU: Vega 8)
  - Windows 10 PC (CPU: FX6300, RAM : 16gb, GPU: GTX750Ti)
@@ -613,6 +611,8 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |                     Nagy György            |           `2`          |             `3`            |           `16`          |            `4`           |    `25`   |
 |                     Nagy Eliot             |            1           |              2             |             9           |             5            |     17    |
 |					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.6			|	  ?		|
+|					  Nagy Dominik			 |			  2 		  |				 2			   |			10			 |			   1.9			|	  15.9	|
+
 
 ### 11.2. Részletes feladatszámok
 
@@ -620,6 +620,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
 | 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   2			|	 11		|
+| 					  Nagy Dominik			 |			  2			  |				1			   |			5			 |			   4			|	 12		|
 
 ### 11.3. Részletes költségvetés
 
@@ -627,5 +628,6 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |:---------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |        Maximálisan választható pontszám %-ban |         10% (7)        |            30% (21)        |          50% (35)       |          30% (21)        | 100% (70) |
 |					   Rózsa Kristóf			| 			4			 |				16			  |			  35			|			  15		   |	 70	   |
+|					   Nagy Dominik				| 			6			 |				17			  |			  32			|			  15		   |	 70	   |
 
 Szeged, `2021-10-25`.
