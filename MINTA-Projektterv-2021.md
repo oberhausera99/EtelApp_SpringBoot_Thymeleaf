@@ -21,15 +21,6 @@ Státusz osztályozás:
  - Előterjesztés: a projekt menedzser bírálatával, a mérföldkő határidejekor
  - Elfogadott: a megrendelő által elfogadva, a prezentáció bemutatásakor
 
-```
-A leadott projekttervet véglegesnek kell tekinteni. 
-Mindazonáltal indokolt esetben ettől el lehet térni, amennyiben a gyakorlatvezető engedélyezi.
-A fő változtatásokat itt kell vezetni a projekt teljes ideje alatt (jelenlegi példánkban most lett vége a 2. mérföldkőnek). 
-Általánosságban elmondható, hogy az első 2 mérföldkő során gyakoribb a változtatás, így legalább 
-3 fő verziót érdemes megjelölni (Tervezet-Előterjesztés-Elfogadott).
-A verzió számozásának következetesnek kell lennie. A szerzőknél azoknak a nevét kell felsorolni, akik hozzájárultak a fő verzióhoz,
-azaz nem feltétlen mindenki, aki módosította a dokumentumot pl. egy elírás javításával. 
-```
 
 ## 3. A projekt bemutatása
 
@@ -52,10 +43,7 @@ A rendszernek képesnek kell lennie ételrendelés fogadására és feldolgozás
  - Rendelés folyamatának megjelenítése
  - Biztonsági mentés automatikus létrehozása
  
-```
-Felhasználók, rendelők, élelmiszerek, futárok és rendelések beszúrása, törlése, nyílvántartása, illetve kezelése.
-Reszponzív grafikus felhasználói felület biztosítása a rendszer felhasználója számára.
-```
+
 
 ### 3.3. Nem funkcionális követelmények
 
@@ -63,13 +51,11 @@ Reszponzív grafikus felhasználói felület biztosítása a rendszer felhaszná
  - Reszponzív megjelenés
  - Szenzitív adatokat biztonságosan tároljuk
 
-```
-A rendszer Windows 10 operációs rendszeren fut, Chromium alapú böngészőkön, modern minimalista megjelenést célozva.
-```
+
 
 ## 4. Költség- és erőforrás-szükségletek
 
-Az erőforrásigényünk összesen kb. `22` személynap/fő.
+Az erőforrásigényünk összesen kb. 16 személynap/fő.
 
 A rendelkezésünkre áll összesen 5 * 70 = 350 pont.
 
@@ -605,7 +591,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
-|                     Nagy György            |           `2`          |             `3`            |           `16`          |            `4`           |    `25`   |
+|                     Nagy György            |           1          |             4            |           9          |            1.3           |    15.3   |
 |                     Nagy Eliot             |            1           |              2             |             9           |             3.2          |     15.2  |
 |					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.3			|	  ?		|
 |					  Nagy Dominik			 |			  2 		  |				 2			   |			10			 |			   1.9			|	  15.9	|
@@ -615,6 +601,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
+|                     Nagy György          |            1           |              2             |            4            |             2           |    9     |
 |                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
 | 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   1			|	 11		|
 | 					  Nagy Dominik			 |			  2			  |				1			   |			5			 |			   4			|	 12		|
@@ -624,6 +611,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |                     Név                       | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:---------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |        Maximálisan választható pontszám %-ban |         10% (7)        |            30% (21)        |          50% (35)       |          30% (21)        | 100% (70) |
+|					  Nagy György		| 			4			 |				16			  |			  34			|			  16	   |	 70	   |
 |					   Rózsa Kristóf			| 			4			 |				16			  |			  35			|			  15		   |	 70	   |
 |					   Nagy Dominik				| 			6			 |				17			  |			  32			|			  15		   |	 70	   |
 
