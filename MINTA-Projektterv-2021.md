@@ -2,17 +2,7 @@
 
 ## 1. Összefoglaló 
 
-`A szállítmányozás lényege, hogy a küldemény a lehető legkisebb költséggel, legbiztonságosabban, a megfelelő időben optimálisan jusson el a rendeltetési helyre. Ez megköveteli az online is elérhető nyilvántartást, épp ezért ennek a projektnek a célja, hogy a szállítmányozással foglalkozó cégek számára egy webalkalmazást fejlesszünk. Az oldal lehetővé teszi tetszőleges árukészlet nyilvántartását, amelyek akár több raktárban, szétszorva vannak tárolva. Ezenkívül az árumozgatás online nyilvántartására is alkalmas lesz az elkészült weboldal. Mindezen funkciókat egy letisztult felületen keresztül tudja elérni a felhasználó.`
-
-```
-Ide írd le tömören (4-6 mondatban), hogy miről szól a projekt, amit a gyakorlatvezetőtől kaptatok. 
-Írd le, hogy mik a fő célok, miért van a weboldalra szükség. 
-A dokumentumban a pirossal illetve a blokkokkal kiemelt szövegeknek két jelentése van: 
-(a) minta/sablon szöveg, amit le kell cserélni, pl. gyakorlatvezető neve; 
-(b) segítő/magyarázó szöveg. 
-Az átadott dokumentumban nem szerepelhetnek se pirossal kiemelt, se blokkban szereplő részek! A
-feketével írt részek törlése tilos, azok közösek.
-```
+Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb költséggel, legbiztonságosabban és megfelelő időben. A projekt lényege, hogy összeszedje az éttermeket, így mindent megtalálhatsz egy helyen. Az oldal lehetővé teszi az étel kiszállítását bármerre az országban.  A kiszállítás lehető leggyorsabb módon működik, hiszen rengeteg fuvarozó dolgozik nekünk. Mindezen funkciókat egy letisztult felületen keresztül tudja elérni a felhasználó.
 
 ## 2. Verziók
 
@@ -53,31 +43,28 @@ A rendszernek képesnek kell lennie ételrendelés fogadására és feldolgozás
 
 ### 3.2. Funkcionális követelmények
 
- - `Felhasználói munkamenet megvalósítása több jogosultsági szinttel (admin, raktáros, sofőr)`
- - `Felhasználók kezelése (CRUD)`
- - `Raktárak kezelése (CRUD)`
- - `Árukészletek kezelése (CRUD)`
- - `Járművek kezelése (CRUD)`
- - `Fuvarok/szállítmányok kezelése (CRUD)`
- - `Email-es kiértesítés új szállítmány esetén az adott raktárosnak és sofőrnek`
- - `Fuvar útvonalának megjelenítése térképen a kezdő és a végponttal együtt`
- - `Kapcsolatfelvételi űrlap biztosítása új cégek számára`
- - `Biztonsági mentés automatikus létrehozása`
+ - Felhasználói munkamenet megvalósítása több jogosultsági szinttel (admin, user)
+ - Felhasználók kezelése (CRUD)
+ - Rendelők kezelése (CRUD)
+ - Élelmiszer raktárak kezelése (CRUD)
+ - Futárok kezelése (CRUD)
+ - Rendelések kezelése (CRUD)
+ - Rendelés folyamatának megjelenítése
+ - Biztonsági mentés automatikus létrehozása
  
 ```
-Ide kerülnek a rendszerrel szemben támasztott funkcionális igények: azaz amit a rendszernek tudnia kell.
+Felhasználók, rendelők, élelmiszerek, futárok és rendelések beszúrása, törlése, nyílvántartása, illetve kezelése.
+Reszponzív grafikus felhasználói felület biztosítása a rendszer felhasználója számára.
 ```
 
 ### 3.3. Nem funkcionális követelmények
 
- - `A kliens oldal platform- és böngészőfüggetlen legyen`
- - `Reszponzív megjelenés`
- - `Szenzitív adatokat biztonságosan tároljuk`
- - `A legfrissebb technológiákat használja a rendszer`
+ - A kliens oldal platform- és böngészőfüggetlen legyen
+ - Reszponzív megjelenés
+ - Szenzitív adatokat biztonságosan tároljuk
 
 ```
-A rendszer nem funkcionális követelményei, pl.: milyen környezetben fusson, milyen teljesítményt kell produkálnia, 
-milyen megjelenéssel kell rendelkeznie.
+A rendszer Windows 10 operációs rendszeren fut, Chromium alapú böngészőkön, modern minimalista megjelenést célozva.
 ```
 
 ## 4. Költség- és erőforrás-szükségletek
@@ -86,10 +73,6 @@ Az erőforrásigényünk összesen kb. `22` személynap/fő.
 
 A rendelkezésünkre áll összesen 5 * 70 = 350 pont.
 
-```
-Becsült sarokszámok, a rendelkezésre álló erőforrás fejenként általában 17-25 személynap, 
-a pontok száma = fejenként a projektre kapható maxpont * tagok száma.
-```
 
 ## 5. Szervezeti felépítés és felelősségmegosztás
 A projekt megrendelője Márkus András. Az Étel projektet a projektcsapat fogja végrehajtani, amely jelenleg öt fejlesztőből áll. A csapatban pályakezdő webprogramozók vannak, mindenkinek van legalább egy év egyetemi tapasztalata.
@@ -117,25 +100,26 @@ A projekt a következő emberekből áll:
 
 ### 6.1. Munkakörnyezet
 A projekt a következő munkaállomásokat fogja használni a munka során:
- - Munkaállomások: 5 db PC Windows 10-es operációs rendszerrel
+ - Munkaállomások: 6 db PC Windows 10-es operációs rendszerrel
  - ASUS ROG Strix laptop (CPU: i7-6700HQ, RAM: 8 GB, GPU: Nvidia GTX 960M)
- - `Dell Inspiron 5558 laptop (CPU: i5 5200U, RAM: 8 GB, GPU: Nvidia 920M)`
- - `Acer Aspire 573g laptop (CPU: i3 5005U, RAM: 4 GB, GPU: Nvidia 920M)`
- - `Asztali számítógép (CPU: i7 7700k, RAM: 16GB, GPU: Nvidia GTX1070)`
+ - Acer Apsire V 15 V5-591G-55TU laptop (CPU: Intel core i5-6300HQ, RAM: 8 GB, GPU: Nvidia GeForce GTX 950M)
+ - Asztali számítógép (CPU: i7 8700k, RAM: 16GB, GPU: ASUS GeForce GTX 1070 OC 8GB)
  - HP Pavilion 14 laptop (CPU: i5 8250U, RAM: 8 GB, GPU: Nvidia GeForce)
+ - ASUS Vivobook 15 laptop (CPU: Ryzen 5 3500, RAM : 8GB, GPU: Vega 8)
+ - Windows 10 PC (CPU: FX6300, RAM : 16gb, GPU: GTX750Ti)
 
 A projekt a következő technológiákat/szoftvereket fogja használni a munka során: 
- - `Heroku platformszolgáltatás`
- - `Heroku által biztosított PostgreSQL adatbázisszerver`
- - `Spring Boot (backend)`
+ - Heroku platformszolgáltatás
+ - Heroku által biztosított PostgreSQL adatbázisszerver
+ - Spring Boot (backend)
  - `React.js (frontend)`
  - `Maven szoftverprojekt menedzselő szoftver`
  - `Eclipse IDE`
- - `Git verziókövető (GitLab)`
+ - Clion
+ - Git verziókövető (GitLab)
+ - IntelliJ IDEA
 
-```
-Milyen gépet használnak a projekttagok, milyen OS-t használnak, milyen szoftverkörnyezetben, stb.
-```
+
 
 ### 6.2. Rizikómenedzsment
 
@@ -150,7 +134,7 @@ Milyen gépet használnak a projekttagok, milyen OS-t használnak, milyen szoftv
 ## 7. Jelentések
 
 ### 7.1. Munka menedzsment
-A munkát `Teszt Elek` koordinálja. `Fő feladata, hogy folyamatosan egyeztessen a csapattagokkal az előrehaladásról és a fellépő problémákról, esetlegesen a megoldásban is segítséget nyújhat a projekt csúszásának elkerülése végett. További feladata a heti szinten tartandó csoportgyűlések időpontjának és helyszínének leszervezése, erről email-ben tájékoztatja a projektcsapatot.`
+A munkát Nagy György koordinálja. Fő feladata, hogy folyamatosan egyeztessen a csapattagokkal az előrehaladásról és a fellépő problémákról, esetlegesen a megoldásban is segítséget nyújthat a projekt csúszásának elkerülése végett. További feladata a heti szinten tartandó csoportgyűlések időpontjának és helyszínének leszervezése, erről Discordon tájékoztatja a projektcsapatot. 
 
 
 ### 7.2. Csoportgyűlések
@@ -213,13 +197,10 @@ A főbb átadandók és határidők a projekt időtartama alatt a következők:
 
 A következőkben a tervezett feladatok részletes összefoglalása található.
 
-```
-Alapvetően egy feladatnak 1 felelőse lehet, de kivételt képez pl. a 9.1.1. részfeladat.`
-```
 
 ### 9.1. Projektterv (1. mérföldkő)
 
-Ennek a feladatnak az a célja, hogy `megvalósításhoz szükséges lépéseket, az ütemzést és a felelősöket meghatározzuk.`
+Ennek a feladatnak az a célja, hogy megvalósításhoz szükséges lépéseket, az ütemzést és a felelősöket meghatározzuk.
 
 Részfeladatai a következők:
 
@@ -299,7 +280,7 @@ Erőforrásigény:  2 személynap
 
 Felelős: Nagy Dominik
 
-Tartam:  1 nap
+Tartam:  2 nap
 
 Erőforrásigény: 2 személynap
 
@@ -320,7 +301,7 @@ Erőforrásigény:  2 személynap
 
 #### 9.3.2.  Felhasználói munkamenethez kapcsolódó GUI megvalósítása
 
-Felelős: Nagy György
+Felelős: Oberhauser Attila
 
 Tartam:  4 nap
 
@@ -348,7 +329,7 @@ Felelős: Nagy György
 
 Tartam:  3 nap
 
-Erőforrásigény:  1 személynap
+Erőforrásigény:  2 személynap
 
 #### 9.3.6.  Étel rendeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
 
@@ -360,11 +341,11 @@ Erőforrásigény:  2 személynap
 
 #### 9.3.7.   Étel rendeléséhez kapcsolódó GUI megvalósítása
 
-Felelős: Nagy György
+Felelős: Nagy Dominik
 
 Tartam:  4 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  3 személynap
 
 #### 9.3.8.  Étel rendeléséhez  szükséges adatok létrehozása az adatbázisban
 
@@ -384,7 +365,7 @@ Erőforrásigény:  3 személynap
 
 #### 9.3.10.  Ételek, menük készítéséhez kapcsolódó GUI megvalósítása
 
-Felelős: Nagy György
+Felelős: Oberhauser Attila
 
 Tartam:  5 nap
 
@@ -430,7 +411,7 @@ Tartam:  4 nap
 
 Erőforrásigény:  2 személynap
 
-#### 9.3.16.  `Fuvarok kezeléshez kapcsolódó GUI megvalósítása`
+#### 9.3.16.  Fuvarok kezeléshez kapcsolódó GUI megvalósítása
 
 Felelős: Nagy György
 
@@ -464,7 +445,7 @@ Erőforrásigény:  1 személynap
 
 #### 9.3.20.  Kapcsolatfelvételi űrlap biztosítása új ügyfelek számára (üzleti logika és GUI)
 
-Felelős: Nagy György
+Felelős: Nagy Dominik
 
 Tartam:  4 nap
 
@@ -520,7 +501,7 @@ Erőforrásigény:  2 személynap
 
 #### 9.4.3. Javított minőségű prototípus a korábbi hiányzó funkciókkal
 
-Felelős: Nagy Eliot
+Felelős: Oberhauser Attila
 
 Tartam:  5 nap
 
@@ -528,7 +509,7 @@ Erőforrásigény:  2 személynap
 
 #### 9.4.4. Felhasználói munkamenet tesztelése (TP, TC, TR)
 
-Felelős: Oberhauser Attila
+Felelős: Nagy Eliot
 
 Tartam:  1 nap
 
@@ -544,7 +525,7 @@ Erőforrásigény:  0.3 személynap
 
 #### 9.4.6. Ételek, menük készítésének tesztelése (TP, TC, TR)
 
-Felelős: Rózsa Kristóf
+Felelős: Nagy Dominik
 
 Tartam:  1 nap
 
@@ -568,7 +549,7 @@ Erőforrásigény:  0.3 személynap
 
 #### 9.4.9. Értesítések tesztelése (TP, TC, TR)
 
-Felelős: Oberhauser Attila
+Felelős: Nagy Eliot
 
 Tartam:  1 nap
 
@@ -617,10 +598,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 
 ## 11. Projekt költségvetés
 
-```
-Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt feladatok számát 
-és az adott mérföldkőben végzett munkáért szerezhető pontszámot kell beírni minden emberre külön-külön.
-```
+
 
 ### 11.1. Részletes erőforrásigény (személynap)
 
@@ -628,25 +606,25 @@ Az egyes leadások alkalmával rögzített erőforrásigényt, az elvállalt fel
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     Nagy György            |           `2`          |             `3`            |           `16`          |            `4`           |    `25`   |
-|                     Nagy Eliot             |            1           |              2             |             9           |             5            |     17    |
-|                     `Lev Elek`             |           `1`          |             `3`            |           `12`          |            `4`           |    `20`   |
+|                     Nagy Eliot             |            1           |              2             |             9           |             3.2          |     15.2  |
+|					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.3			|	  ?		|
+|					  Nagy Dominik			 |			  2 		  |				 2			   |			10			 |			   1.9			|	  15.9	|
 
 
 ### 11.2. Részletes feladatszámok
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
-|                     `Teszt Elek`           |           `2`          |             `3`            |           `9`           |            `6`           |    `20`   |
 |                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
-|                     `Lev Elek`             |           `1`          |             `2`            |           `8`           |            `5`           |    `16`   |
+| 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   1			|	 11		|
+| 					  Nagy Dominik			 |			  2			  |				1			   |			5			 |			   4			|	 12		|
 
 ### 11.3. Részletes költségvetés
 
 |                     Név                       | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:---------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |        Maximálisan választható pontszám %-ban |         10% (7)        |            30% (21)        |          50% (35)       |          30% (21)        | 100% (70) |
-|                     `Teszt Elek`              |           `7`          |             `13`           |          `35`           |            `15`          |    `70`   |
-|                     `Remek Elek`              |           `4`          |             `21`           |          `30`           |            `15`          |    `70`   |
-|                     `Lev Elek`                |           `4`          |             `21`           |          `30`           |            `15`          |    `70`   |
+|					   Rózsa Kristóf			| 			4			 |				16			  |			  35			|			  15		   |	 70	   |
+|					   Nagy Dominik				| 			6			 |				17			  |			  32			|			  15		   |	 70	   |
 
 Szeged, `2021-10-25`.
