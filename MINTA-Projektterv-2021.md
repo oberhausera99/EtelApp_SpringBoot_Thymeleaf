@@ -8,12 +8,16 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 
 | Verzió | Szerző(k)                | Dátum        | Státusz         | Megjegyzés                                                    |
 |--------|--------------------------|--------------|-----------------|---------------------------------------------------------------|
-| `0.1`  | `Teszt Elek`             | `2021-09-26` | `Tervezet`      | `Legelső verzió`                                              |
-| `0.2`  | `Remek Elek, Teszt Elek` | `2021-10-04` | `Előterjesztés` | `A projekt menedzsere jónak találta`                          |
-| `1.0`  | `Lev Elek`               | `2021-10-11` | `Elfogadott`    | `Apróbb átszervezések a kommentek alapján`                    |
-| `1.1`  | `Remek Elek`             | `2021-10-15` | `Tervezet`      | `Személyes felelősségek átszervezése, Gantt chart módosítása` |
-| `1.1`  | `Lev Elek`               | `2021-10-18` | `Előterjesztés` | `2. mérföldkő további módosításai`                            |
-| `2.1`  | `Remek Elek`             | `2021-10-25` | `Elfogadott`    | `Leírások pontosítása a megjegyzések alapján`                 |
+| 0.1  | Nagy György             | 2021-10-01 | Elfogadott      | Az oktató által közétett mintaterv feltöltése                                              |
+| 0.2  |     Nagy Eliot           | 2021-10-02 | Előterjesztés    | A projektterv pontosítása, erőforrásszámítás                     |
+| 0.3  | Rózsa Kristóf               | 2021-10-03 | Előterjesztett | Munkakörnyezet pontosítása és szoftverkörnyezet specifikálása, erőforrás-eloszlás tervezet
+| 0.4  | Nagy György             | 2021-10-03 | Előterjesztett    | Összefoglaló és munkamenedzsment                 |
+| 0.5  | Nagy Dominik             | 2021-10-03 | Előterjesztett    | Funkcionális és nem funckionális követelmények                 |
+| 0.6  | Nagy Eliot             | 2021-10-03 | Előterjesztett    | Konfliktus feloldás, Erőforrásigény- és feladatszámok pontosítása megbeszélés alapján        |
+| 0.7  | Nagy György             | 2021-10-03 | Előterjesztett    | Összefoglaló és munkamenedzsment                 |
+| 0.8  | Rózsa Kristóf             | 2021-10-03 | Előterjesztett    | Erőforrásigény és feladatszám pontosítáSA                 |
+| 0.9  | Oberhauser Attila             | 2021-10-04 | Elfogadott    | A megrendelő által közzétett minta-gantt diagram közzététele                 |
+| 0.10  | Nagy Dominik             | 2021-10-05 | Előterjesztett    | Gantt-diagram elkészítése az előre megbeszélt időigények alapján                 |
 
 
 Státusz osztályozás:
@@ -595,7 +599,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |                     Nagy Eliot             |            1           |              2             |             9           |             3.2          |     15.2  |
 |					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.3			|	  ?		|
 |					  Nagy Dominik			 |			  2 		  |				 2			   |			10			 |			   1.9			|	  15.9	|
-
+|					   Oberhauser Attila				| 			1			 |				3			  |			  10			|		2	  		   |	 16	   |
 
 ### 11.2. Részletes feladatszámok
 
@@ -605,7 +609,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
 | 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   1			|	 11		|
 | 					  Nagy Dominik			 |			  2			  |				1			   |			5			 |			   4			|	 12		|
-
+|					   Oberhauser Attila				| 			1			 |				1			  |			  6			|			  1		   |	 9	   |
 ### 11.3. Részletes költségvetés
 
 |                     Név                       | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
@@ -614,5 +618,6 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |					  Nagy György		| 			4			 |				16			  |			  34			|			  16	   |	 70	   |
 |					   Rózsa Kristóf			| 			4			 |				16			  |			  35			|			  15		   |	 70	   |
 |					   Nagy Dominik				| 			6			 |				17			  |			  32			|			  15		   |	 70	   |
+|					   Oberhauser Attila				| 			4			 |				12			  |			  40			|			  14		   |	 70	   |
 
 Szeged, `2021-10-25`.
