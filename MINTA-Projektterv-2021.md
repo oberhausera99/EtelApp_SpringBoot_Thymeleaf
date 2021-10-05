@@ -582,9 +582,6 @@ Erőforrásigény:  1 személynap
 
 ![image](./MINTA-gantt-diagram.png)
 
-```
-Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfeladatokat tartalmazza felelős/tartam bontásban.
-```
 
 ## 11. Projekt költségvetés
 
