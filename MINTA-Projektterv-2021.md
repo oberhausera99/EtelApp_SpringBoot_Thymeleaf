@@ -619,5 +619,6 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |					   Rózsa Kristóf			| 			4			 |				16			  |			  35			|			  15		   |	 70	   |
 |					   Nagy Dominik				| 			6			 |				17			  |			  32			|			  15		   |	 70	   |
 |					   Oberhauser Attila				| 			4			 |				12			  |			  40			|			  14		   |	 70	   |
+|                      Nagy Eliot               |           4            |              12            |           33           |             21           |     70    |
 
 Szeged, `2021-10-25`.
