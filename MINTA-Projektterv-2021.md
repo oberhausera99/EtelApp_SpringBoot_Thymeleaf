@@ -615,7 +615,7 @@ Erőforrásigény:  1 személynap
 |					  Nagy György		| 			4			 |				16			  |			  34			|			  16	   |	 70	   |
 |					   Rózsa Kristóf			| 			4			 |				16			  |			  35			|			  15		   |	 70	   |
 |					   Nagy Dominik				| 			6			 |				17			  |			  32			|			  15		   |	 70	   |
-|					   Oberhauser Attila				| 			4			 |				12			  |			  40			|			  14		   |	 70	   |
+|					   Oberhauser Attila				| 			4			 |				17			  |			  35			|			  14		   |	 70	   |
 |                      Nagy Eliot               |           4            |              12            |           33           |             21           |     70    |
 
 Szeged, `2021-10-25`.
