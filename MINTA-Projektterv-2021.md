@@ -143,6 +143,12 @@ A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problém�
 	- Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
 	- Érintett témák: A projektben használt technológiák, szerepkörök kiosztása, projektterv kisebb részekre felosztása
 
+ 3. megbeszélés:
+    - Időpont: 2021.10.04.
+    - Hely: Discord
+    - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
+    - Érintett témák: Gantt diagram kitöltésének megbeszélése, projektterv finomhangolása
+
 ### 7.3. Minőségbiztosítás
 
 Az elkészült terveket a terveken nem dolgozó csapattársak közül átnézik, hogy megfelel-e a specifikációnak és az egyes diagramtípusok összhangban vannak-e egymással. A meglévő rendszerünk helyes működését a prototípusok bemutatása előtt a tesztelési dokumentumban leírtak végrehajtása alapján ellenőrizzük és összevetjük a specifikációval, hogy az elvárt eredményt kapjuk-e. További tesztelési lehetőségek: unit tesztek írása az egyes modulokhoz vagy a kód közös átnézése (code review) egy, a vizsgált modul programozásában nem résztvevő csapattaggal. Szoftverünk minőségét a végső leadás előtt javítani kell a rendszerünkre lefuttatott kódelemzés során kapott metrikaértékek és szabálysértések figyelembevételével.
@@ -594,7 +600,7 @@ Erőforrásigény:  1 személynap
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     Nagy György            |           1          |             4            |           9          |            1.3           |    15.3   |
 |                     Nagy Eliot             |            1           |              2             |             9           |             3.2          |     15.2  |
-|					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.3			|	  ?		|
+|					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.3			|	  15.3		|
 |					  Nagy Dominik			 |			  2 		  |				 2			   |			10			 |			   1.9			|	  15.9	|
 |					   Oberhauser Attila				| 			1			 |				3			  |			  10			|		2	  		   |	 16	   |
 
