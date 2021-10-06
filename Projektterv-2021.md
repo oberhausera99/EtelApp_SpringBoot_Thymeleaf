@@ -621,4 +621,4 @@ Erőforrásigény:  1 személynap
 |					   Oberhauser Attila				| 			4			 |				17			  |			  35			|			  14		   |	 70	   |
 |                      Nagy Eliot               |           4            |              12            |           33           |             21           |     70    |
 
-Szeged, 2021-11-06.
+Szeged, 2021-10-06.
