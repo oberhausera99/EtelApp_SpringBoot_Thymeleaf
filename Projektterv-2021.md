@@ -102,9 +102,6 @@ A projekt a következő technológiákat/szoftvereket fogja használni a munka s
  - Heroku platformszolgáltatás
  - Heroku által biztosított PostgreSQL adatbázisszerver
  - Spring Boot (backend)
- - `React.js (frontend)`
- - `Maven szoftverprojekt menedzselő szoftver`
- - `Eclipse IDE`
  - Clion
  - Git verziókövető (GitLab)
  - IntelliJ IDEA
@@ -173,7 +170,7 @@ Minden leadásnál a projektmenedzser jelentést tesz a projekt haladásáról, 
 
 A szoftver fejlesztése során az iteratív és inkrementális fejlesztési modellt alkalmazzuk. A fejlesztés során nagy hangsúlyt fektetünk a folyamatos kommunikcióra. A fejlesztés során a szoftver specifikációi rugalmasan vátozhatnak, és ezzel a módszertannal tudunk a leggyorsabban alkalmazkodni az új elvárásokhoz.
 
-`A szoftver MVC alapú REST webszolgáltatásként működik. A szerver és a kliens függetlenek, csupán API végpontok segítségével kommunikálnak.`
+A szoftver MVC alapú REST webszolgáltatásként működik. A szerver és a kliens függetlenek, csupán API végpontok segítségével kommunikálnak.
 
 
 ### 8.2. Átadandók és határidők
@@ -624,4 +621,4 @@ Erőforrásigény:  1 személynap
 |					   Oberhauser Attila				| 			4			 |				17			  |			  35			|			  14		   |	 70	   |
 |                      Nagy Eliot               |           4            |              12            |           33           |             21           |     70    |
 
-Szeged, `2021-10-25`.
+Szeged, 2021-11-06.
