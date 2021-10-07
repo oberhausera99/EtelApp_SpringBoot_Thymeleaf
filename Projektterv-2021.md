@@ -16,7 +16,7 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 | 0.6  | Nagy Eliot             | 2021-10-03 | Előterjesztett    | Konfliktus feloldás, Erőforrásigény- és feladatszámok pontosítása megbeszélés alapján        |
 | 0.7  | Nagy György             | 2021-10-03 | Előterjesztett    | Összefoglaló és munkamenedzsment                 |
 | 0.8  | Rózsa Kristóf             | 2021-10-03 | Előterjesztett    | Erőforrásigény és feladatszám pontosítáSA                 |
-| 0.9  | Oberhauser Attila             | 2021-10-04 | Elfogadott    | A megrendelő által közzétett minta-gantt diagram közzététele                 |
+| 0.9  | Oberhauser Attila             | 2021-10-04 | Előterjesztett    | A minta-gantt diagram közzététele                 |
 | 0.10  | Nagy Dominik             | 2021-10-05 | Előterjesztett    | Gantt-diagram elkészítése az előre megbeszélt időigények alapján                 |
 
 
@@ -179,7 +179,7 @@ A főbb átadandók és határidők a projekt időtartama alatt a következők:
 
 | Szállítandó |                 Neve                |   Határideje  |
 |:-----------:|:-----------------------------------:|:-------------:|
-|      D1     |       Projektterv és útmutató       | 2021-10-05  |
+|      D1     |       Projektterv és útmutató       | 2021-10-06  |
 |    P1+D2    | UML, DB, képernyőtervek és bemutató | 2021-10-20  |
 |    P1+D3    |      Prototípus I. és bemutató      | 2021-11-10  |
 |    P2+D4    |      Prototípus II. és bemutató     | 2021-12-01  |
