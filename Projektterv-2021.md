@@ -8,15 +8,15 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 
 | Verzió | Szerző(k)                | Dátum        | Státusz         | Megjegyzés                                                    |
 |--------|--------------------------|--------------|-----------------|---------------------------------------------------------------|
-| 0.1  | Nagy György             | 2021-10-01 | Elfogadott      | Az oktató által közétett mintaterv feltöltése                                              |
-| 0.2  |     Nagy Eliot           | 2021-10-02 | Előterjesztés    | A projektterv pontosítása, erőforrásszámítás                     |
+| 0.1  | Nagy György             | 2021-10-01 | Tervezet      | Az oktató által közétett mintaterv feltöltése                                              |
+| 0.2  |     Nagy Eliot           | 2021-10-02 | Tervezet    | A projektterv pontosítása, erőforrásszámítás                     |
 | 0.3  | Rózsa Kristóf               | 2021-10-03 | Előterjesztett | Munkakörnyezet pontosítása és szoftverkörnyezet specifikálása, erőforrás-eloszlás tervezet
 | 0.4  | Nagy György             | 2021-10-03 | Előterjesztett    | Összefoglaló és munkamenedzsment                 |
 | 0.5  | Nagy Dominik             | 2021-10-03 | Előterjesztett    | Funkcionális és nem funckionális követelmények                 |
 | 0.6  | Nagy Eliot             | 2021-10-03 | Előterjesztett    | Konfliktus feloldás, Erőforrásigény- és feladatszámok pontosítása megbeszélés alapján        |
 | 0.7  | Nagy György             | 2021-10-03 | Előterjesztett    | Összefoglaló és munkamenedzsment                 |
-| 0.8  | Rózsa Kristóf             | 2021-10-03 | Előterjesztett    | Erőforrásigény és feladatszám pontosítáSA                 |
-| 0.9  | Oberhauser Attila             | 2021-10-04 | Előterjesztett    | A minta-gantt diagram közzététele                 |
+| 0.8  | Rózsa Kristóf             | 2021-10-03 | Előterjesztett    | Erőforrásigény és feladatszám pontosítása                 |
+| 0.9  | Oberhauser Attila             | 2021-10-04 | Tervezet    | A minta-gantt diagram közzététele                 |
 | 0.10  | Nagy Dominik             | 2021-10-05 | Előterjesztett    | Gantt-diagram elkészítése az előre megbeszélt időigények alapján                 |
 
 
