@@ -8,15 +8,15 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 
 | Verzió | Szerző(k)                | Dátum        | Státusz         | Megjegyzés                                                    |
 |--------|--------------------------|--------------|-----------------|---------------------------------------------------------------|
-| 0.1  | Nagy György             | 2021-10-01 | Elfogadott      | Az oktató által közétett mintaterv feltöltése                                              |
-| 0.2  |     Nagy Eliot           | 2021-10-02 | Előterjesztés    | A projektterv pontosítása, erőforrásszámítás                     |
+| 0.1  | Nagy György             | 2021-10-01 | Tervezet      | Az oktató által közétett mintaterv feltöltése                                              |
+| 0.2  |     Nagy Eliot           | 2021-10-02 | Tervezet    | A projektterv pontosítása, erőforrásszámítás                     |
 | 0.3  | Rózsa Kristóf               | 2021-10-03 | Előterjesztett | Munkakörnyezet pontosítása és szoftverkörnyezet specifikálása, erőforrás-eloszlás tervezet
 | 0.4  | Nagy György             | 2021-10-03 | Előterjesztett    | Összefoglaló és munkamenedzsment                 |
 | 0.5  | Nagy Dominik             | 2021-10-03 | Előterjesztett    | Funkcionális és nem funckionális követelmények                 |
 | 0.6  | Nagy Eliot             | 2021-10-03 | Előterjesztett    | Konfliktus feloldás, Erőforrásigény- és feladatszámok pontosítása megbeszélés alapján        |
 | 0.7  | Nagy György             | 2021-10-03 | Előterjesztett    | Összefoglaló és munkamenedzsment                 |
-| 0.8  | Rózsa Kristóf             | 2021-10-03 | Előterjesztett    | Erőforrásigény és feladatszám pontosítáSA                 |
-| 0.9  | Oberhauser Attila             | 2021-10-04 | Elfogadott    | A megrendelő által közzétett minta-gantt diagram közzététele                 |
+| 0.8  | Rózsa Kristóf             | 2021-10-03 | Előterjesztett    | Erőforrásigény és feladatszám pontosítása                 |
+| 0.9  | Oberhauser Attila             | 2021-10-04 | Tervezet    | A minta-gantt diagram közzététele                 |
 | 0.10  | Nagy Dominik             | 2021-10-05 | Előterjesztett    | Gantt-diagram elkészítése az előre megbeszélt időigények alapján                 |
 
 
@@ -102,9 +102,6 @@ A projekt a következő technológiákat/szoftvereket fogja használni a munka s
  - Heroku platformszolgáltatás
  - Heroku által biztosított PostgreSQL adatbázisszerver
  - Spring Boot (backend)
- - `React.js (frontend)`
- - `Maven szoftverprojekt menedzselő szoftver`
- - `Eclipse IDE`
  - Clion
  - Git verziókövető (GitLab)
  - IntelliJ IDEA
@@ -143,6 +140,12 @@ A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problém�
 	- Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
 	- Érintett témák: A projektben használt technológiák, szerepkörök kiosztása, projektterv kisebb részekre felosztása
 
+ 3. megbeszélés:
+    - Időpont: 2021.10.04.
+    - Hely: Discord
+    - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
+    - Érintett témák: Gantt diagram kitöltésének megbeszélése, projektterv finomhangolása
+
 ### 7.3. Minőségbiztosítás
 
 Az elkészült terveket a terveken nem dolgozó csapattársak közül átnézik, hogy megfelel-e a specifikációnak és az egyes diagramtípusok összhangban vannak-e egymással. A meglévő rendszerünk helyes működését a prototípusok bemutatása előtt a tesztelési dokumentumban leírtak végrehajtása alapján ellenőrizzük és összevetjük a specifikációval, hogy az elvárt eredményt kapjuk-e. További tesztelési lehetőségek: unit tesztek írása az egyes modulokhoz vagy a kód közös átnézése (code review) egy, a vizsgált modul programozásában nem résztvevő csapattaggal. Szoftverünk minőségét a végső leadás előtt javítani kell a rendszerünkre lefuttatott kódelemzés során kapott metrikaértékek és szabálysértések figyelembevételével.
@@ -167,7 +170,7 @@ Minden leadásnál a projektmenedzser jelentést tesz a projekt haladásáról, 
 
 A szoftver fejlesztése során az iteratív és inkrementális fejlesztési modellt alkalmazzuk. A fejlesztés során nagy hangsúlyt fektetünk a folyamatos kommunikcióra. A fejlesztés során a szoftver specifikációi rugalmasan vátozhatnak, és ezzel a módszertannal tudunk a leggyorsabban alkalmazkodni az új elvárásokhoz.
 
-`A szoftver MVC alapú REST webszolgáltatásként működik. A szerver és a kliens függetlenek, csupán API végpontok segítségével kommunikálnak.`
+A szoftver MVC alapú REST webszolgáltatásként működik. A szerver és a kliens függetlenek, csupán API végpontok segítségével kommunikálnak.
 
 
 ### 8.2. Átadandók és határidők
@@ -176,7 +179,7 @@ A főbb átadandók és határidők a projekt időtartama alatt a következők:
 
 | Szállítandó |                 Neve                |   Határideje  |
 |:-----------:|:-----------------------------------:|:-------------:|
-|      D1     |       Projektterv és útmutató       | 2021-10-05  |
+|      D1     |       Projektterv és útmutató       | 2021-10-06  |
 |    P1+D2    | UML, DB, képernyőtervek és bemutató | 2021-10-20  |
 |    P1+D3    |      Prototípus I. és bemutató      | 2021-11-10  |
 |    P2+D4    |      Prototípus II. és bemutató     | 2021-12-01  |
@@ -582,9 +585,6 @@ Erőforrásigény:  1 személynap
 
 ![image](./MINTA-gantt-diagram.png)
 
-```
-Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfeladatokat tartalmazza felelős/tartam bontásban.
-```
 
 ## 11. Projekt költségvetés
 
@@ -597,7 +597,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     Nagy György            |           1          |             4            |           9          |            1.3           |    15.3   |
 |                     Nagy Eliot             |            1           |              2             |             9           |             3.2          |     15.2  |
-|					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.3			|	  ?		|
+|					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.3			|	  15.3		|
 |					  Nagy Dominik			 |			  2 		  |				 2			   |			10			 |			   1.9			|	  15.9	|
 |					   Oberhauser Attila				| 			1			 |				3			  |			  10			|		2	  		   |	 16	   |
 
@@ -618,6 +618,7 @@ Ide kell berakni a Gantt diagramot, amely a 9. fejezetben található részfelad
 |					  Nagy György		| 			4			 |				16			  |			  34			|			  16	   |	 70	   |
 |					   Rózsa Kristóf			| 			4			 |				16			  |			  35			|			  15		   |	 70	   |
 |					   Nagy Dominik				| 			6			 |				17			  |			  32			|			  15		   |	 70	   |
-|					   Oberhauser Attila				| 			4			 |				12			  |			  40			|			  14		   |	 70	   |
+|					   Oberhauser Attila				| 			4			 |				17			  |			  35			|			  14		   |	 70	   |
+|                      Nagy Eliot               |           4            |              12            |           33           |             21           |     70    |
 
-Szeged, `2021-10-25`.
+Szeged, 2021-10-06.
