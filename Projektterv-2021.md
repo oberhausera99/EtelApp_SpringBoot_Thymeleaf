@@ -18,7 +18,7 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 | 0.8  | Rózsa Kristóf             | 2021-10-03 | Előterjesztett    | Erőforrásigény és feladatszám pontosítása                 |
 | 0.9  | Oberhauser Attila             | 2021-10-04 | Tervezet    | A minta-gantt diagram közzététele                 |
 | 0.10  | Nagy Dominik             | 2021-10-05 | Előterjesztett    | Gantt-diagram elkészítése az előre megbeszélt időigények alapján                 |
-| 1.1 | Nagy Györgx            | 2021-10-18 | Előterjesztett    | Projetterv módosítása               |
+| 1.1 | Nagy György        | 2021-10-18 | Előterjesztett    | Projektterv módosítása               |
 
 
 Státusz osztályozás:
