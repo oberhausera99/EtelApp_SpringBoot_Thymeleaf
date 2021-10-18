@@ -284,13 +284,13 @@ Ennek a feladatnak az a célja, hogy egy működő prototípust hozzunk létre, 
 
 Részfeladatai a következők:
 
-#### 9.3.1.  Felhasználói munkamenet üzleti logikája több jogosultsági szinttel (admin, user)
+#### 9.3.1.  Felhasználói munkamenet üzleti logikája több jogosultsági szinttel (admin, user), adatok létrehozása az adatbázisban
 
 Felelős: Rózsa Kristóf
 
-Tartam:  5 nap
+Tartam:  6 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  3 személynap
 
 #### 9.3.2.  Felhasználói munkamenethez kapcsolódó GUI megvalósítása
 
@@ -300,31 +300,17 @@ Tartam:  4 nap
 
 Erőforrásigény:  2 személynap
 
-#### 9.3.3.  Felhasználói munkamenethez szükséges adatok létrehozása az adatbázisban
 
-Felelős: Oberhauser Attila
-
-Tartam:  3 nap
-
-Erőforrásigény:  1 személynap
-
-#### 9.3.4.  Felhasználók kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
+#### 9.3.3.  Felhasználók kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése), GUI megvalósítása
 
 Felelős: Nagy Eliot
 
-Tartam:  4 nap
+Tartam:  6 nap
 
-Erőforrásigény:  3 személynap
+Erőforrásigény:  5 személynap
 
-#### 9.3.5.  Felhasználók kezeléséhez kapcsolódó GUI megvalósítása
 
-Felelős: Nagy György
-
-Tartam:  3 nap
-
-Erőforrásigény:  2 személynap
-
-#### 9.3.6.  Étel rendeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
+#### 9.3.4.  Étel rendeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
 
 Felelős: Rózsa Kristóf
 
@@ -332,39 +318,25 @@ Tartam:  4 nap
 
 Erőforrásigény:  2 személynap
 
-#### 9.3.7.   Étel rendeléséhez kapcsolódó GUI megvalósítása
+
+#### 9.3.5.  Étel rendeléséhez  szükséges adatok létrehozása az adatbázisban, GUI megvalósítása
 
 Felelős: Nagy Dominik
 
-Tartam:  4 nap
+Tartam:  6 nap
 
-Erőforrásigény:  3 személynap
+Erőforrásigény:  4 személynap
 
-#### 9.3.8.  Étel rendeléséhez  szükséges adatok létrehozása az adatbázisban
-
-Felelős: Nagy Dominik
-
-Tartam:  3 nap
-
-Erőforrásigény:  1 személynap
-
-#### 9.3.9.  Ételek, menük készítéséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
-
-Felelős: Nagy Eliot
-
-Tartam:  5 nap
-
-Erőforrásigény:  3 személynap
-
-#### 9.3.10.  Ételek, menük készítéséhez kapcsolódó GUI megvalósítása
+#### 9.3.6.  Ételek, menük készítéséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése), GUI megvalósítása
 
 Felelős: Oberhauser Attila
 
-Tartam:  5 nap
+Tartam:  6 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  5 személynap
 
-#### 9.3.11.  Hozzávalók kezeléséhez szükséges adatok létrehozása az adatbázisban
+
+#### 9.3.7.  Hozzávalók kezeléséhez szükséges adatok létrehozása az adatbázisban
 
 Felelős: Oberhauser Attila
 
@@ -372,23 +344,16 @@ Tartam:  3 nap
 
 Erőforrásigény:  1 személynap
 
-#### 9.3.12.  Futárok kezeléséhez kapcsolódó üzleti logika (listázása, módosítása, létrehozása, törlése)
-
-Felelős: Rózsa Kristóf
-
-Tartam:  4 nap
-
-Erőforrásigény:  2 személynap
-
-#### 9.3.13.  Futárok kezeléséhez kapcsolódó GUI megvalósítása
+#### 9.3.8.  Futárok kezeléséhez kapcsolódó üzleti logika (listázása, módosítása, létrehozása, törlése), GUI megvalósítása
 
 Felelős: Nagy György
 
-Tartam:  5 nap
+Tartam:  6 nap
 
-Erőforrásigény:  3 személynap
+Erőforrásigény:  5 személynap
 
-#### 9.3.14.  Futárok kezeléséhez szükséges adatok létrehozása az adatbázisban
+
+#### 9.3.9.  Futárok kezeléséhez szükséges adatok létrehozása az adatbázisban
 
 Felelős: Oberhauser Attila
 
@@ -396,23 +361,16 @@ Tartam:  3 nap
 
 Erőforrásigény:  1 személynap
 
-#### 9.3.15.  Fuvarok kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése)
+#### 9.3.10.  Fuvarok kezeléséhez tartozó üzleti logika (listázása, módosítása, létrehozása, törlése), GUI megvalósítása
 
 Felelős: Nagy Dominik
 
-Tartam:  4 nap
+Tartam:  7 nap
 
-Erőforrásigény:  2 személynap
+Erőforrásigény:  5 személynap
 
-#### 9.3.16.  Fuvarok kezeléshez kapcsolódó GUI megvalósítása
 
-Felelős: Nagy György
-
-Tartam:  5 nap
-
-Erőforrásigény:  3 személynap
-
-#### 9.3.17.  Fuvarok kezeléséhez szükséges adatok létrehozása az adatbázisban
+#### 9.3.11.  Fuvarok kezeléséhez szükséges adatok létrehozása az adatbázisban
 
 Felelős: Nagy Eliot
 
@@ -420,31 +378,31 @@ Tartam:  3 nap
 
 Erőforrásigény:  2 személynap
 
-#### 9.3.18.  Értesítés sikeres rendelés esetén
+#### 9.3.12.  Értesítés sikeres rendelés esetén
 
-Felelős: Oberhauser Attila
+Felelős: Nagy Eliot
 
 Tartam:  5 nap
 
 Erőforrásigény:  2 személynap
 
-#### 9.3.19.  Fuvar idejének megjelenítése 
+#### 9.3.13.  Fuvar idejének megjelenítése 
 
 Felelős: Rózsa Kristóf
 
 Tartam:  3 nap
 
-Erőforrásigény:  1 személynap
-
-#### 9.3.20.  Kapcsolatfelvételi űrlap biztosítása új ügyfelek számára (üzleti logika és GUI)
-
-Felelős: Nagy Dominik
-
-Tartam:  4 nap
-
 Erőforrásigény:  2 személynap
 
-#### 9.3.21.  Biztonsági mentés automatikus létrehozása
+#### 9.3.14.  Kapcsolatfelvételi űrlap biztosítása új ügyfelek számára (üzleti logika és GUI)
+
+Felelős: Nagy György
+
+Tartam:  5 nap
+
+Erőforrásigény:  3 személynap
+
+#### 9.3.15.  Biztonsági mentés automatikus létrehozása
 
 Felelős: Rózsa Kristóf
 
@@ -452,7 +410,7 @@ Tartam:  4 nap
 
 Erőforrásigény:  2 személynap
 
-#### 9.3.22. Tesztelési dokumentum (TP, TC)
+#### 9.3.16. Tesztelési dokumentum (TP, TC)
 
 Felelős: Mindenki
 
@@ -461,7 +419,7 @@ Tartam:  3 nap
 Erőforrásigény:  1 személynap/fő
 
 
-#### 9.3.23. Bemutató elkészítése 
+#### 9.3.17. Bemutató elkészítése 
 
 Felelős: Nagy Dominik
 
