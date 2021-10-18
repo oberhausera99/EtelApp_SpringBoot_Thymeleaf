@@ -18,6 +18,7 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 | 0.8  | Rózsa Kristóf             | 2021-10-03 | Előterjesztett    | Erőforrásigény és feladatszám pontosítása                 |
 | 0.9  | Oberhauser Attila             | 2021-10-04 | Tervezet    | A minta-gantt diagram közzététele                 |
 | 0.10  | Nagy Dominik             | 2021-10-05 | Előterjesztett    | Gantt-diagram elkészítése az előre megbeszélt időigények alapján                 |
+| 1.1 | Nagy Györgx            | 2021-10-18 | Előterjesztett    | Projetterv módosítása               |
 
 
 Státusz osztályozás:
@@ -569,7 +570,7 @@ Erőforrásigény:  1 személynap
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
-|                     Nagy György          |            1           |              2             |            4            |             2           |    9     |
+|                     Nagy György          |            1           |              2             |            3           |             2           |    9     |
 |                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
 | 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   1			|	 11		|
 | 					  Nagy Dominik			 |			  2			  |				1			   |			5			 |			   4			|	 12		|
@@ -579,7 +580,7 @@ Erőforrásigény:  1 személynap
 |                     Név                       | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:---------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |        Maximálisan választható pontszám %-ban |         10% (7)        |            30% (21)        |          50% (35)       |          30% (21)        | 100% (70) |
-|					  Nagy György		| 			4			 |				16			  |			  34			|			  16	   |	 70	   |
+|					  Nagy György		| 			4			 |				19			  |			  31			|			  16	   |	 70	   |
 |					   Rózsa Kristóf			| 			4			 |				16			  |			  35			|			  15		   |	 70	   |
 |					   Nagy Dominik				| 			6			 |				17			  |			  32			|			  15		   |	 70	   |
 |					   Oberhauser Attila				| 			4			 |				17			  |			  35			|			  14		   |	 70	   |
