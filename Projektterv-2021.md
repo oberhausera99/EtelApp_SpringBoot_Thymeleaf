@@ -561,20 +561,20 @@ Erőforrásigény:  1 személynap
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
 |                     Nagy György            |           1          |             4            |           9          |            1.3           |    15.3   |
-|                     Nagy Eliot             |            1           |              2             |             9           |             3.2          |     15.2  |
+|                     Nagy Eliot             |            1           |              2             |             10           |             3.2          |     16.2  |
 |					  Rózsa Kristóf			 |			  1 		  |				 4			   |			10			 |			   0.3			|	  15.3		|
-|					  Nagy Dominik			 |			  2 		  |				 2			   |			10			 |			   1.9			|	  15.9	|
+|					  Nagy Dominik			 |			  2 		  |				 2			   |			11			 |			   1.9			|	  16.9	|
 |					   Oberhauser Attila				| 			1			 |				3			  |			  10			|		2	  		   |	 16	   |
 
 ### 11.2. Részletes feladatszámok
 
 |                     Név                    | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
 |:------------------------------------------:|:----------------------:|:--------------------------:|:-----------------------:|:------------------------:|:---------:|
-|                     Nagy György          |            1           |              2             |            3           |             2           |    9     |
+|                     Nagy György          |            1           |              2             |            3           |             2           |    8    |
 |                     Nagy Eliot             |            1           |              1             |            4            |             4            |    10     |
-| 					  Rózsa Kristóf			 |			  1			  |				2			   |			6			 |			   1			|	 11		|
-| 					  Nagy Dominik			 |			  2			  |				1			   |			5			 |			   4			|	 12		|
-|					   Oberhauser Attila				| 			1			 |				1			  |			  6			|			  1		   |	 9	   |
+| 					  Rózsa Kristóf			 |			  1			  |				2			   |			5			 |			   1			|	 9		|
+| 					  Nagy Dominik			 |			  2			  |				1			   |			4			 |			   4			|	 11		|
+|					   Oberhauser Attila				| 			1			 |				1			  |			  5			|			  1		   |	 8	   |
 ### 11.3. Részletes költségvetés
 
 |                     Név                       | 1. leadás - Projektterv | 2. leadás - UML és adatbázis | 3. leadás - Prototípus I. | 4. leadás - Prototípus II. | Összesen |
