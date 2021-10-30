@@ -1,0 +1,12 @@
+#headerimg{
+    width: 100%;
+}
+
+nav a{
+    width: 25%;
+    text-align: center;
+}
+
+nav{
+    position: fixed;
+}
