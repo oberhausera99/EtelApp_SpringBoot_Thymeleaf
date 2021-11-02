@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bejelentkezés</title>
+    <title>Regisztráció</title>
     <meta name="author" content="Nagy György, Nagy Eliot, Nagy Dominik, Rózsa Kristóf, Oberhauser Attila" />
-    <meta name="description" content="Bejelentkezés illetve regisztráció" />
+    <meta name="description" content="Regisztráció" />
     <meta name="generator" content="Webstorm" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
@@ -21,26 +21,37 @@
         </nav>
     </header>
     <main>
-        <h1>Bejelentkezés</h1>
+        <h1>Regisztráció</h1>
     </main>
 
-    <form action="/bejelentkezes" method="post">
+    <form action="/regisztracio" method="post">
         <div class="container">
+            <label for="name"><b>Név</b></label>
+                <input type="text" placeholder="Nev" name="name" id="name" required>
+            <br>
+
+            <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Email" name="email" id="email" required>
+            <br>
+
             <label for="uname"><b>Felhasználónév</b></label>
                 <input type="text" placeholder="Felhasznalonev" name="uname" id="uname" required>
             <br>
 
             <label for="passwd"><b>Jelszó</b></label>
-                <input type="text" placeholder="Jelszo" name="passwd" id="passwd" required>
+                <input type="password" placeholder="Jelszo" name="passwd" id="passwd" required>
             <br>
 
-            <button type="submit" class="registerbtn">Bejelentkezés</button>
+            <label for="passwd-repeat"><b>Jelszó ismét</b></label>
+                <input type="password" placeholder="Jelszo Ismet" name="passwd-repeat" id="passwd-repeat" required>
+            <br>
+
+            <button type="submit" class="registerbtn">Regisztráció</button>
             <hr>
         </div>
     </form> 
 
     <footer>
-
     </footer>
     </body>
 </html>
