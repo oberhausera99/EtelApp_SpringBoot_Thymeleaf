@@ -18,12 +18,21 @@ public class IndexController {
 	    return "index.html";
 	 }
 	  
-	
-	
+	  @GetMapping("/kosar")
+	  public String getKosar(){
+	    return "kosar.html";
+	 }
+	  
 	  
 	  @GetMapping("/kapcsolat")
 	  public String getKapcsolat(){
 	    return "kapcsolat";
 	 }
+	  
+	  @GetMapping("/bejelentkezes")
+	  public String getBejelentkezes(){
+	    return "bejelentkezes.html";
+	 }
+	  
 }
 
