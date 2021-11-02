@@ -26,13 +26,18 @@ public class IndexController {
 	  
 	  @GetMapping("/kapcsolat")
 	  public String getKapcsolat(){
-	    return "kapcsolat";
+	    return "kapcsolat.html";
 	 }
 	  
 	  @GetMapping("/bejelentkezes")
 	  public String getBejelentkezes(){
 	    return "bejelentkezes.html";
 	 }
+
+	@GetMapping("/futarok")
+	public String getFutarok(){
+		return "futarok.html";
+	}
 	  
 }
 
