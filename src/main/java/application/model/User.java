@@ -9,6 +9,10 @@ public class User {
 		this.jogosultsag = jogosultsag;
 	}
 	
+	public User() {
+		
+	}
+	
 	private String name;
 	private String uName;
 	private String password;

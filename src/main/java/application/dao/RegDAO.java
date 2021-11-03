@@ -23,6 +23,22 @@ public class RegDAO extends JdbcDaoSupport  {
 		setDataSource(dataSource);
 	}
 	
+	public User getUserFromUName(String uName) {
+		String sql = "SELECT * FROM felhasznalo WHERE felhasznalonev=?";
+		
+		User user = getJdbcTemplate().queryForObject(sql, new Object[] {uName}, new UserRowMapper());
+		return user;
+	}
+	
+	public boolean credsCorrect(String uName, String password) {
+		String sql = "SELECT COUNT(*) FROM felhasznalo WHERE felhasznalonev=? AND jelszo=?";
+		int count = getJdbcTemplate().queryForObject(sql, new Object[]{
+				uName, password
+		}, Integer.class);
+		
+		return count > 0;
+	}
+	
 	public boolean insertUser(User user) {		
 		String sql = "SELECT COUNT(*) FROM felhasznalo WHERE felhasznalonev=?";
 		

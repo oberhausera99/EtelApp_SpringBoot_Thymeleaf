@@ -37,7 +37,15 @@ public class RegController {
 	@PostMapping(value = "/bejelentkezes")
 	public String loginUser(@RequestParam("uname") String uname, @RequestParam("passwd") String password,
 			HttpSession session) {
-		session.setAttribute("loggedin", true);
-		return "redirect:/";
+		if(regDAO.credsCorrect(uname, password)) {
+			session.setAttribute("loggedin", true);
+			User user = regDAO.getUserFromUName(uname);
+
+			session.setAttribute("user", user);
+			return "redirect:/";
+		}
+		else {
+			return "redirect:/404";
+		}
 	}
 }
