@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import application.controller.IndexController;
 
 @SpringBootApplication
-@ComponentScan(basePackageClasses = IndexController.class)
+@ComponentScan(basePackages = "application")
 public class Application {
 
     public static void main(String[] args) {
