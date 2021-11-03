@@ -12,6 +12,7 @@ import application.dao.DogDAO;
 import application.model.Dog;
 
 
+@Controller
 public class DogController {
 
 	@Autowired

@@ -1,4 +1,4 @@
-package application.controller;
+	package application.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,6 +33,10 @@ public class IndexController {
 	  public String getBejelentkezes(){
 	    return "bejelentkezes.html";
 	 }
+	  @GetMapping("/regisztracio")
+	  public String getRegisztracio(){
+		  return "regisztracio.html";
+	  }
 
 	@GetMapping("/futarok")
 	public String getFutarok(){
@@ -40,4 +44,3 @@ public class IndexController {
 	}
 	  
 }
-
