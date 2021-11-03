@@ -17,9 +17,13 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 | 0.7  | Nagy György             | 2021-10-03 | Előterjesztett    | Összefoglaló és munkamenedzsment                 |
 | 0.8  | Rózsa Kristóf             | 2021-10-03 | Előterjesztett    | Erőforrásigény és feladatszám pontosítása                 |
 | 0.9  | Oberhauser Attila             | 2021-10-04 | Tervezet    | A minta-gantt diagram közzététele                 |
-| 0.10  | Nagy Dominik             | 2021-10-05 | Előterjesztett    | Gantt-diagram elkészítése az előre megbeszélt időigények alapján                 |
+| 0.10  | Nagy Dominik             | 2021-10-05 | Elfogadott    | Gantt-diagram elkészítése az előre megbeszélt időigények alapján                 |
 | 1.1 | Nagy György        | 2021-10-18 | Előterjesztett    | Projektterv módosítása               |
-
+| 1.2 | Rózsa Kristóf     | 2021-10-16 | Előterjesztett    | Class diagram elkészítése           |
+| 1.3 | Oberhauser Attila        | 2021-10-16 | Előterjesztett    | EK diagram feltöltése              |
+| 1.4 | Nagy György        | 2021-10-18 | Elfogadott    | Képernyőtervek feltöltése            |
+| 2.1 | Nagy György        | 2021-10-29 | Tervezet    | Heroku kialakitása            |
+| 2.2 | Nagy Dominik       | 2021-11-02 | Előterjesztett    | Futárok html létrehozása              |
 
 Státusz osztályozás:
  - Tervezet: befejezetlen dokumentum, a mérföldkő leadása előtti napokban
@@ -152,6 +156,12 @@ A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problém�
     - Hely: Discord
     - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
     - Érintett témák: UML-diagramok véglegesítése, feladatok elosztásának javítása, 3. mérföldkőre való készülés
+ 5. megbeszélés:
+    - Időpont: 2021.11.03.
+    - Hely: Discord
+    - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
+    - Érintett témák: Heroku megbeszélése , oldal kinézetének egyeztetése, feladatok elosztása
+
 
 ### 7.3. Minőségbiztosítás
 
