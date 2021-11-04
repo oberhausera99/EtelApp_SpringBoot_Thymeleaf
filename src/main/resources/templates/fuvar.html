@@ -23,6 +23,66 @@
 </header>
 <main>
     <h1>Fuvarok</h1>
+    <div>
+        <h2>Jelenlegi fuvar megbízások</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID, </th>
+                <th>Rendelés ID,</th>
+                <th>Futár ID</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="fuvar : ${fuvars}">
+                <td th:text="${fuvar.id}"></td>
+                <td th:text="${fuvar.rendelesid}"></td>
+                <td th:text="${fuvar.futarid}"></td>
+                <td><a th:href="@{/edit/{id}(id=${fuvar.id})}">Módosítás</a></td>
+                <td><button data-toggle="modal" data-target="#modal-toTrash"
+                            th:attr="data-target='#modal-toTrash'+${fuvar.id}" class="btn-sm btn-dark details">Törlés
+                    <span class="glyphicon glyphicon-trash" data-toggle="tooltip"
+                          data-placement="top" title="Sent to Trash Box"></span></button>
+                </td>
+                <div class="modal modal-toTrash" th:id="modal-toTrash+${fuvar.id}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">×
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="error-text"><strong>Biztosan törölni szeretné?</strong></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn-sm btn-dark details" data-dismiss="modal" aria-hidden="true">
+                                    Mégse
+                                </button>
+                                <!--a th:href="@{/deletefuvar/{id}(id=${fuvar.id})}"-->
+                                <form th:action="@{/deletefuvar/{id}(id=${fuvar.id})}" method="post">
+                                    <button class="btn-sm btn-dark details" type="submit" value="delete">igen</button></a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Fuvar hozzáadása:</h2>
+        <form th:action="@{/addfuvar}" method="post">
+            <label>Rendelés ID:
+                <input type="text" name="rendelesid" id="rendelesid"></input>
+            </label>
+            <label>Futár ID:
+                <input type="text" name="futarid" id="futarid"></input>
+            </label>
+            <input type="submit" value="Hozzáadás" class="btn-sm btn-dark details"></input>
+        </form>
+    </div>
 </main>
 <footer>
 
