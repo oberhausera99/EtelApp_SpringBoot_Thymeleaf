@@ -59,5 +59,16 @@ public class IndexController {
 		}
 		return "redirect:/";
 	}
+
+	@GetMapping("/fuvar")
+	public String getFuvar(HttpSession session){
+		if(session.getAttribute("loggedin") != null) {
+			User user = (User) session.getAttribute("user");
+			if(user.getJogosultsag() == true) {
+				return "fuvar.html";
+			}
+		}
+		return "redirect:/";
+	}
 	  
 }
