@@ -27,7 +27,7 @@
 <body>
 <div>
     <h2>Futár módosítás</h2>
-    <form action="#" th:action="@{/update/{id}(id=${futar.id})}" method="post">
+    <form action="#" th:action="@{/updatefuvar/{id}(id=${futar.id})}" method="post">
         <label>Name:
             <input type="text" name="name" id="name" th:value="${futar.name}"></input>
         </label>

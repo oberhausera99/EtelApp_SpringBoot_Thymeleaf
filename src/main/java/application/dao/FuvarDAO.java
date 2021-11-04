@@ -38,8 +38,8 @@ public class FuvarDAO extends JdbcDaoSupport  {
         for(Map<String, Object> row:rows){
             Fuvar fuvar = new Fuvar();
             fuvar.setRendelesid((Integer)row.get("rendelesid"));
-            fuvar.setFutarid((Integer) row.get("futarid"));
-            fuvar.setid((Integer) row.get("id"));
+            fuvar.setFutarid((Integer)row.get("futarid"));
+            fuvar.setid((Integer)row.get("id"));
             result.add(fuvar);
         }
 
