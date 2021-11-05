@@ -2,9 +2,9 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>Menü</title>
+    <title>Kijelentkezés</title>
     <meta name="author" content="Nagy György, Nagy Eliot, Nagy Dominik, Rózsa Kristóf, Oberhauser Attila" />
-    <meta name="description" content="Ez a menü" />
+    <meta name="description" content="Kijelentkezés felület" />
     <meta name="generator" content="Webstorm" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
@@ -18,13 +18,18 @@
             <a class="navbar-brand" th:href="@{/kosar}">Kosár</a>
             <a class="navbar-brand" th:href="@{/regisztracio}">Regisztráció</a>
             <a class="navbar-brand" th:href="@{/bejelentkezes}">Bejelentkezés</a>
-            <a class="navbar-brand" th:href="@{/kijelentkezes}">Kijelentkezés</a>
             <a class="navbar-brand" th:href="@{/futarok}">Futárok</a>
             <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
         </nav>
     </header>
     <main>
-        <h1>Menü</h1>
+        <form action="/kijelentkezes" method="post">
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                <button type="submit button" class="btn btn-secondary">Kijelentkezés</button>
+                </div>
+            </div>        
+        </form>
     </main>
     <footer>
 

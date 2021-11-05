@@ -43,10 +43,12 @@ public class IndexController {
 		  return "regisztracio.html";
 	  }
 	  
-	  @GetMapping("kijelentkezes")
+	  @GetMapping("/kijelentkezes")
 	  public String getKijelentkezes(HttpSession session) {
-		  session.invalidate();
-		  return "redirect:/";
+		  if(session.getAttribute("loggedin") != null) { 
+			  return "kijelentkezes.html";
+		  }
+		  return "redirect:/bejelentkezes";
 	  }
 
 	@GetMapping("/futarok")

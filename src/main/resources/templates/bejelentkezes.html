@@ -16,30 +16,38 @@
             <a class="navbar-brand"  th:href="@{/index}">Menü</a>
             <a class="navbar-brand" th:href="@{/kapcsolat}">Kapcsolat</a>
             <a class="navbar-brand" th:href="@{/kosar}">Kosár</a>
+            <a class="navbar-brand" th:href="@{/regisztracio}">Regisztráció</a>
             <a class="navbar-brand" th:href="@{/bejelentkezes}">Bejelentkezés</a>
             <a class="navbar-brand" th:href="@{/futarok}">Futárok</a>
             <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
         </nav>
     </header>
     <main>
-        <h1>Bejelentkezés</h1>
+        <div class="container">
+            <div class="row justify-content-center mb-3">
+                <h1>Bejelentkezés</h1>
+            </div>
+        </div>
     </main>
 
     <form action="/bejelentkezes" method="post">
         <div class="container">
+            <div class="mb-3 ml-5 mr-5">
             <label for="uname"><b>Felhasználónév</b></label>
-                <input type="text" placeholder="Felhasznalonev" name="uname" id="uname" required>
-            <br>
+                <input type="text" class="form-control" placeholder="Felhasználónév" name="uname" id="uname" required>
+            </div>
 
+            <div class="mb-3 ml-5 mr-5">
             <label for="passwd"><b>Jelszó</b></label>
-                <input type="text" placeholder="Jelszo" name="passwd" id="passwd" required>
-            <br>
+                <input type="text" class="form-control" placeholder="Jelszó" name="passwd" id="passwd" required>
+            </div>
 
-            <button type="submit" class="registerbtn">Bejelentkezés</button>
+            <div class="row justify-content-center">
+                <button type="submit" class="ml-3 registerbtn btn btn-secondary">Bejelentkezés</button>
+            </div>
             <hr>
         </div>
     </form> 
-
     <footer>
 
     </footer>
