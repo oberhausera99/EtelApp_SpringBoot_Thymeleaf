@@ -22,32 +22,43 @@
         </nav>
     </header>
     <main>
-        <h1>Regisztráció</h1>
+        <div class="container">
+            <div class="row justify-content-center mb-3">
+                <h1>Regisztráció</h1>
+            </div>
+        </div>
     </main>
 
     <form action="/regisztracio" method="post">
         <div class="container">
-            <label for="name"><b>Név</b></label>
-                <input type="text" placeholder="Nev" name="name" id="name" required>
-            <br>
+            <div class="mb-3 ml-5 mr-5">
+            <label for="name"><b>Teljes név</b></label>
+                <input type="text" class="form-control" placeholder="Teljes név" name="name" id="name" required>
+            </div>
 
-            <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Email" name="email" id="email" required>
-            <br>
+            <div class="mb-3 ml-5 mr-5">
+            <label for="email"><b>E-mail cím</b></label>
+                <input type="text" class="form-control" placeholder="E-mail cím" name="email" id="email" required>
+            </div>
 
+            <div class="mb-3 ml-5 mr-5">
             <label for="uname"><b>Felhasználónév</b></label>
-                <input type="text" placeholder="Felhasznalonev" name="uname" id="uname" required>
-            <br>
+                <input type="text" class="form-control" placeholder="Felhasználónév" name="uname" id="uname" required>
+            </div>
 
+            <div class="mb-3 ml-5 mr-5">
             <label for="passwd"><b>Jelszó</b></label>
-                <input type="password" placeholder="Jelszo" name="passwd" id="passwd" required>
-            <br>
+                <input type="password" class="form-control" placeholder="Jelszó" name="passwd" id="passwd" required>
+            </div>
 
+            <div class="mb-3 ml-5 mr-5">
             <label for="passwd-repeat"><b>Jelszó ismét</b></label>
-                <input type="password" placeholder="Jelszo Ismet" name="passwd-repeat" id="passwd-repeat" required>
-            <br>
+                <input type="password" class="form-control" placeholder="Jelszó ismét" name="passwd-repeat" id="passwd-repeat" required>
+            </div>
 
-            <button type="submit" class="registerbtn">Regisztráció</button>
+            <div class="row justify-content-center">
+            <button type="submit" class="registerbtn btn btn-secondary">Regisztráció</button>
+            </div>
             <hr>
         </div>
     </form> 
