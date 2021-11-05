@@ -23,9 +23,9 @@ public class FutarDAO extends JdbcDaoSupport  {
 	}
 	
 	public void insertFutar(Futar futar) {
-		String sql = "INSERT INTO futar(name, age) VALUES (?, ?)";
+		String sql = "INSERT INTO futar(name, alkalmazott_miota) VALUES (?, ?)";
 		getJdbcTemplate().update(sql, new Object[]{
-				futar.getName(), futar.getAge()
+				futar.getName(), futar.getAlkalmazott_miota()
 		});
 	}
 	
@@ -38,7 +38,7 @@ public class FutarDAO extends JdbcDaoSupport  {
 			Futar futar = new Futar();
 			futar.setId((Integer)row.get("id"));
 			futar.setName((String)row.get("name"));
-			futar.setAge((Integer) row.get("age"));
+			futar.setAlkalmazott_miota((Integer) row.get("alkalmazott_miota"));
 			result.add(futar);
 		}
 		
@@ -54,7 +54,7 @@ public class FutarDAO extends JdbcDaoSupport  {
 			Futar futar = new Futar();
 			futar.setId((Integer)row.get("id"));
 			futar.setName((String)row.get("name"));
-			futar.setAge((Integer) row.get("age"));
+			futar.setAlkalmazott_miota((Integer) row.get("alkalmazott_miota"));
 			result.add(futar);
 		}
 		
@@ -66,8 +66,8 @@ public class FutarDAO extends JdbcDaoSupport  {
 		getJdbcTemplate().update(sql);	
 	}
 	
-	public void updateFutar(int id,String name, int age){
-		String sql = "UPDATE futar SET name='"+name+"', age='"+age+"' WHERE id="+id;
+	public void updateFutar(int id,String name, int alkalmazott_miota){
+		String sql = "UPDATE futar SET name='"+name+"', alkalmazott_miota='"+alkalmazott_miota+"' WHERE id="+id;
 		getJdbcTemplate().update(sql);	
 	}
 	

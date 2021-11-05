@@ -32,15 +32,15 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Age</th>
+            <th>Alkalmazott mióta</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="futar : ${futarok}">
             <td th:text="${futar.id}"></td>
             <td th:text="${futar.name}"></td>
-            <td th:text="${futar.age}"></td>
-            <td><a th:href="@{/edit/{id}(id=${futar.id})}">Update</a></td>
+            <td th:text="${futar.alkalmazott_miota}"></td>
+            <td><a th:href="@{/editfutar/{id}(id=${futar.id})}">Update</a></td>
             <td><button data-toggle="modal" data-target="#modal-toTrash"
                         th:attr="data-target='#modal-toTrash'+${futar.id}" class="btn-sm btn-dark details">Delete
                 <span class="glyphicon glyphicon-trash" data-toggle="tooltip"
@@ -61,8 +61,8 @@
                             <button class="btn-sm btn-dark details" data-dismiss="modal" aria-hidden="true">
                                 Cancel
                             </button>
-                            <!--a th:href="@{/delete/{id}(id=${futar.id})}"-->
-                            <form th:action="@{/delete/{id}(id=${futar.id})}" method="post">
+                            <!--a th:href="@{/deletefutar/{id}(id=${futar.id})}"-->
+                            <form th:action="@{/deletefutar/{id}(id=${futar.id})}" method="post">
                                 <button class="btn-sm btn-dark details" type="submit" value="delete">Yes</button></a>
                             </form>
                         </div>
@@ -75,12 +75,12 @@
 </div>
 <div>
     <h2>Futár hozzáadása</h2>
-    <form th:action="@{/add}" method="post">
+    <form th:action="@{/addfutar}" method="post">
         <label>Name:
             <input type="text" name="name" id="name"></input>
         </label>
-        <label>Age:
-            <input type="text" name="age" id="age"></input>
+        <label>Alkalmazott mióta:
+            <input type="text" name="alkalmazott_miota" id="alkalmazott_miota"></input>
         </label>
         <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
     </form>

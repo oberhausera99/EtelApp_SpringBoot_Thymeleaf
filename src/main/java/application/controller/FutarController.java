@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import application.dao.FutarDAO;
 import application.model.Futar;
 
-
+@Controller
 public class FutarController {
 
 	@Autowired
@@ -24,32 +24,32 @@ public class FutarController {
 		return "futarok.html";
 	}
 
-	@PostMapping(value = "/add")
-	public String addFutar(@RequestParam("name") String name, @RequestParam("age") int age) {
-		Futar futar = new Futar(name, age);
+	@PostMapping(value = "/addfutar")
+	public String addFutar(@RequestParam("name") String name, @RequestParam("alkalmazott_miota") int alkalmazott_miota) {
+		Futar futar = new Futar(name, alkalmazott_miota);
 		futarDAO.insertFutar(futar);
 
 		return "redirect:/";
 	}
 
-	@PostMapping(value = "/delete/{id}")
+	@PostMapping(value = "/deletefutar/{id}")
 	public String deleteFutar(@PathVariable("id") int id) {
 		futarDAO.deleteFutar(id);
 	
 		return "redirect:/";
 	}
 
-	@GetMapping(value = "/edit/{id}")
+	@GetMapping(value = "/editfutar/{id}")
 	public String editFutar(@PathVariable("id") int id, Model model) {
 		Futar futar = futarDAO.getFutarById(id);
 		model.addAttribute("futar", futar);
 
-		return "update-futar.html";
+		return "update-futar";
 	}
 
-	@PostMapping(value = "/update/{id}")
-	public String updateFutar(@PathVariable("id") int id, @RequestParam("name") String name, @RequestParam("age") int age) {
-		futarDAO.updateFutar(id, name, age);
+	@PostMapping(value = "/updatefutar/{id}")
+	public String updateFutar(@PathVariable("id") int id, @RequestParam("name") String name, @RequestParam("alkalmazott_miota") int alkalmazott_miota) {
+		futarDAO.updateFutar(id, name, alkalmazott_miota);
 
 		return "redirect:/";
 	}

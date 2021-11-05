@@ -8,20 +8,20 @@ public class Futar implements Serializable{
     
     int id;
     String name;
-    int age;
+    int alkalmazott_miota;
  
     public Futar(){
     }
  
-    public Futar(int id, String name, int age) {
+    public Futar(int id, String name, int alkalmazott_miota) {
         this.id = id;
         this.name = name;
-        this.age = age;
+        this.alkalmazott_miota = alkalmazott_miota;
     }
     
-    public Futar(String name, int age) {
+    public Futar(String name, int alkalmazott_miota) {
         this.name = name;
-        this.age = age;
+        this.alkalmazott_miota = alkalmazott_miota;
     }
  
     public int getId() {
@@ -40,17 +40,17 @@ public class Futar implements Serializable{
         this.name = name;
     }
     
-    public int getAge() {
-        return age;
+    public int getAlkalmazott_miota() {
+        return alkalmazott_miota;
     }
     
-    public void setAge(int age) {
-        this.age = age;
+    public void setAlkalmazott_miota(int alkalmazott_miota) {
+        this.alkalmazott_miota = alkalmazott_miota;
     }
 
 	@Override
 	public String toString() {
-		return "Futár [id=" + id + ", name=" + name + ", age=" + age + "]";
+		return "Futár [id=" + id + ", name=" + name + ", alkalmazott_miota=" + alkalmazott_miota + "]";
 	}
  
 }

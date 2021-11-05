@@ -27,12 +27,12 @@
 <body>
 <div>
     <h2>Futár módosítás</h2>
-    <form action="#" th:action="@{/update/{id}(id=${futar.id})}" method="post">
+    <form action="#" th:action="@{/updatefutar/{id}(id=${futar.id})}" method="post">
         <label>Name:
             <input type="text" name="name" id="name" th:value="${futar.name}"></input>
         </label>
-        <label>Age:
-            <input type="text" name="age" id="age" th:value="${futar.age}"></input>
+        <label>Alkalmazott mióta:
+            <input type="text" name="alkalmazott_miota" id="alkalmazott_miota" th:value="${futar.alkalmazott_miota}"></input>
         </label>
         <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
     </form>
