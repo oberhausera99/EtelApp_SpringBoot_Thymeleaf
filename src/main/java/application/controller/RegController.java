@@ -48,4 +48,10 @@ public class RegController {
 			return "redirect:/404";
 		}
 	}
+	
+	@PostMapping(value = "/kijelentkezes")
+		public String logOut(HttpSession session) {
+			session.invalidate();
+			return "redirect:/";
+	}
 }
