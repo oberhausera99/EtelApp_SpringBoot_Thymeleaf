@@ -1,6 +1,7 @@
 package application.controller;
 
 import java.util.AbstractMap.SimpleEntry;
+import java.util.Map.Entry;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -18,14 +19,30 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import application.model.Etel;
 import application.model.Kosar;
-
+import application.model.User;
 import application.dao.EtelDAO;
+import application.dao.KosarDAO;
 
 @Controller
 public class KosarController {
 	@Autowired
 	EtelDAO etelDao;
+	@Autowired
+	KosarDAO kosarDao;
 	
+	@GetMapping(value = "megrendel")
+	public String getMegrendel(HttpSession session) {
+		Kosar kosar = ((Kosar)session.getAttribute("kosar"));
+		User user = ((User)session.getAttribute("user"));
+		
+		for(Entry<Etel, Integer> entry : kosar.getEtelek().entrySet()) {
+			kosarDao.rendelesRogzit(user, entry.getKey());
+		}
+		
+		kosar.getEtelek().clear();
+		return "sikeresrendeles.html";
+	}
+		
 	@GetMapping(value = "/kosar")
 	public String getKosar(HttpSession session, Model model) {
 		Kosar kosar = ((Kosar)session.getAttribute("kosar"));
