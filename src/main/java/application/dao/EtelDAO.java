@@ -47,6 +47,33 @@ import application.model.User;
 			return result;
 		}
 		
+		
+		
+		public List<Etel> listPizzak(){
+			String sql = "SELECT * FROM etel WHERE nev LIKE '%pizza' OR nev LIKE '%Pizza'";
+			List<Map<String, Object>> rows = getJdbcTemplate().queryForList(sql);
+			
+			List<Etel> result = new ArrayList<Etel>();
+			for(Map<String, Object> row:rows){
+				Etel etel = new Etel();
+				etel.setNev((String)row.get("nev"));
+				etel.setAr((Integer)row.get("ar"));
+				result.add(etel);
+			}
+			
+			return result;
+		}
+		
+		
+		 public void insertPizza(Etel etel) {
+				String sql = "INSERT INTO etel(nev, ar) VALUES (?, ?)";
+				getJdbcTemplate().update(sql, new Object[]{
+						etel.getNev(), etel.getAr()
+				});
+			} 
+		
+		
+		
 		public Etel getEtelByNev(String nev){
 			String sql = "SELECT * FROM etel WHERE nev=?";
 			

@@ -22,6 +22,16 @@ public class EtelController {
 		model.addAttribute("etelek", etelDAO.listEtelek());
 		return "rendeles.html";
 	}
+	
+	
+	@GetMapping("/pizzak")
+	public String getPizzak(Model model) {
+		model.addAttribute("etelek", etelDAO.listPizzak());
+		return "pizzak.html";
+	} 
+	
+	
+	
 
 	@GetMapping("/etelek")
 	public String listEtel(Model model) {
@@ -37,6 +47,17 @@ public class EtelController {
 
 		return "index";
 	}
+	 
+	 
+	 @PostMapping(value = "/addpizza")
+		public String addPizza(@RequestParam("nev") String nev, @RequestParam("ar") int ar) {
+			Etel etel = new Etel(nev, ar);
+			etelDAO.insertEtel(etel);
+
+			return "pizzak.html";
+		}
+	 
+	 
 
 	@PostMapping(value = "/deleteetel/{nev}")
 	public String deleteEtel(@PathVariable("nev") String nev) {

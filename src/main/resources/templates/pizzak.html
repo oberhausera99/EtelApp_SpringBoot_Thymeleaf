@@ -33,6 +33,49 @@
             <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
     </nav>
 </header>
+
+		 <div>
+        <h2>Pizzák</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Név</th>
+                <th>Ár</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="etel : ${etelek}">
+                <td th:text="${etel.nev}"></td>
+                <td th:text="${etel.ar}"></td>
+
+                <!--<td><a th:href="@{/editetel/{id}(id=${etel.id})}">Update</a></td>
+                <td><button data-toggle="modal" data-target="#modal-toTrash"
+                            th:attr="data-target='#modal-toTrash'+${etel.id}" class="btn-sm btn-dark details">Delete
+                    <span class="glyphicon glyphicon-trash" data-toggle="tooltip"
+                          data-placement="top" title="Sent to Trash Box"></span></button>
+                </td>
+                <div class="modal modal-toTrash" th:id="modal-toTrash+${etel.id}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">×
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="error-text"><strong>Confirmation</strong></p>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
     <div class="container">
         <div class="row">
             
