@@ -48,6 +48,7 @@
             <td th:text="${item.key.getAr()}">Név</td>
             <td th:text="${item.value}">Darab</td>
             <td><a th:href="@{/updatekosar/{nev}/(nev=${item.key.getNev()})}">Update</a></td>
+            <td><a th:href="@{/kosartorol/{nev}/(nev=${item.key.getNev()})}">Töröl</a></td>
             <br>
         </tr>
         <a href="/megrendel">

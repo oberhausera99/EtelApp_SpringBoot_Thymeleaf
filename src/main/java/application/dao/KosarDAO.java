@@ -23,7 +23,7 @@ public class KosarDAO extends JdbcDaoSupport{
     private void initialize(){
         setDataSource(dataSource);
     }
-    
+	
 	public void rendelesRogzit(User user, Etel etel) {
 		String sql = "INSERT INTO rendeles(nev, ar, felhasznalonev) VALUES (?, ?, ?)";
 		getJdbcTemplate().update(sql, new Object[]{

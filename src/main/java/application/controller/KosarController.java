@@ -30,7 +30,16 @@ public class KosarController {
 	@Autowired
 	KosarDAO kosarDao;
 	
-	@GetMapping(value = "megrendel")
+	@GetMapping(value = "/kosartorol/{nev}")
+	public String getKosartorol(@PathVariable("nev") String nev, HttpSession session) {
+		Kosar kosar = ((Kosar)session.getAttribute("kosar"));
+		Etel etel = etelDao.getEtelByNev(nev);
+		kosar.deleteEtel(etel);
+		
+		return "redirect:/kosar";
+	}
+	
+	@GetMapping(value = "/megrendel")
 	public String getMegrendel(HttpSession session) {
 		Kosar kosar = ((Kosar)session.getAttribute("kosar"));
 		User user = ((User)session.getAttribute("user"));
