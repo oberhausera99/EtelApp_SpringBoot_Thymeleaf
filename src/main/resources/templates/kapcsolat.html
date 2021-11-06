@@ -8,6 +8,20 @@
     <meta name="generator" content="Webstorm" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        input[type="text"]{
+            height: 50px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #form{
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+       
+    </style>
 </head>
 <body>
 <header>
@@ -19,12 +33,14 @@
             <a class="navbar-brand" th:href="@{/regisztracio}" id="reg">Regisztráció</a>
             <a class="navbar-brand" th:href="@{/bejelentkezes}" id="auth">Bejelentkezés</a>
             <script>
+                let bejelentkezett = false;
                 const getCookieValue = (name) => (document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '');
                 if(getCookieValue("bejelentkezve") !== ""){
                     auth.innerHTML = "Kijelentkezés";
                     auth.setAttribute("href", "/kijelentkezes");
                     reg.innerHTML = "Kosár";
                     reg.setAttribute("href", "/kosar");
+                    bejelentkezett = true;
                 }
 
             </script>
@@ -34,10 +50,66 @@
     </nav>
 </header>
 <main>
-    <h1>Kapcsolat</h1>
-</main>
-<footer>
+    <script>
+        function updateTextInput(val) {
+            document.getElementById('ertekeles').value=val;
+        }
 
+    </script>
+    <h1>Kapcsolat</h1>
+    <form id="hidden"  th:action="@{/velemeny}" method="post">
+        <div id="form">
+            <label for="velemeny" >Kérlek fejtsd ki a véleményed a weboldalról!</label>
+            <br/>
+            <input id="velemeny" name="velemeny"  type="text"/>
+            <br/>
+            <label>Értekeld 1-10 skálán:
+                <input type="range"  id="rangeInput" min="1" max="10" />
+                <input hidden type="text" id="ertekeles" name="ertekeles" value="">
+            </label>
+            <br/>
+            <input class="btn btn-primary" onclick="updateTextInput(document.getElementById('rangeInput').value)" type="submit" value="Elküldés"/>
+        </div>
+    </form>
+    <h3>A weboldal szerkesztői:</h3>
+    <ul class="list-group">
+    	<li class="list-group-item">Nagy György</li>
+    	<ul>
+    		<li class="list-group-item">Felelősség: projektmenedszer, dokumentációk</li>
+    		<li class="list-group-item">Email: h049468@stud.u-szeged.hu</li>
+    	</ul>
+    	<li class="list-group-item" >Nagy Eliot</li>
+    	<ul>
+    		<li class="list-group-item" >Felelősség: felhasználói felületek</li>
+    		<li class="list-group-item" >Email: h049431@stud.u-szeged.hu</li>
+    	</ul>
+    	<li class="list-group-item">Nagy Dominik</li>
+    	<ul>
+    		<li class="list-group-item">Felelősség: prezentációk</li>
+    		<li class="list-group-item">Email: h984509@stud.u-szeged.hu</li>
+    	</ul>
+    	<li class="list-group-item">Rózsa Kristóf</li>
+    	<ul>
+    		<li class="list-group-item">Felelősség: a rendszer működési logikája</li>
+    		<li class="list-group-item">Email: h051111@stud.u-szeged.hu</li>
+    	</ul>
+    	<li class="list-group-item">Oberhauser Attila</li>
+    	<ul>
+    		<li class="list-group-item">Felelősség: adatbázis és adatkapcsolatok</li>
+    		<li class="list-group-item">Email: h879870@stud.u-szeged.hu</li>
+    	</ul>
+  	
+    </ul>
+    <script>
+        if(!bejelentkezett){
+            document.getElementById("hidden").hidden = true;
+        }
+    </script>
+</main>
+<footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright: etel-ib153i-5-2021
+        </div>
 </footer>
 </body>
 </html>
