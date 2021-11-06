@@ -34,7 +34,7 @@ public class FutarController {
 
 	@PostMapping(value = "/deletefutar/{id}")
 	public String deleteFutar(@PathVariable("id") int id) {
-		futarDAO.deleteFutar(id);
+	 	futarDAO.deleteFutar(id);
 	
 		return "redirect:/";
 	}

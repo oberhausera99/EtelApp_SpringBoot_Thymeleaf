@@ -1,5 +1,7 @@
 package application.controller;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,12 +38,15 @@ public class RegController {
 	
 	@PostMapping(value = "/bejelentkezes")
 	public String loginUser(@RequestParam("uname") String uname, @RequestParam("passwd") String password,
-			HttpSession session) {
+			HttpSession session, HttpServletResponse response) {
 		if(regDAO.credsCorrect(uname, password)) {
 			session.setAttribute("loggedin", true);
 			User user = regDAO.getUserFromUName(uname);
 
 			session.setAttribute("user", user);
+			Cookie cookie = new Cookie("bejelentkezve", "1");
+			cookie.setPath("/");
+			response.addCookie(cookie);
 			return "redirect:/";
 		}
 		else {
@@ -50,8 +55,14 @@ public class RegController {
 	}
 	
 	@PostMapping(value = "/kijelentkezes")
-		public String logOut(HttpSession session) {
+		public String logOut(HttpSession session, HttpServletResponse response) {
 			session.invalidate();
+			
+			Cookie cookie = new Cookie("bejelentkezve", null);
+			cookie.setPath("/");
+			cookie.setMaxAge(0);
+			response.addCookie(cookie);
+			
 			return "redirect:/";
 	}
 }
