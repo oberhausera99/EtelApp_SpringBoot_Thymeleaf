@@ -13,12 +13,22 @@
 <header>
     <img src="img/header.jpg" id="headerimg" title="header" alt="header"/>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand"  th:href="@{/index}">Menü</a>
-        <a class="navbar-brand" th:href="@{/kapcsolat}">Kapcsolat</a>
-        <a class="navbar-brand" th:href="@{/kosar}">Kosár</a>
-        <a class="navbar-brand" th:href="@{/bejelentkezes}">Bejelentkezés</a>
-        <a class="navbar-brand" th:href="@{/futarok}">Futárok</a>
-        <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
+            <a  class="navbar-brand" th:href="@{/index}">Menü</a>
+            <a class="navbar-brand" th:href="@{/kapcsolat}">Kapcsolat</a>
+            <a class="navbar-brand" th:href="@{/kosar}">Kosár</a>
+            <a class="navbar-brand" th:href="@{/regisztracio}">Regisztráció</a>
+            <a class="navbar-brand" th:href="@{/bejelentkezes}" id="auth">Bejelentkezés</a>
+            <script>
+                const getCookieValue = (name) => (document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '');
+                if(getCookieValue("bejelentkezve") !== ""){
+                    auth.innerHTML = "Kijelentkezés";
+                    auth.setAttribute("href", "/kijelentkezes");
+                }
+
+            </script>
+            <!--<a class="navbar-brand" th:href="@{/kijelentkezes}">Kijelentkezés</a>-->
+            <a class="navbar-brand" th:href="@{/futarok}">Futárok</a>
+            <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
     </nav>
 </header>
 <main>
