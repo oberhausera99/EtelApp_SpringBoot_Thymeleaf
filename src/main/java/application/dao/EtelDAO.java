@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 
 import application.model.Etel;
+import application.model.User;
 
 
 	@Repository
@@ -47,18 +48,11 @@ import application.model.Etel;
 		}
 		
 		public Etel getEtelByNev(String nev){
-			String sql = "SELECT * FROM etel WHERE nev="+nev;
-			List<Map<String, Object>> rows = getJdbcTemplate().queryForList(sql);
+			String sql = "SELECT * FROM etel WHERE nev=?";
 			
-			List<Etel> result = new ArrayList<Etel>();
-			for(Map<String, Object> row:rows){
-				Etel etel = new Etel();
-				etel.setNev((String)row.get("nev"));
-				etel.setAr((Integer)row.get("ar"));
-				result.add(etel);
-			}
-			
-			return result.get(0);
+			Etel etel = getJdbcTemplate().queryForObject(sql, new Object[] {nev}, new EtelRowMapper());
+
+			return etel;
 		}
 		
 		public void deleteEtel(String nev){

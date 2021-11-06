@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import application.dao.DogDAO;
 import application.dao.RegDAO;
+import application.model.Kosar;
 import application.model.User;
 
 @Controller
@@ -44,6 +45,7 @@ public class RegController {
 			User user = regDAO.getUserFromUName(uname);
 
 			session.setAttribute("user", user);
+			session.setAttribute("kosar", new Kosar());
 			Cookie cookie = new Cookie("bejelentkezve", "1");
 			cookie.setPath("/");
 			response.addCookie(cookie);

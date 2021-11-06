@@ -16,6 +16,12 @@ public class EtelController {
 
 	@Autowired
 	private EtelDAO etelDAO;
+	
+	@GetMapping("/rendeles")
+	public String getRendeles(Model model) {
+		model.addAttribute("etelek", etelDAO.listEtelek());
+		return "rendeles.html";
+	}
 
 	@GetMapping("/etelek")
 	public String listEtel(Model model) {

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kosár</title>
+    <title>Futárok</title>
     <meta name="author" content="Nagy György, Nagy Eliot, Nagy Dominik, Rózsa Kristóf, Oberhauser Attila" />
-    <meta name="description" content="Kosár megtekintése" />
+    <meta name="description" content="Futárok" />
     <meta name="generator" content="Webstorm" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
@@ -29,28 +29,52 @@
 
             </script>
             <!--<a class="navbar-brand" th:href="@{/kijelentkezes}">Kijelentkezés</a>-->
-            <a class="navbar-brand" th:href="@{/futarok}">Futárok</a>
+            <a class="navbar-brand" th:href="@{/etelek}">Futárok</a>
             <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
     </nav>
 </header>
 <main>
-    <h1>Kosár</h1>
+    <div>
+        <h2>Ételek</h2>
+        <table>
             <thead>
             <tr>
                 <th>Név</th>
                 <th>Ár</th>
-                <th>Darab</th>
             </tr>
-            <br>
             </thead>
-        <tr th:each="item : ${kosar}">
-            <td th:text="${item.key.getNev()}">Név</td>
-            <td th:text="${item.key.getAr()}">Név</td>
-            <td th:text="${item.value}">Darab</td>
-            <td><a th:href="@{/updatekosar/{nev}/(nev=${item.key.getNev()})}">Update</a></td>
-            <br>
-        </tr>
-         <button type="button">Tovább a megrendeléssel</button> 
+            <tbody>
+            <tr th:each="etel : ${etelek}">
+                <td th:text="${etel.nev}"></td>
+                <td th:text="${etel.ar}"></td>
+                <td><a th:href="@{/kosarbarak/{nev}(nev=${etel.nev})}">Kosárba rak</a></td>
+
+                <!--<td><a th:href="@{/editetel/{id}(id=${etel.id})}">Update</a></td>
+                <td><button data-toggle="modal" data-target="#modal-toTrash"
+                            th:attr="data-target='#modal-toTrash'+${etel.id}" class="btn-sm btn-dark details">Delete
+                    <span class="glyphicon glyphicon-trash" data-toggle="tooltip"
+                          data-placement="top" title="Sent to Trash Box"></span></button>
+                </td>
+                <div class="modal modal-toTrash" th:id="modal-toTrash+${etel.id}">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-hidden="true">×
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="error-text"><strong>Confirmation</strong></p>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </main>
 <footer>
 
