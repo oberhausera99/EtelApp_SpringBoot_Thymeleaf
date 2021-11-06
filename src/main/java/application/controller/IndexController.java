@@ -72,5 +72,10 @@ public class IndexController {
 		}
 		return "redirect:/";
 	}
+
+	@GetMapping("/pizzak")
+	public String getPizzak(){
+		return "pizzak.html";
+	 }
 	  
 }
