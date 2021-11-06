@@ -1,5 +1,7 @@
 package application.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import application.dao.FutarDAO;
 import application.model.Futar;
+import application.model.User;
 
 @Controller
 public class FutarController {
@@ -17,11 +20,16 @@ public class FutarController {
 	@Autowired
 	private FutarDAO futarDAO;
 
-	@GetMapping(value = "/")
-	public String listFutar(Model model) {
-		model.addAttribute("futarok", futarDAO.listFutarok());
-
-		return "futarok.html";
+	@GetMapping("/futarok")
+	public String getFutarok(HttpSession session, Model model){
+		if(session.getAttribute("loggedin") != null) {
+			User user = (User) session.getAttribute("user");
+			if(user.getJogosultsag() == true) {
+				model.addAttribute("futarok", futarDAO.listFutarok());
+				return "futarok.html";
+			}
+		}
+		return "redirect:/";
 	}
 
 	@PostMapping(value = "/addfutar")
