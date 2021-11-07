@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import application.dao.KapcsolatDAO;
-import application.model.Futar;
 import application.model.Kapcsolat;
 import application.model.User;
 
@@ -32,6 +31,13 @@ public class KapcsolatController {
 	@GetMapping(value = "/kosz")
 	public String getKosz() {
 		return "kosz.html";
+	}
+	
+	@GetMapping("/kapcsolat")
+	public String getKapcsolatok(Model model){
+			model.addAttribute("kapcsolatok", kapcsolatDAO.listKapcsolatok());
+				return "kapcsolat.html";
+	
 	}
 
 }

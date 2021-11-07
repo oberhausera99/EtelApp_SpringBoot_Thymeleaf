@@ -57,6 +57,22 @@
 
     </script>
     <h1>Kapcsolat</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Sorszám</th>
+            <th>Vélemény</th>
+            <th>Értékelés</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="kapcsolat : ${kapcsolatok}">
+            <td th:text="${kapcsolat.id}"></td>
+            <td th:text="${kapcsolat.velemeny}"></td>
+            <td th:text="${kapcsolat.ertekeles}"></td>
+        </tr>
+        </tbody>
+    </table>
     <form id="hidden"  th:action="@{/velemeny}" method="post">
         <div id="form">
             <label for="velemeny" >Kérlek fejtsd ki a véleményed a weboldalról!</label>

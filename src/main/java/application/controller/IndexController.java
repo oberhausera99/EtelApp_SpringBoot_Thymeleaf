@@ -34,10 +34,6 @@ public class IndexController {
 	    return "index.html";
 	 }
 	  
-	  @GetMapping("/kapcsolat")
-	  public String getKapcsolat(){
-	    return "kapcsolat.html";
-	 }
 	  
 	  @GetMapping("/bejelentkezes")
 	  public String getBejelentkezes(){

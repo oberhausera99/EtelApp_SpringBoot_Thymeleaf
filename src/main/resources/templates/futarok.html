@@ -50,34 +50,10 @@
                 <td th:text="${futar.name}"></td>
                 <td th:text="${futar.alkalmazott_miota}"></td>
                 <td><a th:href="@{/editfutar/{id}(id=${futar.id})}">Update</a></td>
-                <td><button data-toggle="modal" data-target="#modal-toTrash"
-                            th:attr="data-target='#modal-toTrash'+${futar.id}" class="btn-sm btn-dark details">Delete
-                    <span class="glyphicon glyphicon-trash" data-toggle="tooltip"
-                          data-placement="top" title="Sent to Trash Box"></span></button>
-                </td>
-                <div class="modal modal-toTrash" th:id="modal-toTrash+${futar.id}">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"
-                                        aria-hidden="true">×
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="error-text"><strong>Confirmation</strong></p>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn-sm btn-dark details" data-dismiss="modal" aria-hidden="true">
-                                    Cancel
-                                </button>
-                                <!--a th:href="@{/delete/{id}(id=${futar.id})}"-->
-                                <form th:action="@{/deletefutar/{id}(id=${futar.id})}" method="post">
-                                    <button class="btn-sm btn-dark details" type="submit" value="delete">Yes</button></a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <form th:action="@{/deletefutar/{id}(id=${futar.id})}" method="post">
+                <td><button type="submit" class="btn-sm btn-dark details">Delete</button>
+                </form>
+            </td>
             </tr>
             </tbody>
         </table>
