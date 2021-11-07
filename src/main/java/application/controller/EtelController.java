@@ -30,46 +30,48 @@ public class EtelController {
 		return "pizzak.html";
 	} 
 	
+	@GetMapping("/hamburgerek")
+	public String getHamburgerek(Model model) {
+		model.addAttribute("etelek", etelDAO.listHamburgerek());
+		return "hamburgerek.html";
+	} 
+	
+	@GetMapping("/egyebek")
+	public String getEgyebek(Model model) {
+		model.addAttribute("etelek", etelDAO.listEgyebek());
+		return "egyebek.html";
+	} 
+	
 	
 	
 
-	@GetMapping("/etelek")
+	/* @GetMapping("/etelek")
 	public String listEtel(Model model) {
 		model.addAttribute("etelek", etelDAO.listEtelek());
 
 		return "index";
-	}
+	} */
 
 	 @PostMapping(value = "/addetel")
 	public String addEtel(@RequestParam("nev") String nev, @RequestParam("ar") int ar) {
 		Etel etel = new Etel(nev, ar);
 		etelDAO.insertEtel(etel);
 
-		return "index";
+		return "redirect:/";
 	}
-	 
-	 
-	 @PostMapping(value = "/addpizza")
-		public String addPizza(@RequestParam("nev") String nev, @RequestParam("ar") int ar) {
-			Etel etel = new Etel(nev, ar);
-			etelDAO.insertEtel(etel);
-
-			return "pizzak.html";
-		}
-	 
 	 
 
 	@PostMapping(value = "/deleteetel/{nev}")
 	public String deleteEtel(@PathVariable("nev") String nev) {
 		etelDAO.deleteEtel(nev);
 	
-		return "index";
+		return "redirect:/";
 	}
 
 	@GetMapping(value = "/editetel/{nev}")
 	public String editEtel(@PathVariable("nev") String nev, Model model) {
-		Etel etel = etelDAO.getEtelByNev(nev);
-		model.addAttribute("etel", etel);
+		 Etel etel = etelDAO.getEtelByNev(nev);
+		model.addAttribute("etel", etel); 
 
 		return "update-etel";
 	}
@@ -78,6 +80,6 @@ public class EtelController {
 	public String updateEtel(@PathVariable("nev") String nev, @RequestParam("ar") int ar) {
 		etelDAO.updateEtel(nev, ar);
 
-		return "index";
+		return "redirect:/";
 	} 
 }

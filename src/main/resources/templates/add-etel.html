@@ -38,7 +38,7 @@
         <tr th:each="etel : ${etelek}">
             <td th:text="${etel.nev}"></td>
             <td th:text="${etel.ar}"></td>
-            <td><a th:href="@{/editetel/{id}(id=${etel.nev})}">Update</a></td>
+            <td><a th:href="@{/editetel/{nev}(nev=${etel.nev})}">Update</a></td>
             <td><button data-toggle="modal" data-target="#modal-toTrash"
                         th:attr="data-target='#modal-toTrash'+${etel.nev}" class="btn-sm btn-dark details">Delete
                 <span class="glyphicon glyphicon-trash" data-toggle="tooltip"
@@ -60,7 +60,7 @@
                                 Cancel
                             </button>
                             <!--a th:href="@{/deleteetel/{id}(id=${etel.nev})}"-->
-                            <form th:action="@{/deleteetel/{id}(id=${etel.nev})}" method="post">
+                            <form th:action="@{/deleteetel/{nev}(nev=${etel.nev})}" method="post">
                                 <button class="btn-sm btn-dark details" type="submit" value="delete">Yes</button></a>
                             </form>
                         </div>
