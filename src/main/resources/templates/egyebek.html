@@ -33,32 +33,36 @@
             <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
     </nav>
 </header>
-
-	 <div>
-        <h2>Egyéb ételeink</h2>
+        <div class="container">
+        <div class="row justify-content-center"><h2>Egyéb ételeink</h2></div>
+        <div class="row justify-content-center">
         <table>
             <thead>
             <tr>
+                <th></th>	
                 <th>Név</th>
                 <th>Ár</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="etel : ${etelek}">
+            <td><img src="img/meat.png" alt="egyeb"></td>
                 <td th:text="${etel.nev}"></td>
                 <td th:text="${etel.ar}"></td>
 
-                <td><a th:href="@{/editetel/{nev}(nev=${etel.nev})}">Update</a></td>
+                <!--<td><a th:href="@{/editetel/{nev}(nev=${etel.nev})}">Update</a></td>
                 <form th:action="@{/deleteetel/{nev}(nev=${etel.nev})}" method="post">
                 <td><button type="submit" class="btn-sm btn-dark details">Delete</button>
-                </form>
+                </form>-->
+                <td><a th:href="@{/kosarbarak/{nev}(nev=${etel.nev})}"><button class="btn btn-secondary">Kosárba rak</button></a></td>
                 
          
             </tr>
             </tbody>
         </table>
     </div>
-	<div>
+    </div>
+	<!--<div>
     <h2>Egyéb étel hozzáadása</h2>
     <form th:action="@{/addetel}" method="post">
         <label>Név:
@@ -75,7 +79,7 @@
         <div class="row">
             
         </div>
-    </div>
+    </div>-->
 <footer class="bg-light text-center text-lg-start">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2021 Copyright: etel-ib153i-5-2021
