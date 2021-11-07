@@ -44,7 +44,7 @@
                 <span class="glyphicon glyphicon-trash" data-toggle="tooltip"
                       data-placement="top" title="Sent to Trash Box"></span></button>
             </td>
-            <div class="modal modal-toTrash" th:id="modal-toTrash+${etel.nev}">
+              <div class="modal modal-toTrash" th:id="modal-toTrash+${etel.nev}">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -59,6 +59,7 @@
                             <button class="btn-sm btn-dark details" data-dismiss="modal" aria-hidden="true">
                                 Cancel
                             </button>
+                            
                             <!--a th:href="@{/deleteetel/{id}(id=${etel.nev})}"-->
                             <form th:action="@{/deleteetel/{nev}(nev=${etel.nev})}" method="post">
                                 <button class="btn-sm btn-dark details" type="submit" value="delete">Yes</button></a>
