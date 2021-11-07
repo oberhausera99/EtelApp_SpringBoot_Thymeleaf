@@ -84,6 +84,6 @@ public class KosarController {
 		
 		((Kosar)session.getAttribute("kosar")).addEtel(etel);
 				
-		return "redirect:/rendeles";
+		return "redirect:/kosar";
 	}
 }
