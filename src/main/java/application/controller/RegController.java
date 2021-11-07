@@ -46,7 +46,12 @@ public class RegController {
 
 			session.setAttribute("user", user);
 			session.setAttribute("kosar", new Kosar());
-			Cookie cookie = new Cookie("bejelentkezve", "1");
+			
+			String val = "1";
+			if(user.getJogosultsag() == true) {
+				val = "2";
+			}
+			Cookie cookie = new Cookie("bejelentkezve", val);
 			cookie.setPath("/");
 			response.addCookie(cookie);
 			return "redirect:/";
