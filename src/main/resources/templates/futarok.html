@@ -8,6 +8,7 @@
     <meta name="generator" content="Webstorm" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
+ 
 </head>
 <body>
 <header>
@@ -49,9 +50,9 @@
                 <td th:text="${futar.id}"></td>
                 <td th:text="${futar.name}"></td>
                 <td th:text="${futar.alkalmazott_miota}"></td>
-                <td><a th:href="@{/editfutar/{id}(id=${futar.id})}">Update</a></td>
+                <td><a th:href="@{/editfutar/{id}(id=${futar.id})}">Módosítás</a></td>
                 <form th:action="@{/deletefutar/{id}(id=${futar.id})}" method="post">
-                <td><button type="submit" class="btn-sm btn-dark details">Delete</button>
+                <td><button type="submit" class="btn-sm btn-dark details">Törlés</button>
                 </form>
             </td>
             </tr>

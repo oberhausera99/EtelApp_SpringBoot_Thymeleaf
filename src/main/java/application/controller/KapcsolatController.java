@@ -16,13 +16,24 @@ import application.model.User;
 
 @Controller
 public class KapcsolatController {
+	
 
 	@Autowired
 	private KapcsolatDAO kapcsolatDAO;
+	
 
 	@PostMapping(value = "/velemeny")
-	public String addKapcsolat(@RequestParam("velemeny") String velemeny, @RequestParam("ertekeles") int ertekeles) {
-		Kapcsolat kapcsolat = new Kapcsolat(velemeny, ertekeles);
+	public String addKapcsolat(@RequestParam("velemeny") String velemeny, @RequestParam("ertekeles") int ertekeles, HttpSession session)
+	{
+		String felhasznalo;
+		if(session.getAttribute("loggedin") != null) {
+			User user = (User) session.getAttribute("user");
+				felhasznalo = user.getUName();
+			}else {
+				felhasznalo = "";
+			}
+				
+		Kapcsolat kapcsolat = new Kapcsolat(velemeny, ertekeles,felhasznalo);
 		kapcsolatDAO.insertKapcsolat(kapcsolat);
 
 		return "redirect:/kosz";

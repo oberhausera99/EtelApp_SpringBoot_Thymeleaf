@@ -23,9 +23,9 @@ public class KapcsolatDAO extends JdbcDaoSupport  {
 	}
 	
 	public void insertKapcsolat(Kapcsolat kapcsolat) {
-		String sql = "INSERT INTO kapcsolat(velemeny, ertekeles) VALUES (?, ?)";
+		String sql = "INSERT INTO kapcsolat(velemeny, ertekeles, felhasznalo) VALUES (?, ?, ?)";
 		getJdbcTemplate().update(sql, new Object[]{
-				kapcsolat.getVelemeny(), kapcsolat.getErtekeles()
+				kapcsolat.getVelemeny(), kapcsolat.getErtekeles(), kapcsolat.getFelhasznalo()
 		});
 	}
 	
@@ -39,25 +39,11 @@ public class KapcsolatDAO extends JdbcDaoSupport  {
 			kapcsolat.setId((Integer)row.get("id"));
 			kapcsolat.setVelemeny((String)row.get("velemeny"));
 			kapcsolat.setErtekeles((Integer) row.get("ertekeles"));
+			kapcsolat.setFelhasznalo((String) row.get("felhasznalo"));
 			result.add(kapcsolat);
 		}
 		
 		return result;
 	}
 	
-	public Kapcsolat getKapcsolatById(int id){
-		String sql = "SELECT * FROM kapcsolat WHERE id="+id;
-		List<Map<String, Object>> rows = getJdbcTemplate().queryForList(sql);
-		
-		List<Kapcsolat> result = new ArrayList<Kapcsolat>();
-		for(Map<String, Object> row:rows){
-			Kapcsolat kapcsolat = new Kapcsolat();
-			kapcsolat.setId((Integer)row.get("id"));
-			kapcsolat.setVelemeny((String)row.get("velemeny"));
-			kapcsolat.setErtekeles((Integer) row.get(">"));
-			result.add(kapcsolat);
-		}
-		
-		return result.get(0);
-	}
 }

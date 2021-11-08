@@ -9,19 +9,30 @@ public class Kapcsolat implements Serializable{
     int id;
     String velemeny;
     int ertekeles;
+    String felhasznalo;
  
     public Kapcsolat(){
     }
  
-    public Kapcsolat(int id, String velemeny, int ertelekes) {
+    public Kapcsolat(int id, String velemeny, int ertelekes,  String felhasznalo) {
         this.id = id;
         this.velemeny = velemeny;
         this.ertekeles = ertekeles;
+        this.felhasznalo = felhasznalo;
     }
     
-    public Kapcsolat(String velemeny, int ertekeles) {
+    public Kapcsolat(String velemeny, int ertekeles, String felhasznalo) {
         this.velemeny = velemeny;
         this.ertekeles = ertekeles;
+        this.felhasznalo = felhasznalo;
+    }
+    
+    public String getFelhasznalo() {
+        return felhasznalo;
+    }
+    
+    public void setFelhasznalo(String felhasznalo) {
+        this.felhasznalo = felhasznalo;
     }
  
     public int getId() {
@@ -50,7 +61,7 @@ public class Kapcsolat implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Futár [id=" + id + ", velemeny=" + velemeny + ", ertekeles=" + ertekeles + "]";
+		return "Kapcsolat [id=" + id + ", velemeny=" + velemeny + ", ertekeles=" + ertekeles +", felhasznalo=" + felhasznalo + "]";
 	}
  
 }
