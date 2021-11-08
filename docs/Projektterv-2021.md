@@ -162,6 +162,12 @@ A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problém�
     - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
     - Érintett témák: Heroku megbeszélése , oldal kinézetének egyeztetése, feladatok elosztása
 
+ 6. megbeszélés:
+    - Időpont: 2021.11.08.
+    - Hely: Discord
+    - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
+    - Érintett témák: 3. mérföldkő összegzése, az utolsó néhány feladat megbeszélése
+
 
 ### 7.3. Minőségbiztosítás
 
