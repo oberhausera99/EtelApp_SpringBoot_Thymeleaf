@@ -47,6 +47,9 @@ public class KosarController {
 		for(Entry<Etel, Integer> entry : kosar.getEtelek().entrySet()) {
 			kosarDao.rendelesRogzit(user, entry.getKey());
 		}
+		if (kosar.getEtelek().isEmpty()) {
+			return "sikertelen.html";
+		}
 		
 		kosar.getEtelek().clear();
 		return "sikeresrendeles.html";
