@@ -88,7 +88,12 @@ public class KosarController {
 	public String kosarHozzaad(@PathVariable("nev") String nev, HttpSession session) {
 		Etel etel = etelDao.getEtelByNev(nev);
 		
-		((Kosar)session.getAttribute("kosar")).addEtel(etel);
+		Kosar kosar = (Kosar)session.getAttribute("kosar");
+		if(kosar == null) {
+			return "redirect:/";
+		}
+		
+		kosar.addEtel(etel);
 				
 		return "redirect:/kosar";
 	}
