@@ -40,8 +40,14 @@
                     auth.setAttribute("href", "/kijelentkezes");
                     reg.innerHTML = "Kosár";
                     reg.setAttribute("href", "/kosar");
-                    bejelentkezett = true;
+               
+                    if(getCookieValue("bejelentkezve") == 1){
+							bejelentkezett = true;
+						}
+                   
                 }
+               
+               
 
             </script>
             <!--<a class="navbar-brand" th:href="@{/kijelentkezes}">Kijelentkezés</a>-->
@@ -60,14 +66,14 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Sorszám</th>
+            <th>Felhasználó</th>
             <th>Vélemény</th>
             <th>Értékelés</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="kapcsolat : ${kapcsolatok}">
-            <td th:text="${kapcsolat.id}"></td>
+            <td th:text="${kapcsolat.felhasznalo}"></td>
             <td th:text="${kapcsolat.velemeny}"></td>
             <td th:text="${kapcsolat.ertekeles}"></td>
         </tr>
