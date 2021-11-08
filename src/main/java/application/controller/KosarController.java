@@ -58,6 +58,9 @@ public class KosarController {
 	@GetMapping(value = "/kosar")
 	public String getKosar(HttpSession session, Model model) {
 		Kosar kosar = ((Kosar)session.getAttribute("kosar"));
+		if(kosar == null) {
+			return "redirect:/";
+		}
 		model.addAttribute("kosar", kosar.getEtelek());
 		
 		return "kosar.html";
