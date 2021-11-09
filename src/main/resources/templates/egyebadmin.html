@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Egyéb ételek</title>
+    <meta name="author" content="Nagy György, Nagy Eliot, Nagy Dominik, Rózsa Kristóf, Oberhauser Attila" />
+    <meta name="description" content="Pizzák" />
+    <meta name="generator" content="Webstorm" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+<header>
+    <img src="img/header.jpg" id="headerimg" title="header" alt="header"/>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a  class="navbar-brand" th:href="@{/index}">Menü</a>
+            <a class="navbar-brand" th:href="@{/kapcsolat}">Kapcsolat</a>
+            <!--<a class="navbar-brand" th:href="@{/kosar}">Kosár</a>-->
+            <a class="navbar-brand" th:href="@{/regisztracio}" id="reg">Regisztráció</a>
+            <a class="navbar-brand" th:href="@{/bejelentkezes}" id="auth">Bejelentkezés</a>
+            <script>
+                const getCookieValue = (name) => (document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '');
+                if(getCookieValue("bejelentkezve") !== ""){
+                    auth.innerHTML = "Kijelentkezés";
+                    auth.setAttribute("href", "/kijelentkezes");
+                    reg.innerHTML = "Kosár";
+                    reg.setAttribute("href", "/kosar");
+                }
+
+            </script>
+            <!--<a class="navbar-brand" th:href="@{/kijelentkezes}">Kijelentkezés</a>-->
+            <a class="navbar-brand" th:href="@{/futarok}">Futárok</a>
+            <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
+    </nav>
+</header>
+<div class="container">
+        <div class="row justify-content-center"><h2>Egyéb étel</h2></div>
+        <div class="row justify-content-center">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>Név</th>
+                <th>Ár</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="etel : ${etelek}">
+                 <td><img src="img/hambi.png" alt="hamburger"></td>
+                <td th:text="${etel.nev}"></td>
+                <td th:text="${etel.ar}"></td>
+
+             <!--   <td><a th:href="@{/editetel/{nev}(nev=${etel.nev})}">Update</a></td> -->
+                <form th:action="@{/deleteetel/{nev}(nev=${etel.nev})}" method="post">
+                <td><button type="submit" class="btn-sm btn-dark details">Törlés</button>
+                </form>
+                <td><a th:href="@{/kosarbarak/{nev}(nev=${etel.nev})}"><button class="btn btn-secondary">Kosárba rak</button></a></td>
+                
+         
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+	<div>
+	<center>
+    <h2>Egyéb étel hozzáadása</h2>
+    </center>
+    <center>
+    <form th:action="@{/addetel}" method="post">
+        <label>Név:
+            <input type="text" name="nev" id="nev"></input>
+        </label>
+        <label>Ár:
+            <input type="text" name="ar" id="ar"></input>
+        </label>
+        <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
+    </form>
+    </center>
+</div>
+
+    <div class="container">
+        <div class="row">
+            
+        </div>
+    </div>
+<footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright: etel-ib153i-5-2021
+        </div>
+    </footer>
+
+</body>
+</html>

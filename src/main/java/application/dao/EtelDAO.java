@@ -107,16 +107,22 @@ import application.model.User;
 			return etel;
 		}
 		
+
+		 
 		
 		
 		public void deleteEtel(String nev){
 			String sql = "DELETE FROM etel WHERE nev='"+nev+"'";
-			getJdbcTemplate().update(sql);	
+			String rend = "DELETE FROM rendeles WHERE nev ='"+nev+"'";
+			getJdbcTemplate().update(rend);
+			getJdbcTemplate().update(sql);
 		}
 		
 		public void updateEtel(String nev, int ar){
-			 String sql = "UPDATE etel SET nev='"+nev+"', ar="+ar+" WHERE nev='"+nev+"'"; 
-			getJdbcTemplate().update(sql);
+			 String sql = "UPDATE etel SET nev='"+nev+"', ar="+ar+" WHERE nev='"+nev+"'";
+			 getJdbcTemplate().update(sql);
+			 /* nem működik */
+			 
 		}
 			
 	

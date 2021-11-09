@@ -90,7 +90,7 @@ public class KosarController {
 		
 		Kosar kosar = (Kosar)session.getAttribute("kosar");
 		if(kosar == null) {
-			return "redirect:/";
+			return "redirect:/bejelentkezes";
 		}
 		
 		kosar.addEtel(etel);
