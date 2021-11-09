@@ -101,6 +101,9 @@ import application.model.User;
 		 
 		public Etel getEtelByNev(String nev){
 			String sql = "SELECT * FROM etel WHERE nev=?";
+			String deleteSql = "TRUNCATE rendeles CASCADE";
+			
+			getJdbcTemplate().update(deleteSql);
 			
 			Etel etel = getJdbcTemplate().queryForObject(sql, new Object[] {nev}, new EtelRowMapper());
 

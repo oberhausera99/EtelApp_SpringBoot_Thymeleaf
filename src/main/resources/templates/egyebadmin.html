@@ -51,6 +51,9 @@
                 <td th:text="${etel.ar}"></td>
 
              <!--   <td><a th:href="@{/editetel/{nev}(nev=${etel.nev})}">Update</a></td> -->
+                <form th:action="@{/editetel/{nev}(nev=${etel.nev})}" method="get">
+                <td><button type="submit" class="btn-sm btn-dark details">Módosítás</button>
+                </form>
                 <form th:action="@{/deleteetel/{nev}(nev=${etel.nev})}" method="post">
                 <td><button type="submit" class="btn-sm btn-dark details">Törlés</button>
                 </form>
