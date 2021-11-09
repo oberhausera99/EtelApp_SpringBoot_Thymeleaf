@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
-    <title>Fuvar módosítása</title>
+    <title>Futár</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,7 +17,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="/">Menü</a>
+                        <a class="nav-link text-dark" href="/">Vissza</a>
                     </li>
                 </ul>
             </div>
@@ -29,10 +29,10 @@
     <h2>Fuvar módosítása</h2>
     <form action="#" th:action="@{/updatefuvar/{id}(id=${fuvar.id})}" method="post">
         <label>Rendelés ID:
-            <input type="text" name="rendelesid" id="rendelesid"></input>
+            <input type="text" name="name" id="rendelesid" th:value="${fuvar.rendelesid}"></input>
         </label>
         <label>Futár ID:
-            <input type="text" name="futarid" id="futarid"></input>
+            <input type="text" name="futarid" id="futarid" th:value="${fuvar.futarid}"></input>
         </label>
         <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
     </form>

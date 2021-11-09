@@ -5,11 +5,11 @@ import java.util.Map;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
-
-import application.model.Fuvar;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
+
+import application.model.Fuvar;
 
 
 @Repository
@@ -30,16 +30,16 @@ public class FuvarDAO extends JdbcDaoSupport  {
         });
     }
 
-    public List<Fuvar> listFuvars(){
+    public List<Fuvar> listFuvarok(){
         String sql = "SELECT * FROM fuvar";
         List<Map<String, Object>> rows = getJdbcTemplate().queryForList(sql);
 
         List<Fuvar> result = new ArrayList<Fuvar>();
         for(Map<String, Object> row:rows){
             Fuvar fuvar = new Fuvar();
-            fuvar.setRendelesid((Integer)row.get("rendelesid"));
             fuvar.setFutarid((Integer)row.get("futarid"));
             fuvar.setid((Integer)row.get("id"));
+            fuvar.setRendelesid((Integer)row.get("rendelesid"));
             result.add(fuvar);
         }
 
@@ -53,9 +53,9 @@ public class FuvarDAO extends JdbcDaoSupport  {
         List<Fuvar> result = new ArrayList<Fuvar>();
         for(Map<String, Object> row:rows){
             Fuvar fuvar = new Fuvar();
-            fuvar.setRendelesid((Integer)row.get("rendelesid"));
-            fuvar.setFutarid((Integer) row.get("futarid"));
             fuvar.setid((Integer) row.get("id"));
+            fuvar.setFutarid((Integer) row.get("futarid"));
+            fuvar.setRendelesid((Integer)row.get("rendelesid"));
             result.add(fuvar);
         }
 

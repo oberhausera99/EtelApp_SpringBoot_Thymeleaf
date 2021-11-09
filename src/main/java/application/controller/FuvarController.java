@@ -1,5 +1,7 @@
 package application.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import application.dao.FuvarDAO;
 import application.model.Fuvar;
-
+import application.model.User;
 
 @Controller
 public class FuvarController {
@@ -18,11 +20,16 @@ public class FuvarController {
     @Autowired
     private FuvarDAO fuvarDAO;
 
-    @GetMapping(value = "/fuvarok")
-    public String listFuvar(Model model) {
-        model.addAttribute("fuvars", fuvarDAO.listFuvars());
-
-        return "index";
+    @GetMapping("/fuvarok")
+    public String getFuvarok(HttpSession session, Model model){
+        if(session.getAttribute("loggedin") != null) {
+            User user = (User) session.getAttribute("user");
+            if(user.getJogosultsag() == true) {
+                model.addAttribute("fuvarok", fuvarDAO.listFuvarok());
+                return "fuvar.html";
+            }
+        }
+        return "redirect:/";
     }
 
     @PostMapping(value = "/addfuvar")
@@ -30,14 +37,14 @@ public class FuvarController {
         Fuvar fuvar = new Fuvar(rendelesid, futarid);
         fuvarDAO.insertFuvar(fuvar);
 
-        return "fuvar";
+        return "redirect:/";
     }
 
     @PostMapping(value = "/deletefuvar/{id}")
     public String deleteFuvar(@PathVariable("id") int id) {
         fuvarDAO.deleteFuvar(id);
 
-        return "fuvar";
+        return "redirect:/";
     }
 
     @GetMapping(value = "/editfuvar/{id}")
@@ -49,10 +56,10 @@ public class FuvarController {
     }
 
     @PostMapping(value = "/updatefuvar/{id}")
-    public String updateFuvar(@PathVariable("id") int id, @RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid) {
-        fuvarDAO.updateFuvar(id, rendelesid, futarid);
+    public String updateFuvar(@RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid, @PathVariable("id") int id) {
+        fuvarDAO.updateFuvar(rendelesid, futarid, id);
 
-        return "fuvar";
+        return "redirect:/";
     }
 
 }
