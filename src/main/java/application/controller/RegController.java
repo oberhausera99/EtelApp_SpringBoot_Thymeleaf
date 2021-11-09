@@ -24,17 +24,72 @@ public class RegController {
 	@Autowired
 	private RegDAO regDAO;
 	
+	
+	  @GetMapping("/bejelentkezes")
+	  public String getBejelentkezes(){
+	    return "bejelentkezes.html";
+	  }
+	  @GetMapping("/regisztracio")
+	  public String getRegisztracio(){
+		  return "regisztracio.html";
+	  }
+	  
+	  @GetMapping("/kijelentkezes")
+	  public String getKijelentkezes(HttpSession session) {
+		  if(session.getAttribute("loggedin") != null) { 
+			  return "kijelentkezes.html";
+		  }
+		  return "redirect:/bejelentkezes";
+	  }
+	  
+	@GetMapping("/regisztracio/{hiba}")
+	public String getRegisztracio(@PathVariable("hiba") int hiba, Model model) {
+		if(hiba == 1) {
+			model.addAttribute("hiba", "HIBA: Nem megegyező jelszavak");
+		}
+		else if(hiba == 2) {
+			model.addAttribute("hiba", "HIBA: Túl hosszú felhasználónév és/vagy jelszó");
+		}
+		else if(hiba == 3) {
+			model.addAttribute("hiba", "HIBA: Túl rövid felhasználónév/jelszó");
+		}
+		else if(hiba == 4){
+			model.addAttribute("hiba", "HIBA: Felhasználónév már létezik");
+		}
+		else {
+			model.addAttribute("hiba", "Sikeres regisztráció!");
+		}
+		
+		return "regisztracio.html";
+	}
+	
 	@PostMapping(value = "/regisztracio")
 	public String registerUser(@RequestParam("name") String name, @RequestParam("email") String email,
 			@RequestParam("uname") String uname, @RequestParam("passwd") String passwd,
 			@RequestParam("passwd-repeat") String passwdRepeat) {
 		
+		if(!passwd.equals(passwdRepeat)) {
+			return "redirect:/regisztracio/1";
+		}
+		else if(uname.length() > 16 || passwd.length() > 24) {
+			return "redirect:/regisztracio/2";
+		}
+		else if(uname.length() < 6 || passwd.length() < 8) {
+			return "redirect:/regisztracio/3";
+		}
+		
 		if(regDAO.insertUser(new User(name, uname, passwd, email, false))) {
-			return "redirect:/";
+			return "redirect:/regisztracio/0";
 		}
 		else {
-			return "redirect:/404";
+			return "redirect:/regisztracio/4";
 		}
+	}
+	
+	@GetMapping(value = "/bejelentkezes/{hiba}")
+	public String getBejelentkezes(@PathVariable("hiba") String hiba, Model model) {
+		model.addAttribute("hiba", "1");
+		return "bejelentkezes.html";
 	}
 	
 	@PostMapping(value = "/bejelentkezes")
@@ -57,7 +112,7 @@ public class RegController {
 			return "redirect:/";
 		}
 		else {
-			return "redirect:/404";
+			return "redirect:/bejelentkezes/1";
 		}
 	}
 	

@@ -34,23 +34,6 @@ public class IndexController {
 	    return "index.html";
 	 }
 	  
-	  
-	  @GetMapping("/bejelentkezes")
-	  public String getBejelentkezes(){
-	    return "bejelentkezes.html";
-	 }
-	  @GetMapping("/regisztracio")
-	  public String getRegisztracio(){
-		  return "regisztracio.html";
-	  }
-	  
-	  @GetMapping("/kijelentkezes")
-	  public String getKijelentkezes(HttpSession session) {
-		  if(session.getAttribute("loggedin") != null) { 
-			  return "kijelentkezes.html";
-		  }
-		  return "redirect:/bejelentkezes";
-	  }
 
 	@GetMapping("/fuvar")
 	public String getFuvar(HttpSession session){

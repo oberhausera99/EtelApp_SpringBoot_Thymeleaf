@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    var message = [[${hiba}]];
+    if(!(message == "" || message == null) ){
+        alert(message);
+        if(message == "Sikeres regisztráció!"){
+            window.location.href="/bejelentkezes";
+        }
+        else{
+            window.location.href="/regisztracio";
+        }
+    }
+
+    /*]]>*/
+</script>
 <head>
     <meta charset="UTF-8">
     <title>Regisztráció</title>
