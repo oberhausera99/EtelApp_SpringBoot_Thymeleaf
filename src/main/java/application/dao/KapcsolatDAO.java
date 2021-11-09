@@ -43,7 +43,13 @@ public class KapcsolatDAO extends JdbcDaoSupport  {
 			result.add(kapcsolat);
 		}
 		
+		
 		return result;
+	}
+	
+	public void deleteKapcsolat(int id){
+		String sql = "DELETE FROM kapcsolat WHERE id="+id;
+		getJdbcTemplate().update(sql);	
 	}
 	
 }

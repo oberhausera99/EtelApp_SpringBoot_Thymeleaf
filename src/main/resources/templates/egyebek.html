@@ -29,8 +29,8 @@
 
             </script>
             <!--<a class="navbar-brand" th:href="@{/kijelentkezes}">Kijelentkezés</a>-->
-            <a class="navbar-brand" th:href="@{/futarok}">Futárok</a>
-            <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
+            <a id="futar" class="navbar-brand" th:href="@{/futarok}">Futárok</a>
+            <a id="fuvar" class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
     </nav>
 </header>
         <div class="container">
@@ -85,6 +85,11 @@
             © 2021 Copyright: etel-ib153i-5-2021
         </div>
     </footer>
-
+<script>
+    if(getCookieValue("bejelentkezve") != 2){
+        document.getElementById("futar").hidden = true;
+        document.getElementById("fuvar").hidden = true;
+    }
+</script>
 </body>
 </html>

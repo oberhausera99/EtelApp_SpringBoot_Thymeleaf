@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
     <link rel="stylesheet" href="style.css" />
+
     <style>
         input[type="text"]{
             height: 50px;
@@ -51,8 +52,9 @@
 
             </script>
             <!--<a class="navbar-brand" th:href="@{/kijelentkezes}">Kijelentkezés</a>-->
-            <a class="navbar-brand" th:href="@{/futarok}">Futárok</a>
-            <a class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
+            <a id="futar" class="navbar-brand" th:href="@{/futarok}">Futárok</a>
+            <a id="fuvar" class="navbar-brand" th:href="@{/fuvar}">Fuvarok</a>
+
     </nav>
 </header>
 <main>
@@ -69,6 +71,7 @@
             <th>Felhasználó</th>
             <th>Vélemény</th>
             <th>Értékelés</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -76,6 +79,11 @@
             <td th:text="${kapcsolat.felhasznalo}"></td>
             <td th:text="${kapcsolat.velemeny}"></td>
             <td th:text="${kapcsolat.ertekeles}"></td>
+            <td>
+            <form th:action="@{/deletevelemeny/{id}(id=${kapcsolat.id})}" method="post">
+                <button type="submit" class="btn-sm btn-dark details">Törlés</button>
+            </form>
+            </td>
         </tr>
         </tbody>
     </table>
@@ -85,10 +93,10 @@
             <br/>
             <input id="velemeny" name="velemeny"  type="text"/>
             <br/>
-            <label>Értekeld 1-10 skálán:
-                <input type="range"  id="rangeInput" min="1" max="10" />
+            <label class="form-label" for="rangeInput">Értekeld 1-10 skálán:</label>
+                <input class="form-range" type="range"  id="rangeInput" min="1" max="10" />
                 <input hidden type="text" id="ertekeles" name="ertekeles" value="">
-            </label>
+            
             <br/>
             <input class="btn btn-primary" onclick="updateTextInput(document.getElementById('rangeInput').value)" type="submit" value="Elküldés"/>
         </div>
@@ -125,6 +133,10 @@
     <script>
         if(!bejelentkezett){
             document.getElementById("hidden").hidden = true;
+        }
+        if(getCookieValue("bejelentkezve") != 2){
+            document.getElementById("futar").hidden = true;
+            document.getElementById("fuvar").hidden = true;
         }
     </script>
 </main>

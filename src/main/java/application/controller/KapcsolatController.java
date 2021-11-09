@@ -50,5 +50,19 @@ public class KapcsolatController {
 				return "kapcsolat.html";
 	
 	}
+	
+	@PostMapping(value = "/deletevelemeny/{id}")
+	public String deleteFutar(@PathVariable("id") int id, HttpSession session, Model model) {
+		if(session.getAttribute("loggedin") != null) {
+			User user = (User) session.getAttribute("user");
+			if(user.getJogosultsag() == true) {
+				kapcsolatDAO.deleteKapcsolat(id);
+				return "redirect:/kapcsolat";
+			}
+		}
+	 	
+		return "redirect:/kapcsolat";
+	}
+
 
 }
