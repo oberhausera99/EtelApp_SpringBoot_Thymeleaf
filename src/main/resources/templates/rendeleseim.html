@@ -35,21 +35,21 @@
     </nav>
 </header>
 <main>
-    <div>
-        <h2>Jelenlegi rendeléseid</h2>
-        <table class="table">
-            <thead>
+    <div class="container">
+        <div class="row justify-content-center"><h2>Jelenlegi rendeléseid</h2></div>
+        <table class="table table-bordered">
+            <thead class="table-secondary">
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Érkezik körülbelül</th>
+                <th class="col-1 text-center" scope="col">Név</th>
+                <th class="col-1 text-center" scope="col">Ár</th>
+                <th class="col-1 text-center" scope="col">Érkezik körülbelül</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="rendeles : ${rendelesek}">
-                <td th:text="${rendeles.nev}"></td>
-                <td th:text="${rendeles.ar}"></td>
-                <td th:text="${rendeles.erkezesiIdo}"></td>
+                <td class="text-center" th:text="${rendeles.nev}"></td>
+                <td class="text-center" th:text="${rendeles.ar}"></td>
+                <td class="text-center" th:text="${rendeles.erkezesiIdo}"></td>
             </td>
             </tr>
             </tbody>

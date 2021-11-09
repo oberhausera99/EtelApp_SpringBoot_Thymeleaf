@@ -38,22 +38,24 @@
     <div class="container">
     <div class="row justify-content-center"><h1>Kosár</h1></div>
     <div class="row justify-content-center">
-        <table>
-            <thead>
+        <table class="table table-bordered">
+            <thead class="table-secondary">
             <tr>
-                <th>Név</th>
-                <th>Ár</th>
-                <th>Darab</th>
+                <th class="col-1 text-center" scope="col">Név</th>
+                <th class="col-1 text-center" scope="col">Ár</th>
+                <th class="col-1 text-center" scope="col">Darab</th>
+                <th class="col-1 text-center" scope="col"></th>
+                <th class="col-1 text-center" scope="col"></th>
             </tr>
             <br>
             </thead>
             <tbody>
         <tr th:each="item : ${kosar}">
-            <td th:text="${item.key.getNev()}">Név</td>
-            <td th:text="${item.key.getAr()}">Név</td>
-            <td th:text="${item.value}">Darab</td>
-            <td><a th:href="@{/updatekosar/{nev}/(nev=${item.key.getNev()})}">Update</a></td>
-            <td><a th:href="@{/kosartorol/{nev}/(nev=${item.key.getNev()})}">Töröl</a></td>
+            <td class="text-center" th:text="${item.key.getNev()}">Név</td>
+            <td class="text-center" th:text="${item.key.getAr()}">Név</td>
+            <td class="text-center" th:text="${item.value}">Darab</td>
+            <td class="text-center"><a th:href="@{/updatekosar/{nev}/(nev=${item.key.getNev()})}"><button class="btn-primary">Mennyiség módosítása</button></a></td>
+            <td class="text-center"><a th:href="@{/kosartorol/{nev}/(nev=${item.key.getNev()})}"><button class="btn-primary">Törlés</button></a></td>
             <br>
         </tr>
         </tbody>
@@ -64,9 +66,9 @@
 <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Rendelés véglegesítése
 </button>
-
-
 </div>
+<br/>
+<br/>
 <div class="row justify-content-center">
     <a href="/rendeleseim">
     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -84,7 +86,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Biztosan szeretné megrendelni a kiválasztott ételeket?
+        Biztosan szeretné megrendelni a kiválasztott ételeket?<br/>
+        (Fizetés kizárólag a futárnál!)
         <br/>
         <br/>
         <label for="name"><b>Szállítási cím</b></label>
