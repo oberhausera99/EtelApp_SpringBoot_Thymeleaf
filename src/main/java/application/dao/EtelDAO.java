@@ -101,10 +101,6 @@ import application.model.User;
 		 
 		public Etel getEtelByNev(String nev){
 			String sql = "SELECT * FROM etel WHERE nev=?";
-			String deleteSql = "TRUNCATE rendeles CASCADE";
-			
-			getJdbcTemplate().update(deleteSql);
-			
 			Etel etel = getJdbcTemplate().queryForObject(sql, new Object[] {nev}, new EtelRowMapper());
 
 			return etel;
@@ -122,10 +118,11 @@ import application.model.User;
 		}
 		
 		public void updateEtel(String nev, int ar){
-			 String sql = "UPDATE etel SET nev='"+nev+"', ar="+ar+" WHERE nev='"+nev+"'";
-			 getJdbcTemplate().update(sql);
-			 /* nem működik */
-			 
+			String sql = "UPDATE etel SET nev='"+nev+"', ar="+ar+" WHERE nev='"+nev+"'";
+			String deleteSql = "TRUNCATE rendeles CASCADE";
+			getJdbcTemplate().update(deleteSql);
+				
+			getJdbcTemplate().update(sql); 
 		}
 			
 	
