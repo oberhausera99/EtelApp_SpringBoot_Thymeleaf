@@ -24,6 +24,21 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 | 1.4 | Nagy György        | 2021-10-18 | Elfogadott    | Képernyőtervek feltöltése            |
 | 2.1 | Nagy György        | 2021-10-29 | Tervezet    | Heroku kialakitása            |
 | 2.2 | Nagy Dominik       | 2021-11-02 | Előterjesztett    | Futárok html létrehozása              |
+| 2.3 | Nagy Eliot       | 2021-11-05 | Tervezet   | Kijelentkezés html létrehozása              |
+| 2.4 | Nagy György   | 2021-11-05 | Előterjesztett    | Futárok adatbázis GUI             |
+| 2.5 | Oberhauser Attila | 2021-11-05 | Tervezet   | Étal osztály létrehozása            |
+| 2.6 | Nagy Eliot   | 2021-11-05 | Tervezet   | Főoldal struktúra       |
+| 2.7 | Rózsa Kristóf  | 2021-11-06 | Tervezet    | Cookie bejelentkezett felhasználóknak, dinamikus ki/bejelentkezés         |
+| 2.8 | Rózsa Kristóf  | 2021-11-06 | Tervezet    | Kosár implementáció         |
+| 2.9 | Oberhauser Attila  | 2021-11-06 | Előterjesztett    | Pizzák listázása       |
+| 2.10 | Nagy György  | 2021-11-06 | Előterjesztett    | Kapcsolat oldal kialakítása, footer beillesztése      |
+| 2.11 | Rózsa Kristóf  | 2021-11-07 | Előterjesztett  | Süti javítások        |
+| 2.12 | Nagy Eliot       | 2021-11-08 | Előterjesztett    | Üres kosár ellenőrzése          |
+| 2.13 | Nagy Dominik       | 2021-11-09 | Tervezet   | Fuvar fül módosítás              |
+| 2.14 | Nagy György  | 2021-11-10 | Előterjesztett    | Fuvar hibák javítása     |
+
+
+
 
 Státusz osztályozás:
  - Tervezet: befejezetlen dokumentum, a mérföldkő leadása előtti napokban
