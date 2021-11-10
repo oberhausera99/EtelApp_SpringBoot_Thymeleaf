@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <title>Futárok</title>
@@ -8,7 +8,7 @@
     <meta name="generator" content="Webstorm" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
- 
+ 	<link rel="shortcut icon" href="img/favicon.png" />
 </head>
 <body>
 <header>
@@ -41,7 +41,7 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
+                <th>Név</th>
                 <th>Mióta</th>
             </tr>
             </thead>
@@ -62,13 +62,13 @@
     <div>
         <h2>Futár hozzáadása</h2>
         <form th:action="@{/addfutar}" method="post">
-            <label>Name:
+            <label>Név:
                 <input type="text" name="name" id="name"></input>
             </label>
             <label>Mióta:
                 <input type="text" name="alkalmazott_miota" id="alkalmazott_miota"></input>
             </label>
-            <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
+            <input type="submit" value="Hozzáad" class="btn-sm btn-dark details"></input>
         </form>
     </div>
 </main>
