@@ -77,14 +77,14 @@ Az alábbi tesztdokumentum az étel projekthez tartozó 9.3.8 Futárok kezelés�
 - Művelet: nyomjuk meg a MÓDOSÍT gombot 
 - Elvárt kimenet: a táblában módosult a kiválasztott érték
 
-#### 2.3.3. TC-01
+#### 2.3.2. TC-02
 - TP: TP-03
 - Leírás: módosítás funkció tesztelése 
 - Bemenet: STRING1 = 25 ; NUMBER1 = 2018
 - Művelet: nyomjuk meg a MÓDOSÍT gombot 
 - Elvárt kimenet: a táblában módosult a kiválasztott érték (nem sok értelme van, ezt javitani kell)
 
-#### 2.3.3. TC-01
+#### 2.3.3. TC-03
 - TP: TP-03
 - Leírás: módosítás funkció tesztelése 
 - Bemenet: STRING1 = 'Teszt' ; NUMBER1 = 'teszt'
