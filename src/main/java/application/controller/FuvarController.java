@@ -26,7 +26,7 @@ public class FuvarController {
             User user = (User) session.getAttribute("user");
             if(user.getJogosultsag() == true) {
                 model.addAttribute("fuvarok", fuvarDAO.listFuvarok());
-                return "fuvar.html";
+                return "fuvarok.html";
             }
         }
         return "redirect:/";
@@ -37,14 +37,14 @@ public class FuvarController {
         Fuvar fuvar = new Fuvar(rendelesid, futarid);
         fuvarDAO.insertFuvar(fuvar);
 
-        return "redirect:/";
+        return "redirect:/fuvarok";
     }
 
     @PostMapping(value = "/deletefuvar/{id}")
     public String deleteFuvar(@PathVariable("id") int id) {
         fuvarDAO.deleteFuvar(id);
 
-        return "redirect:/";
+        return "redirect:/fuvarok";
     }
 
     @GetMapping(value = "/editfuvar/{id}")
@@ -59,7 +59,7 @@ public class FuvarController {
     public String updateFuvar(@RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid, @PathVariable("id") int id) {
         fuvarDAO.updateFuvar(rendelesid, futarid, id);
 
-        return "redirect:/";
+        return "redirect:/fuvarok";
     }
 
 }
