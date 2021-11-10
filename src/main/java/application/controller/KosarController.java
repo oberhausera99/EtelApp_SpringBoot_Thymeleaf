@@ -45,7 +45,9 @@ public class KosarController {
 		User user = ((User)session.getAttribute("user"));
 		
 		for(Entry<Etel, Integer> entry : kosar.getEtelek().entrySet()) {
-			kosarDao.rendelesRogzit(user, entry.getKey());
+			for(int i = 0; i < entry.getValue(); i++) {
+				kosarDao.rendelesRogzit(user, entry.getKey());
+			}
 		}
 		if (kosar.getEtelek().isEmpty()) {
 			return "sikertelen.html";

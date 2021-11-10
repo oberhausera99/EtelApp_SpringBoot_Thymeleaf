@@ -24,6 +24,27 @@ public class RendelesDAO extends JdbcDaoSupport {
 		setDataSource(dataSource);
 	}
 	
+	public void deleteRendeles(String id) {
+		//String sql = "DELETE FROM etel WHERE id='"+id+"'";
+		
+		String sql = "DELETE FROM rendeles WHERE rendelesid ='"+id+"'";
+		String sql2 = "DELETE FROM fuvar WHERE rendelesid ='"+id+"'";
+
+		getJdbcTemplate().update(sql2);
+		getJdbcTemplate().update(sql);
+
+	}
+	
+	public List<Rendeles> getRendelesek(){
+		List<Rendeles> rendelesek = new ArrayList<Rendeles>();
+		
+		String sql = "SELECT * FROM rendeles";
+		
+		rendelesek = getJdbcTemplate().query(sql, new RendelesRowMapper());
+		
+		return rendelesek;
+	}
+	
 	public List<Rendeles> getRendelesForUser(User user){
 		List<Rendeles> rendelesek = new ArrayList<Rendeles>();
 		

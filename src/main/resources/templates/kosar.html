@@ -71,8 +71,8 @@
 <br/>
 <br/>
 <div class="row justify-content-center">
-    <a href="/rendeleseim">
-    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <a href="/rendeleseim" id="renda">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="rend">
       Rendeléseim
     </button>
     </a>
@@ -121,6 +121,10 @@
     if(getCookieValue("bejelentkezve") != 2){
         document.getElementById("futar").hidden = true;
         document.getElementById("fuvar").hidden = true;
+    }
+    else{
+        rend.innerHTML = "Rendelések";
+        renda.setAttribute("href", "/rendelesek");
     }
 </script>
 </body>

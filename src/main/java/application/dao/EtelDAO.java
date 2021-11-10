@@ -107,9 +107,6 @@ import application.model.User;
 		}
 		
 
-		 
-		
-		
 		public void deleteEtel(String nev){
 			String sql = "DELETE FROM etel WHERE nev='"+nev+"'";
 			String rend = "DELETE FROM rendeles WHERE nev ='"+nev+"'";

@@ -2,9 +2,9 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>Hamburgerek</title>
+    <title>Rendelések</title>
     <meta name="author" content="Nagy György, Nagy Eliot, Nagy Dominik, Rózsa Kristóf, Oberhauser Attila" />
-    <meta name="description" content="Pizzák" />
+    <meta name="description" content="Rendeléseim" />
     <meta name="generator" content="Webstorm" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
@@ -34,65 +34,36 @@
             <a id="fuvar" class="navbar-brand" th:href="@{/fuvarok}">Fuvarok</a>
     </nav>
 </header>
-<div class="container">
-        <div class="row justify-content-center"><h2>Hamburger</h2></div>
-        <div class="row justify-content-center">
-        <table>
-            <thead>
+<main>
+    <div class="container">
+        <div class="row justify-content-center"><h2>Jelenlegi rendelések</h2></div>
+        <table class="table table-bordered">
+            <thead class="table-secondary">
             <tr>
-                <th></th>
-                <th>Név</th>
-                <th>Ár</th>
+                <th class="col-1 text-center" scope="col">Név</th>
+                <th class="col-1 text-center" scope="col">Ár</th>
+                <th class="col-1 text-center" scope="col">Érkezik körülbelül</th>
+                <th class="col-1 text-center" scope="col">Rendelte</th>
+                <th class="col-1 text-center" scope="col">Törlés</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="etel : ${etelek}">
-                 <td><img src="img/hambi.png" alt="hamburger"></td>
-                <td th:text="${etel.nev}"></td>
-                <td th:text="${etel.ar}"></td>
-
-             <!--   <td><a th:href="@{/editetel/{nev}(nev=${etel.nev})}">Update</a></td> -->
-                <form th:action="@{/editetel/{nev}(nev=${etel.nev})}" method="get">
-                <td><button type="submit" class="btn-sm btn-dark details">Módosítás</button>
-                </form>
-                <form th:action="@{/deleteetel/{nev}(nev=${etel.nev})}" method="post">
-                <td><button type="submit" class="btn-sm btn-dark details">Törlés</button>
-                </form>
-                <td><a th:href="@{/kosarbarak/{nev}/(nev=${etel.nev})}"><button class="btn btn-secondary">Kosárba rak</button></a></td>
-                
-         
+            <tr th:each="rendeles : ${rendelesek}">
+                <td class="text-center" th:text="${rendeles.nev}"></td>
+                <td class="text-center" th:text="${rendeles.ar}"></td>
+                <td class="text-center" th:text="${rendeles.erkezesiIdo}"></td>
+                <td class="text-center" th:text="${rendeles.felhnev}"></td>
+                <td><a th:href="@{/deleterendeles/{id}(id=${rendeles.id})}"> <button>Törlés</button> </a></td>
             </tr>
             </tbody>
         </table>
     </div>
-    </div>
-	<div>
-	<center>
-    <h2>Hamburger hozzáadása</h2>
-    </center>
-    <center>
-    <form th:action="@{/addetel}" method="post">
-        <label>Név:
-            <input type="text" name="nev" id="nev"></input>
-        </label>
-        <label>Ár:
-            <input type="text" name="ar" id="ar"></input>
-        </label>
-        <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
-    </form>
-    </center>
-</div>
-
-    <div class="container">
-        <div class="row">
-            
-        </div>
-    </div>
+</main>
 <footer class="bg-light text-center text-lg-start">
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2021 Copyright: etel-ib153i-5-2021
-        </div>
-    </footer>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright: etel-ib153i-5-2021
+    </div>
+</footer>
 <script>
     if(getCookieValue("bejelentkezve") != 2){
         document.getElementById("futar").hidden = true;

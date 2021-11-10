@@ -30,9 +30,33 @@ public class RendelesKontroller {
 	@Autowired
 	private RendelesDAO rendelesDao;
 	
+	@GetMapping("/rendelesek")
+	public String getRendelesek(Model model, HttpSession session) {
+		User user = (User)session.getAttribute("user");
+		if(user == null || !user.getJogosultsag()) {
+			return "redirect:/";
+		}
+		
+		List<Rendeles> rendelesek = rendelesDao.getRendelesek();
+		model.addAttribute("rendelesek", rendelesek);
+		return "rendelesek.html";
+	}
+	
+	@GetMapping("/deleterendeles/{id}")
+	public String deleteRendeles(@PathVariable("id") int id, Model model, HttpSession session) {
+		User user = (User)session.getAttribute("user");
+		if(user == null || !user.getJogosultsag()) {
+			return "redirect:/";
+		}
+
+		rendelesDao.deleteRendeles(String.valueOf(id));
+		
+		return "redirect:/rendelesek";
+	}
+	
+	
 	@GetMapping("/rendeleseim")
 	public String getRendeleseim(Model model, HttpSession session) {
-		Rendeles rendeles = new Rendeles();
 		User user = (User)session.getAttribute("user");
 		if(user == null) {
 			return "redirect:/";

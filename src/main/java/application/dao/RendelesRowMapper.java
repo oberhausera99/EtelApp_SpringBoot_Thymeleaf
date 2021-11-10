@@ -17,7 +17,8 @@ public class RendelesRowMapper implements RowMapper<Rendeles> {
     	rendeles.setNev(rs.getString("nev"));
     	rendeles.setAr(rs.getInt("ar"));
     	LocalDateTime varhatoErkezes = rs.getTimestamp("ido").toLocalDateTime();
-    	
+    	rendeles.setFelhnev(rs.getString("felhasznalonev"));
+    	rendeles.setId(rs.getInt("rendelesid"));
     	varhatoErkezes = varhatoErkezes.plusMinutes(PERCEK_ERKEZESIG);
     	LocalDateTime most = LocalDateTime.now();
     	
