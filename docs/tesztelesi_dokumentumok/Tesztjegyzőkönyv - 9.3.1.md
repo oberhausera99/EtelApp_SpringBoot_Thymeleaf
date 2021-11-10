@@ -11,6 +11,7 @@ Az alábbi tesztdokumentum az Étel(etel-ib153i-5-2021) projekthez tartozó jogo
     0. lépés: Nyissuk meg az alkalmazást
     1. lépés: Nyissuk meg a /futár végpontot
     2. lépés: Ellenőrizzük az eredményt.
+    Elvárt eredmény:
     User esetén: redirect egy másik oldalra
     Admin esetén: végpont rendesen elérhetővé válik
 
@@ -21,6 +22,7 @@ Az alábbi tesztdokumentum az Étel(etel-ib153i-5-2021) projekthez tartozó jogo
     0. lépés: Nyissuk meg az alkalmazást
     1. lépés: Nyissuk meg a /fuvar végpontot
     2. lépés: Ellenőrizzük az eredményt.
+    Elvárt eredmény:
     User esetén: redirect egy másik oldalra
     Admin esetén: végpont rendesen elérhetővé válik
 
@@ -31,6 +33,7 @@ Az alábbi tesztdokumentum az Étel(etel-ib153i-5-2021) projekthez tartozó jogo
     0. lépés: Nyissuk meg az alkalmazást
     1. lépés: Nyissuk meg a /pizzak, /hamburgerek vagy /egyebek végpontokat
     2. lépés: Ellenőrizzük az eredményt.
+    Elvárt eredmény:
     User esetén: Törlés/módosítás nem elérhető
     Admin esetén: Törlés/módosítás elérhető
 
