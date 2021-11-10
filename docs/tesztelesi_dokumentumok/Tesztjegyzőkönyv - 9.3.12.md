@@ -21,7 +21,7 @@ A tesztelési dokumentáció áttekinthetőségének érdekében egy jegyzőkön
 
 ## 2. Teszesetek (TC)
 
-### 2.1. Összeadás funkció tesztesetei
+### 2.1. Rendelés a kosárból funkció tesztesetei
 
 #### 2.1.1. TC-01
 - TP: TP-01
@@ -47,7 +47,7 @@ A tesztelési dokumentáció áttekinthetőségének érdekében egy jegyzőkön
 
 ## 3. Tesztriportok (TR)
 
-### 3.1. Összeadás funkció tesztriportjai
+### 3.1. Rendelés a kosárból funkció tesztriportjai
 
 #### 3.1.1. TR-01 (TC-01)
 - TP: TP-01
