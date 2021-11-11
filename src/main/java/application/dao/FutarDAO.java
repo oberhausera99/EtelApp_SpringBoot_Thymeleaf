@@ -39,6 +39,7 @@ public class FutarDAO extends JdbcDaoSupport  {
 			futar.setId((Integer)row.get("id"));
 			futar.setName((String)row.get("name"));
 			futar.setAlkalmazott_miota((Integer) row.get("alkalmazott_miota"));
+			futar.setElerheto((Boolean) row.get("elerheto"));
 			result.add(futar);
 		}
 		
@@ -55,6 +56,7 @@ public class FutarDAO extends JdbcDaoSupport  {
 			futar.setId((Integer)row.get("id"));
 			futar.setName((String)row.get("name"));
 			futar.setAlkalmazott_miota((Integer) row.get("alkalmazott_miota"));
+			futar.setElerheto((Boolean) row.get("elerheto"));
 			result.add(futar);
 		}
 		
@@ -66,8 +68,8 @@ public class FutarDAO extends JdbcDaoSupport  {
 		getJdbcTemplate().update(sql);	
 	}
 	
-	public void updateFutar(int id,String name, int alkalmazott_miota){
-		String sql = "UPDATE futar SET name='"+name+"', alkalmazott_miota='"+alkalmazott_miota+"' WHERE id="+id;
+	public void updateFutar(int id,String name, int alkalmazott_miota, boolean elerheto){
+		String sql = "UPDATE futar SET name='"+name+"', alkalmazott_miota='"+alkalmazott_miota+"', elerheto='"+elerheto+"' WHERE id="+id;
 		getJdbcTemplate().update(sql);	
 	}
 	

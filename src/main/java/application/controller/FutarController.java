@@ -56,8 +56,8 @@ public class FutarController {
 	}
 
 	@PostMapping(value = "/updatefutar/{id}")
-	public String updateFutar(@PathVariable("id") int id, @RequestParam("name") String name, @RequestParam("alkalmazott_miota") int alkalmazott_miota) {
-		futarDAO.updateFutar(id, name, alkalmazott_miota);
+	public String updateFutar(@PathVariable("id") int id, @RequestParam("name") String name, @RequestParam("alkalmazott_miota") int alkalmazott_miota,@RequestParam("elerheto") boolean elerheto) {
+		futarDAO.updateFutar(id, name, alkalmazott_miota, elerheto);
 
 		return "redirect:/";
 	}

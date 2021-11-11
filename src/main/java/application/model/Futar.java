@@ -9,14 +9,16 @@ public class Futar implements Serializable{
     int id;
     String name;
     int alkalmazott_miota;
+    boolean elerheto;
  
     public Futar(){
     }
  
-    public Futar(int id, String name, int alkalmazott_miota) {
+    public Futar(int id, String name, int alkalmazott_miota, boolean elerheto) {
         this.id = id;
         this.name = name;
         this.alkalmazott_miota = alkalmazott_miota;
+        this.elerheto = elerheto;
     }
     
     public Futar(String name, int alkalmazott_miota) {
@@ -47,10 +49,18 @@ public class Futar implements Serializable{
     public void setAlkalmazott_miota(int alkalmazott_miota) {
         this.alkalmazott_miota = alkalmazott_miota;
     }
+    
+    public boolean isElerheto() {
+    	return elerheto;
+    }
+    
+    public void setElerheto(boolean elerheto) {
+    	this.elerheto = elerheto;
+    }
 
 	@Override
 	public String toString() {
-		return "Futár [id=" + id + ", name=" + name + ", alkalmazott_miota=" + alkalmazott_miota + "]";
+		return "Futár [id=" + id + ", name=" + name + ", alkalmazott_miota=" + alkalmazott_miota + ", elerheto=" + elerheto + "]";
 	}
  
 }

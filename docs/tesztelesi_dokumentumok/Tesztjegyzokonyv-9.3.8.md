@@ -33,7 +33,8 @@ Az alábbi tesztdokumentum az étel projekthez tartozó 9.3.8 Futárok kezelés�
     2. lépés: Nyomjuk meg a MÓDOSÍTÁS gombot
     3. lépés: A 'név' szövegbeviteli mezőbe írjunk be a STRING1 szöveget
     4. lépés: A 'mióta' szövegbeviteli mezőbe írjunk be a NUMBER1 számot
-	5. lépés: Ellenőrizzük az eredményt. Elvárt eredmény: az adat módosításra került
+	5. lépés: Az "elérhető" szövegbeviteli mezőbe írjunk be a BOOLEAN értéket
+	6. lépés: Ellenőrizzük az eredményt. Elvárt eredmény: az adat módosításra került
 
 ## 2. Teszesetek (TC)
 
@@ -73,23 +74,23 @@ Az alábbi tesztdokumentum az étel projekthez tartozó 9.3.8 Futárok kezelés�
 #### 2.3.1. TC-01
 - TP: TP-03
 - Leírás: módosítás funkció tesztelése 
-- Bemenet: STRING1 = 'Teszt' ; NUMBER1 = 2018
+- Bemenet: STRING1 = 'Teszt' ; NUMBER1 = 2018; BOOlEAN = false
 - Művelet: nyomjuk meg a MÓDOSÍT gombot 
 - Elvárt kimenet: a táblában módosult a kiválasztott érték
 
 #### 2.3.2. TC-02
 - TP: TP-03
 - Leírás: módosítás funkció tesztelése 
-- Bemenet: STRING1 = 25 ; NUMBER1 = 2018
+- Bemenet: STRING1 = 25 ; NUMBER1 = 2018; BOOLEAN = true
 - Művelet: nyomjuk meg a MÓDOSÍT gombot 
 - Elvárt kimenet: a táblában módosult a kiválasztott érték (nem sok értelme van, ezt javitani kell)
 
 #### 2.3.3. TC-03
 - TP: TP-03
 - Leírás: módosítás funkció tesztelése 
-- Bemenet: STRING1 = 'Teszt' ; NUMBER1 = 'teszt'
+- Bemenet: STRING1 = 'Teszt' ; NUMBER1 = 'teszt'; BOOLEAN = 'asd'
 - Művelet: nyomjuk meg a MÓDOSÍT gombot 
-- Elvárt kimenet: NUMBER1 = HIBA (nem tudja a stringet számmá alakitani)
+- Elvárt kimenet: NUMBER1 = HIBA (nem tudja a stringet számmá alakitani), BOOLEAN = HIBA (nem tudja értelmezni a szöveget mint logikai érték)
 
 
 

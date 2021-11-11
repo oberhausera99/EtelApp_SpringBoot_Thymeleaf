@@ -43,6 +43,7 @@
                 <th>ID</th>
                 <th>Név</th>
                 <th>Mióta</th>
+                <th>Elérhető</th>
             </tr>
             </thead>
             <tbody>
@@ -50,6 +51,7 @@
                 <td th:text="${futar.id}"></td>
                 <td th:text="${futar.name}"></td>
                 <td th:text="${futar.alkalmazott_miota}"></td>
+                 <td th:text="${futar.elerheto}"></td>
                 <td><a th:href="@{/editfutar/{id}(id=${futar.id})}">Módosítás</a></td>
                 <form th:action="@{/deletefutar/{id}(id=${futar.id})}" method="post">
                 <td><button type="submit" class="btn-sm btn-dark details">Törlés</button>
