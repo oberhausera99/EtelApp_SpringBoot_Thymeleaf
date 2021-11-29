@@ -38,12 +38,13 @@ public class FuvarController {
     }
 
     @PostMapping(value = "/addfuvar")
-    public String addFuvar(@RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid) {
-        Fuvar fuvar = new Fuvar(rendelesid, futarid);
-        try{
-        fuvarDAO.insertFuvar(fuvar);
+    public String addFuvar(@RequestParam("rendelesid") String rendelesid, @RequestParam("futarid") String futarid) {
+        if(rendelesid == "" || futarid == ""){return "badrequest.html";}
+        else{Fuvar fuvar = new Fuvar(Integer.parseInt(rendelesid), Integer.parseInt(futarid));
+        try {
+            fuvarDAO.insertFuvar(fuvar);
         }catch(Exception e){return  "badrequest.html";}
-        return "redirect:/fuvarok";
+        return "redirect:/fuvarok";}
     }
 
     @PostMapping(value = "/deletefuvar/{id}")
@@ -62,9 +63,10 @@ public class FuvarController {
     }
 
     @PostMapping(value = "/updatefuvar/{id}")
-    public String updateFuvar(@PathVariable("id") int id, @RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid) {
+    public String updateFuvar(@PathVariable("id") int id, @RequestParam("rendelesid") String rendelesid, @RequestParam("futarid") String futarid) {
         try {
-            fuvarDAO.updateFuvar(id, rendelesid, futarid);
+            if(rendelesid == "" || futarid == ""){return "badrequest.html";}
+            fuvarDAO.updateFuvar(id, Integer.parseInt(rendelesid), Integer.parseInt(futarid));
         }catch(Exception e){return  "badrequest.html";}
 
 

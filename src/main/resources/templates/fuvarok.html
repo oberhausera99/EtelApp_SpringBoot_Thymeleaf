@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
     <link rel="shortcut icon" href="img/favicon.png" />
+<style>
+    input[type='number']{
+    width: 100px;
+}
+</style>
 
 </head>
 <body>
@@ -38,7 +43,7 @@
 <main>
 
     <div class="container">
-        <div class="row justify-content-center"><h2>Folyamatban lévő fuvarok</h2></div>
+        <div class="row justify-content-left"><h2>Folyamatban lévő fuvarok</h2></div>
 
         <table class="table">
             <thead>
@@ -71,10 +76,10 @@
         <center>
         <form th:action="@{/addfuvar}" method="post">
             <label>Futár ID:
-                <input type="text" name="futarid" id="futarid"></input>
+                <input type="number" name="futarid" id="futarid"></input>
             </label>
             <label>Rendelés ID:
-                <input type="text" name="rendelesid" id="rendelesid"></input>
+                <input type="number" name="rendelesid" id="rendelesid"></input>
             </label>
             <input type="submit" value="Megbízás" class="btn-sm btn-dark details"></input>
         </form>
