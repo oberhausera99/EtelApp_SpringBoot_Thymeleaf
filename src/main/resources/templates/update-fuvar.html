@@ -29,11 +29,11 @@
 <div>
     <h2>Fuvar módosítása</h2>
     <form action="#" th:action="@{/updatefuvar/{id}(id=${fuvar.id})}" method="post">
-        <label>Rendelés ID:
-            <input type="text" name="name" id="rendelesid" th:value="${fuvar.rendelesid}"></input>
-        </label>
         <label>Futár ID:
             <input type="text" name="futarid" id="futarid" th:value="${fuvar.futarid}"></input>
+        </label>
+        <label>Rendelés ID:
+            <input type="text" name="rendelesid" id="rendelesid" th:value="${fuvar.rendelesid}"></input>
         </label>
         <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
     </form>

@@ -56,8 +56,8 @@ public class FuvarController {
     }
 
     @PostMapping(value = "/updatefuvar/{id}")
-    public String updateFuvar(@RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid, @PathVariable("id") int id) {
-        fuvarDAO.updateFuvar(rendelesid, futarid, id);
+    public String updateFuvar(@PathVariable("id") int id, @RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid) {
+        fuvarDAO.updateFuvar(id, rendelesid, futarid);
 
         return "redirect:/fuvarok";
     }
