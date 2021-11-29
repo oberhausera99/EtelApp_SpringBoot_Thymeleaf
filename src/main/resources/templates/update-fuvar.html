@@ -27,16 +27,18 @@
 </header>
 <body>
 <div>
-    <h2>Fuvar módosítása</h2>
+    <center><h2>Fuvar módosítása</h2></center>
+    <center>
     <form action="#" th:action="@{/updatefuvar/{id}(id=${fuvar.id})}" method="post">
         <label>Futár ID:
-            <input type="text" name="futarid" id="futarid" th:value="${fuvar.futarid}"></input>
+            <input type="number" name="futarid" id="futarid" th:value="${fuvar.futarid}"></input>
         </label>
         <label>Rendelés ID:
-            <input type="text" name="rendelesid" id="rendelesid" th:value="${fuvar.rendelesid}"></input>
+            <input type="number" name="rendelesid" id="rendelesid" th:value="${fuvar.rendelesid}"></input>
         </label>
-        <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
+        <input type="submit" value="Módosítás" class="btn-sm btn-dark details"></input>
     </form>
+    </center>
 </div>
 </body>
 </html>

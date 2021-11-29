@@ -2,6 +2,8 @@ package application.controller;
 
 import javax.servlet.http.HttpSession;
 
+import org.postgresql.util.PSQLException;
+import org.postgresql.util.PSQLState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import application.dao.FuvarDAO;
 import application.model.Fuvar;
 import application.model.User;
+import org.springframework.web.client.HttpClientErrorException;
+
+import java.sql.SQLException;
 
 @Controller
 public class FuvarController {
@@ -35,8 +40,9 @@ public class FuvarController {
     @PostMapping(value = "/addfuvar")
     public String addFuvar(@RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid) {
         Fuvar fuvar = new Fuvar(rendelesid, futarid);
+        try{
         fuvarDAO.insertFuvar(fuvar);
-
+        }catch(Exception e){return  "badrequest.html";}
         return "redirect:/fuvarok";
     }
 
@@ -57,7 +63,10 @@ public class FuvarController {
 
     @PostMapping(value = "/updatefuvar/{id}")
     public String updateFuvar(@PathVariable("id") int id, @RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid) {
-        fuvarDAO.updateFuvar(id, rendelesid, futarid);
+        try {
+            fuvarDAO.updateFuvar(id, rendelesid, futarid);
+        }catch(Exception e){return  "badrequest.html";}
+
 
         return "redirect:/fuvarok";
     }
