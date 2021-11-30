@@ -183,6 +183,18 @@ A projekt hetente ülésezik, hogy megvitassák az azt megelőző hét problém�
     - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
     - Érintett témák: 3. mérföldkő összegzése, az utolsó néhány feladat megbeszélése
 
+ 7. megbeszélés:
+    - Időpont: 2021.11.16.
+    - Hely: Discord
+    - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
+    - Érintett témák: 4. mérföldkő feladatainak átbeszélése
+
+ 8. megbeszélés:
+    - Időpont: 2021.11.27.
+    - Hely: Discord
+    - Résztvevők: Nagy Dominik, Nagy Eliot, Nagy György, Rózsa Kristóf, Oberhauser Attila
+    - Érintett témák: Feladatokkal kapcsolatosan felmerülő kérdések megbeszélése
+
 
 ### 7.3. Minőségbiztosítás
 
