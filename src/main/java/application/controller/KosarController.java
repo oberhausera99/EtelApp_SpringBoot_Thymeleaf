@@ -53,6 +53,7 @@ public class KosarController {
 			return "sikertelen.html";
 		}
 		
+		
 		kosar.getEtelek().clear();
 		return "sikeresrendeles.html";
 	}

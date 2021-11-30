@@ -69,9 +69,16 @@
             <div class="col-2 fs-1 align-self-center ml-4" id="oszlop"><a class="link" th:href="@{/hamburgerek}">Hamburgerek</a></div>
             <div class="col-2 fs-1 align-self-end mb-5" id="oszlop"><a class="link" th:href="@{/egyebek}">Egyéb ételeink</a></div>
         </div>
+                <form hidden="true" name="rendeles" th:action="@{/fuvarkiosztas}" method="post">
+                    <input type="submit"  class="btn-sm btn-dark details"></input>
+                </form>
         </div>
         </main>
-        <script>alert("Sikeres megrendelés!")</script>
+        <script>alert("Sikeres megrendelés!")
+            window.onload = function(){
+            document.forms["rendeles"].submit();
+            }
+        </script>
     <footer class="bg-light text-center text-lg-start">
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2021 Copyright: etel-ib153i-5-2021

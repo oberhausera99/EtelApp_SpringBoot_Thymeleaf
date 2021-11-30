@@ -10,8 +10,10 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
+import application.model.Futar;
 import application.model.Rendeles;
 import application.model.User;
+
 
 @Repository
 public class RendelesDAO extends JdbcDaoSupport {
@@ -54,4 +56,5 @@ public class RendelesDAO extends JdbcDaoSupport {
 		
 		return rendelesek;
 	}
+	
 }
