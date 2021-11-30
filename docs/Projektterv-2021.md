@@ -35,7 +35,9 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 | 2.11 | Rózsa Kristóf  | 2021-11-07 | Előterjesztett  | Süti javítások        |
 | 2.12 | Nagy Eliot       | 2021-11-08 | Előterjesztett    | Üres kosár ellenőrzése          |
 | 2.13 | Nagy Dominik       | 2021-11-09 | Tervezet   | Fuvar fül módosítás              |
-| 2.14 | Nagy György  | 2021-11-10 | Előterjesztett    | Fuvar hibák javítása     |
+| 2.14 | Nagy György  | 2021-11-10 | Elfogadott   | Fuvar hibák javítása     |
+| 3.1 | Nagy Dominik | 2021-11-29 | Előterjesztett   | Fuvarok gui módosítás    |
+| 3.2 | Nagy Eliot | 2021-11-30 | Előterjesztett   | Meetingek beírása   |
 
 
 
@@ -591,7 +593,7 @@ Erőforrásigény:  1 személynap
 
 ## 10. Részletes időbeosztás
 
-![image](./MINTA-gantt-diagram.png)
+![image](./docs/gantt-diagram.png)
 
 
 ## 11. Projekt költségvetés
