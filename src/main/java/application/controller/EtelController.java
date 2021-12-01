@@ -80,6 +80,8 @@ public class EtelController {
 	public String addEtel(@RequestParam("nev") String nev, @RequestParam("ar") int ar) {
 		if(ar <= 0) {
 			return "arhiba.html";
+		} else if(!(nev.matches(".*[a-zA-Z]+.*"))) {
+			return "nevhiba.html";
 		} else {
 		Etel etel = new Etel(nev, ar);
 		etelDAO.insertEtel(etel);
@@ -111,7 +113,6 @@ public class EtelController {
 			return "arhiba.html";
 		} else {
 		etelDAO.updateEtel(nev, ar);
-
 		return "redirect:/index";
 	} 
 	}
