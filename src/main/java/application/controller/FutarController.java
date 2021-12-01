@@ -5,10 +5,12 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import application.dao.FutarDAO;
 import application.model.Futar;
@@ -31,14 +33,33 @@ public class FutarController {
 		}
 		return "redirect:/";
 	}
+	
+	@ExceptionHandler(MethodArgumentTypeMismatchException.class)
+	public String handleTypeMismatch(MethodArgumentTypeMismatchException ex) {
 
+	    
+	    return "redirect:/";
+	}
+	
+	
 	@PostMapping(value = "/addfutar")
 	public String addFutar(@RequestParam("name") String name, @RequestParam("alkalmazott_miota") int alkalmazott_miota) {
-		Futar futar = new Futar(name, alkalmazott_miota);
-		futarDAO.insertFutar(futar);
-
+		if(alkalmazott_miota < 2000) {
+			Futar futar = new Futar(name, 2000);
+			futarDAO.insertFutar(futar);
+		}
+		else {
+			if(alkalmazott_miota > 2021) {
+				Futar futar = new Futar(name, 2021);
+				futarDAO.insertFutar(futar);
+			}else {
+				Futar futar = new Futar(name, alkalmazott_miota);
+				futarDAO.insertFutar(futar);
+			}
+		}
 		return "redirect:/";
 	}
+	
 
 	@PostMapping(value = "/deletefutar/{id}")
 	public String deleteFutar(@PathVariable("id") int id) {
@@ -57,6 +78,14 @@ public class FutarController {
 
 	@PostMapping(value = "/updatefutar/{id}")
 	public String updateFutar(@PathVariable("id") int id, @RequestParam("name") String name, @RequestParam("alkalmazott_miota") int alkalmazott_miota,@RequestParam("elerheto") boolean elerheto) {
+		if(alkalmazott_miota < 2000) {
+			alkalmazott_miota = 2000;
+		}
+		else {
+			if(alkalmazott_miota > 2021) {
+				alkalmazott_miota = 2021;
+			}
+		}
 		futarDAO.updateFutar(id, name, alkalmazott_miota, elerheto);
 
 		return "redirect:/";

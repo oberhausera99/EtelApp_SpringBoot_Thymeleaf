@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style2.css" />
     <link rel="shortcut icon" href="img/favicon.png" />
+<style>
+    input[type='number']{
+    width: 100px;
+}
+</style>
 
 </head>
 <body>
@@ -36,11 +41,14 @@
     </nav>
 </header>
 <main>
-    <div>
-        <h2>Folyamatban lévő fuvarok</h2>
+
+    <div class="container">
+        <div class="row justify-content-left"><h2>Folyamatban lévő fuvarok</h2></div>
+
         <table class="table">
             <thead>
             <tr>
+                <th></th>
                 <th>ID</th>
                 <th>Futár ID</th>
                 <th>Rendelés ID</th>
@@ -48,10 +56,13 @@
             </thead>
             <tbody>
             <tr th:each="fuvar : ${fuvarok}">
+                <td><img src="img/kamion.png" alt="faggio"></td>
                 <td th:text="${fuvar.id}"></td>
                 <td th:text="${fuvar.futarid}"></td>
                 <td th:text="${fuvar.rendelesid}"></td>
-                <td><a th:href="@{/editfuvar/{id}(id=${fuvar.id})}">Módosítás</a></td>
+                <form th:action="@{/editfuvar/{id}(id=${fuvar.id})}" method="get">
+                    <td><button type="submit" class="btn-sm btn-dark details">Módosítás</button>
+                </form>
                 <form th:action="@{/deletefuvar/{id}(id=${fuvar.id})}" method="post">
                     <td><button type="submit" class="btn-sm btn-dark details">Törlés</button>
                 </form>
@@ -61,16 +72,18 @@
         </table>
     </div>
     <div>
-        <h2>Fuvarral való megbízás</h2>
+        <center><h2>Fuvarral való megbízás</h2></center>
+        <center>
         <form th:action="@{/addfuvar}" method="post">
-            <label>Rendelés ID:
-                <input type="text" name="rendelesid" id="rendelesid"></input>
-            </label>
             <label>Futár ID:
-                <input type="text" name="futarid" id="futarid"></input>
+                <input type="number" name="futarid" id="futarid"></input>
             </label>
-            <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
+            <label>Rendelés ID:
+                <input type="number" name="rendelesid" id="rendelesid"></input>
+            </label>
+            <input type="submit" value="Megbízás" class="btn-sm btn-dark details"></input>
         </form>
+            </center>
     </div>
 </main>
 <footer class="bg-light text-center text-lg-start">

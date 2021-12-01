@@ -27,7 +27,7 @@ Az alábbi tesztdokumentum a étel projekthez tartozó 9.3.10 Fuvarok kezelésé
 
 ### 1.3. Fuvar módosítása funkció tesztelése
 - Azonosító: TP-03
-- Tesztesetek: TC-01
+- Tesztesetek: TC-01, TC-02, TC-03
 - Leírás: Fuvar módosításának tesztelése
   0. lépés: Menjünk a fuvar oldalra
   1. lépés: Válasszunk ki egy adatot a táblában
@@ -54,14 +54,14 @@ Az alábbi tesztdokumentum a étel projekthez tartozó 9.3.10 Fuvarok kezelésé
 - Leírás: hozzáadás funkció tesztelése
 - Bemenet: NUMBER1 = 3000 ; NUMBER2 = 3000
 - Művelet: nyomjuk meg az SUBMIT gombot
-- Elvárt kimenet: HIBA, NUMBER1 és NUMBER2 külső kulcs
+- Elvárt kimenet: Hibajelzés rossz inputra
 
 #### 2.1.3. TC-03
 - TP: TP-01
 - Leírás: hozzáadás funkció tesztelése
-- Bemenet: NUMBER1 = 'valami1' ; NUMBER2 = 'valami2'
+- Bemenet: NUMBER1 = "" ; NUMBER2 = ""
 - Művelet: nyomjuk meg az SUBMIT gombot
-- Elvárt kimenet: HIBA, nem megfelelő változó típus
+- Elvárt kimenet: Hibajelzés rossz inputra
 
 
 ### 2.2. Törlés funkció tesztesetei
@@ -81,6 +81,20 @@ Az alábbi tesztdokumentum a étel projekthez tartozó 9.3.10 Fuvarok kezelésé
 - Művelet: nyomjuk meg a MÓDOSÍT gombot
 - Elvárt kimenet: a táblában módosult a kiválasztott érték
 
+#### 2.3.2. TC-02
+- TP: TP-01
+- Leírás: módosítás funkció tesztelése
+- Bemenet: NUMBER1 = 3000 ; NUMBER2 = 3000
+- Művelet: nyomjuk meg a MÓDOSÍTÁS gombot
+- Elvárt kimenet: Hibajelzés rossz inputra
+
+#### 2.3.3. TC-02
+- TP: TP-01
+- Leírás: módosítás funkció tesztelése
+- Bemenet: NUMBER1 = "" ; NUMBER2 = ""
+- Művelet: nyomjuk meg a MÓDOSÍTÁS gombot
+- Elvárt kimenet: Hibajelzés rossz inputra
+
 
 ## 3. Tesztriportok (TR)
 
@@ -98,13 +112,13 @@ Az alábbi tesztdokumentum a étel projekthez tartozó 9.3.10 Fuvarok kezelésé
 - TP: TP-01
     1. lépés: 3000-t beírtam
     2. lépés: 3000-t beírtam 
-    3. lépés: Whitelabel Error Page (hibás input nincs lekezelve)
+    3. lépés: Tájékoztat az oldal a rossz input miatt, vissza léphetek az előző oldalra
 
 #### 3.1.3. TR-03 (TC-03)
 - TP: TP-01
-  1. lépés: 'valami1'-et beírtam
-  2. lépés: 'valami2'-t beírtam
-  3. lépés: Whitelabel Error Page (hibás input nincs lekezelve)
+  1. lépés: ""-et beírtam
+  2. lépés: ""-t beírtam
+  3. lépés: Tájékoztat az oldal a rossz input miatt, vissza léphetek az előző oldalra
 
 
 ### 3.2. Törlés funkció tesztriportjai
@@ -124,6 +138,22 @@ Az alábbi tesztdokumentum a étel projekthez tartozó 9.3.10 Fuvarok kezelésé
   2. lépés: a sorban a MÓDOSÍTÁS gomb egyszeri megnyomás után átkerülünk a módosítás oldalra
   3. lépés: 51-et beírtam
   4. lépés: 116-ot beírtam
-  5. Whitelabel Error Page (valami nem jó)
+  5. lépés: a tábla sikeresen módosult
+
+#### 3.3.2. TR-02 (TC-02)
+- TP: TP-03
+  1. lépés: Módosítandó sor megkeresése
+  2. lépés: a sorban a MÓDOSÍTÁS gomb egyszeri megnyomás után átkerülünk a módosítás oldalra
+  3. lépés: 3000-et beírtam
+  4. lépés: 3000-et beírtam
+  5. lépés: Tájékoztat az oldal a rossz input miatt, vissza léphetek az előző oldalra
+  
+#### 3.3.3. TR-03 (TC-03)
+- TP: TP-03
+  1. lépés: Módosítandó sor megkeresése
+  2. lépés: a sorban a MÓDOSÍTÁS gomb egyszeri megnyomás után átkerülünk a módosítás oldalra
+  3. lépés: ""-et beírtam
+  4. lépés: ""-ot beírtam
+  5. lépés: Tájékoztat az oldal a rossz input miatt, vissza léphetek az előző oldalra
 
     

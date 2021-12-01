@@ -40,6 +40,7 @@
         <table class="table table-bordered">
             <thead class="table-secondary">
             <tr>
+                <th class="col-1 text-center" scope="col">Rendelés ID</th>
                 <th class="col-1 text-center" scope="col">Név</th>
                 <th class="col-1 text-center" scope="col">Ár</th>
                 <th class="col-1 text-center" scope="col">Érkezik körülbelül</th>
@@ -49,6 +50,7 @@
             </thead>
             <tbody>
             <tr th:each="rendeles : ${rendelesek}">
+                <td class="text-center" th:text="${rendeles.id}"></td>
                 <td class="text-center" th:text="${rendeles.nev}"></td>
                 <td class="text-center" th:text="${rendeles.ar}"></td>
                 <td class="text-center" th:text="${rendeles.erkezesiIdo}"></td>

@@ -50,16 +50,16 @@ Az alábbi tesztdokumentum az étel projekthez tartozó 9.3.8 Futárok kezelés�
 #### 2.1.2. TC-02
 - TP: TP-01
 - Leírás: hozzáadás funkció tesztelése 
-- Bemenet: STRING1 = 5 ; NUMBER1 = 2019
+- Bemenet: STRING1 = 5 ; NUMBER1 = -5
 - Művelet: nyomjuk meg az HOZZÁAD gombot 
-- Elvárt kimenet: a táblába felkerült az érték (habár sok értelme nincs mivel a név nem értelmes, ezt később javítom)
+- Elvárt kimenet: a táblába felkerült az érték, úgy hogy a második érték 2000-re módosul
 
 #### 2.1.3. TC-03
 - TP: TP-01
 - Leírás: hozzáadás funkció tesztelése 
 - Bemenet: STRING1 = 'Teszt' ; NUMBER1 = 'Teszt'
 - Művelet: nyomjuk meg az HOZZÁAD gombot 
-- Elvárt kimenet: NUMBER1 = HIBA (nem tudja a stringet számmá alakitani)
+- Elvárt kimenet: NUMBER1 = HIBA 
 
 ### 2.2. Törlés funkció tesztesetei
 
@@ -81,7 +81,7 @@ Az alábbi tesztdokumentum az étel projekthez tartozó 9.3.8 Futárok kezelés�
 #### 2.3.2. TC-02
 - TP: TP-03
 - Leírás: módosítás funkció tesztelése 
-- Bemenet: STRING1 = 25 ; NUMBER1 = 2018; BOOLEAN = true
+- Bemenet: STRING1 = 25 ; NUMBER1 = -10 ; BOOLEAN = true
 - Művelet: nyomjuk meg a MÓDOSÍT gombot 
 - Elvárt kimenet: a táblában módosult a kiválasztott érték (nem sok értelme van, ezt javitani kell)
 
@@ -90,8 +90,69 @@ Az alábbi tesztdokumentum az étel projekthez tartozó 9.3.8 Futárok kezelés�
 - Leírás: módosítás funkció tesztelése 
 - Bemenet: STRING1 = 'Teszt' ; NUMBER1 = 'teszt'; BOOLEAN = 'asd'
 - Művelet: nyomjuk meg a MÓDOSÍT gombot 
-- Elvárt kimenet: NUMBER1 = HIBA (nem tudja a stringet számmá alakitani), BOOLEAN = HIBA (nem tudja értelmezni a szöveget mint logikai érték)
+- Elvárt kimenet: NUMBER1 = HIBA , BOOLEAN = HIBA 
 
+## 3. Tesztriportok (TR)
+
+### 3.1. Hozzáadás funkció tesztriportjai
+
+#### 3.1.1. TR-01 (TC-01)
+- TP: TP-01
+    1. lépés: 'Teszt'-t beírtam
+    2. lépés: 2020-t beírtam
+    3. lépés: a gomb egyszeri megnyomása után hozzáadta a futárt a táblához
+    4. lépés: Helyes eredményt kaptam
+
+#### 3.1.2. TR-02 (TC-02)
+- TP: TP-01
+    1. lépés: 5-t beírtam
+    2. lépés: -5-t beírtam
+    3. lépés: a gomb egyszeri megnyomása után hozzáadta a futárt a táblához, úgy hogy módosult a második érték
+    4. lépés: Helyes eredményt kaptam
+
+#### 3.1.3. TR-03 (TC-03)
+- TP: TP-01
+    1. lépés: 'Teszt'-t beírtam
+    2. lépés: 'Teszt'-t beírtam
+    3. lépés: a gomb egyszeri megnyomása után nem adta hozzá a futárt a táblához
+    4. lépés: Helyes eredményt kaptam (HIBA)
+
+### 3.2. Törlés funkció tesztriportjai
+
+#### 3.2.1. TR-01 (TC-01)
+- TP: TP-02
+	1. lépés: megnyomtam a 'Törlés gombot'
+    2. lépés: a rekord törlésre került
+    3. lépés: helyes eredményt kaptam
+
+### 3.3. Módosítás funkció tesztriportjai
+
+#### 3.3.1. TR-01 (TC-01)
+- TP: TP-03
+    1. lépés: 'Teszt'-t beírtam
+    2. lépés: 2018-t beírtam
+	3. lépés: falset-t beírtam
+    4. lépés: a gomb egyszeri megnyomása után módosította a futárt a táblában
+    5. lépés: Helyes eredményt kaptam
+
+#### 3.3.2. TR-02 (TC-02)
+- TP: TP-03
+    1. lépés: 25-t beírtam
+    2. lépés: -10-t beírtam
+	3. lépés: true-t beírtam
+    4. lépés: a gomb egyszeri megnyomása után módosította a futárt a táblában, úgy hogy a második értéket 2000-re állította
+    5. lépés: Helyes eredményt kaptam
+
+#### 3.3.3. TR-03 (TC-03)
+- TP: TP-03
+	1. lépés: 'Teszt'-t beírtam
+    2. lépés: 'teszt'-t beírtam
+	3. lépés: 'asd'-t beírtam
+    4. lépés: a gomb egyszeri megnyomása után nem módosította a rekordot, mivel a 2. és 3. érték helytelen
+    5. lépés: Helyes eredményt kaptam (HIBA)
+
+
+    
 
 
     

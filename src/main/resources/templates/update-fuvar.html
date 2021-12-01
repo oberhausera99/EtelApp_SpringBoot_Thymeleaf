@@ -11,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/favicon.png" />
+
 </head>
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -27,16 +28,18 @@
 </header>
 <body>
 <div>
-    <h2>Fuvar módosítása</h2>
+    <center><h2>Fuvar módosítása</h2></center>
+    <center>
     <form action="#" th:action="@{/updatefuvar/{id}(id=${fuvar.id})}" method="post">
-        <label>Rendelés ID:
-            <input type="text" name="name" id="rendelesid" th:value="${fuvar.rendelesid}"></input>
-        </label>
         <label>Futár ID:
-            <input type="text" name="futarid" id="futarid" th:value="${fuvar.futarid}"></input>
+            <input type="number" name="futarid" id="futarid" th:value="${fuvar.futarid}"></input>
         </label>
-        <input type="submit" value="Submit" class="btn-sm btn-dark details"></input>
+        <label>Rendelés ID:
+            <input type="number" name="rendelesid" id="rendelesid" th:value="${fuvar.rendelesid}"></input>
+        </label>
+        <input type="submit" value="Módosítás" class="btn-sm btn-dark details"></input>
     </form>
+    </center>
 </div>
 </body>
 </html>

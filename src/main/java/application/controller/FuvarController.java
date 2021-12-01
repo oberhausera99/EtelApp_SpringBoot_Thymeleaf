@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.postgresql.util.PSQLException;
+import org.postgresql.util.PSQLState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,12 +23,19 @@ import application.model.User;
 import application.model.Rendeles;
 import application.model.Futar;
 
+import org.springframework.web.client.HttpClientErrorException;
+
+import java.sql.SQLException;
+
+
 @Controller
 public class FuvarController {
 
     @Autowired
     private FuvarDAO fuvarDAO;
-    private RendelesDAO rendelesDAO;
+    @Autowired
+    private RendelesDAO rendelesDAO ;
+    @Autowired
     private FutarDAO futarDAO;
 
     @GetMapping("/fuvarok")
@@ -42,11 +51,13 @@ public class FuvarController {
     }
 
     @PostMapping(value = "/addfuvar")
-    public String addFuvar(@RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid) {
-        Fuvar fuvar = new Fuvar(rendelesid, futarid);
-        fuvarDAO.insertFuvar(fuvar);
-
-        return "redirect:/fuvarok";
+    public String addFuvar(@RequestParam("rendelesid") String rendelesid, @RequestParam("futarid") String futarid) {
+        if(rendelesid == "" || futarid == ""){return "badrequest.html";}
+        else{Fuvar fuvar = new Fuvar(Integer.parseInt(rendelesid), Integer.parseInt(futarid));
+        try {
+            fuvarDAO.insertFuvar(fuvar);
+        }catch(Exception e){return  "badrequest.html";}
+        return "redirect:/fuvarok";}
     }
 
     @PostMapping(value = "/deletefuvar/{id}")
@@ -65,8 +76,12 @@ public class FuvarController {
     }
 
     @PostMapping(value = "/updatefuvar/{id}")
-    public String updateFuvar(@RequestParam("rendelesid") int rendelesid, @RequestParam("futarid") int futarid, @PathVariable("id") int id) {
-        fuvarDAO.updateFuvar(rendelesid, futarid, id);
+    public String updateFuvar(@PathVariable("id") int id, @RequestParam("rendelesid") String rendelesid, @RequestParam("futarid") String futarid) {
+        try {
+            if(rendelesid == "" || futarid == ""){return "badrequest.html";}
+            fuvarDAO.updateFuvar(id, Integer.parseInt(rendelesid), Integer.parseInt(futarid));
+        }catch(Exception e){return  "badrequest.html";}
+
 
         return "redirect:/fuvarok";
     }
@@ -77,20 +92,34 @@ public class FuvarController {
     	rendelesek = rendelesDAO.getRendelesek();
     	
     	List<Futar> futarok = new ArrayList<Futar>();
-    	futarok = futarDAO.listFutarok();
+    	
+    	List<Fuvar> fuvarok = new ArrayList<Fuvar>();
+    	fuvarok = fuvarDAO.listFuvarok();
     	
     	
     	for(Rendeles r : rendelesek) {
-    		int futarid = 0;
-        	for(Futar f : futarok) {
-        		if(f.isElerheto() == true) {
-        			futarid = f.getId();
-        			f.setElerheto(false);
+    		boolean azonos = false;
+        	for(Fuvar fuvar : fuvarok) {
+        		if(fuvar.getRendelesid() == r.getId()) {
+        			azonos = true;
         			break;
         		}
         	}
-    		Fuvar fuvar = new Fuvar(r.getId(),futarid);
-    		fuvarDAO.insertFuvar(fuvar);
+        	if(!azonos) {
+        		futarok = futarDAO.listFutarok();
+        		int futarid = 0;
+            	for(Futar f : futarok) {
+            		if(f.isElerheto() == true) {
+            			futarid = f.getId();
+            			futarDAO.updateFutar(futarid,f.getName(), f.getAlkalmazott_miota(), false);
+            			break;
+            		}
+            	}
+        		            		
+        		Fuvar fuvar = new Fuvar(r.getId(),futarid);
+        		fuvarDAO.insertFuvar(fuvar);
+        	}
+        	
     	}
     	
     	 return "index.html";
