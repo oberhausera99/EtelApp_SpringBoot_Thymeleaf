@@ -71,7 +71,7 @@
             <th>Felhasználó</th>
             <th>Vélemény</th>
             <th>Értékelés</th>
-            <th></th>
+            <th id="torolTh">Töröl</th>
         </tr>
         </thead>
         <tbody>
@@ -79,7 +79,7 @@
             <td th:text="${kapcsolat.felhasznalo}"></td>
             <td th:text="${kapcsolat.velemeny}"></td>
             <td th:text="${kapcsolat.ertekeles}"></td>
-            <td>
+            <td id="torolTd">
             <form th:action="@{/deletevelemeny/{id}(id=${kapcsolat.id})}" method="post">
                 <button  type="submit" class="btn-sm btn-dark details">Törlés</button>
             </form>
@@ -137,6 +137,8 @@
         if(getCookieValue("bejelentkezve") != 2){
             document.getElementById("futar").hidden = true;
             document.getElementById("fuvar").hidden = true;
+            document.getElementById("torolTd").style.display = "none";
+            document.getElementById("torolTh").style.display = "none";
         }
     </script>
 </main>
