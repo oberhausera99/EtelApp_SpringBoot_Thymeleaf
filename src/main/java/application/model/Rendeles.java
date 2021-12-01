@@ -5,6 +5,7 @@ public class Rendeles {
 	private int ar;
 	private String erkezesiIdo;
 	private String felhnev;
+	private String szallitasiCim;
 	int id;
 	
 	public Rendeles(String nev, int ar, String erkezesiIdo, String felhnev, int id) {
@@ -50,5 +51,12 @@ public class Rendeles {
 	}
 	public void setErkezesiIdo(String erkezesiIdo) {
 		this.erkezesiIdo = erkezesiIdo;
+	}
+	
+	public String getSzallitasiCim() {
+		return szallitasiCim;
+	}
+	public void setSzallitasiCim(String szallitasiCim) {
+		this.szallitasiCim = szallitasiCim;
 	}
 }

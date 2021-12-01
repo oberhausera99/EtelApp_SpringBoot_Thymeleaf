@@ -25,9 +25,9 @@ public class KosarDAO extends JdbcDaoSupport{
     }
 	
 	public void rendelesRogzit(User user, Etel etel) {
-		String sql = "INSERT INTO rendeles(nev, ar, felhasznalonev) VALUES (?, ?, ?)";
+		String sql = "INSERT INTO rendeles(nev, ar, felhasznalonev, szallitasiCim) VALUES (?, ?, ?, ?)";
 		getJdbcTemplate().update(sql, new Object[]{
-				etel.getNev(), etel.getAr(), user.getUName()
+				etel.getNev(), etel.getAr(), user.getUName(), ""
 		});
 	}
 }
