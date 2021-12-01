@@ -8,7 +8,7 @@ készült. Felelőse: `Oberhauser Attila`
 ### 1.1. Hozzáadás funkció tesztelése
 
 -   Azonosító: TP-01
--   Tesztesetek: TC-01
+-   Tesztesetek: TC-01, TC-02
 -   Leírás: összeadás funkció tesztelése
     0.  lépés: Nyissuk meg az alkalmazást, és jelentkezzünk be egy
         adminisztrátor jogosultságú fiókba. Navigáljunk a menühöz és
@@ -22,7 +22,7 @@ készült. Felelőse: `Oberhauser Attila`
 ### 1.2. Módosítás funckió tesztelése
 
 -   Azonosító: TP-02
--   Tesztesetek: TC-01
+-   Tesztesetek: TC-01- TC-02
 -   Leírás: Módosítás funkció tesztelése
     0.  lépés: Nyissuk meg az alkalmazást, és jelentkezzünk be egy
         adminisztrátor jogosultságú fiókba. Navigáljunk a menühöz és
@@ -83,7 +83,7 @@ készült. Felelőse: `Oberhauser Attila`
 -   Művelet: nyomjuk meg az `Submit` gombot
 -   Elvárt kimenet: a Hawaii pizza nevű étel ára 1301-re módosult.
 
-#### 2.2.2. TC-01
+#### 2.2.2. TC-02
 
 -   TP: TP-02
 -   Leírás: hozzáadás funkció tesztelése
