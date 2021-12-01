@@ -1,6 +1,6 @@
 # Tesztjegyzőkönyv-Bejelentkezés/Regisztráció
 
-Az alábbi tesztdokumentum az Étel(etel-ib153i-5-2021) projekthez tartozó Bejelentkezés és Regisztráció funkcióihoz készült. Felelőse: Nagy Eliot 
+Az alábbi tesztdokumentum az Étel(etel-ib153i-5-2021) projekthez tartozó Értesítések teszteléséről szól. Felelőse: Nagy Eliot 
 
 ## 1. Teszteljárások (TP)
 
