@@ -62,6 +62,16 @@ készült. Felelőse: `Oberhauser Attila`
 -   Művelet: nyomjuk meg az `Submit` gombot
 -   Elvárt kimenet: az ételek listája tartalmazza a következő értékeket:
     `Név` = Hawaii pizza, `Ár` = 1300.
+    
+#### 2.1.2. TC-02
+
+-   TP: TP-02
+-   Leírás: hozzáadás funkció tesztelése
+-   Bemenet: `TEXT1` = Fank ; `NUMBER2` = -1
+-   Művelet: nyomjuk meg az `Submit` gombot
+-   Elvárt kimenet: az ételek listája tartalmazza a következő értékeket:
+    Negatív árat adtunk meg, ezért egy hibaoldalra leszünk irányítva
+    
 
 ### 2.2. Módosítás funkció tesztesetei
 
@@ -72,6 +82,15 @@ készült. Felelőse: `Oberhauser Attila`
 -   Bemenet: `TEXT1` = Hawaii pizza, `NUMBER1` = 1301
 -   Művelet: nyomjuk meg az `Submit` gombot
 -   Elvárt kimenet: a Hawaii pizza nevű étel ára 1301-re módosult.
+
+#### 2.2.2. TC-01
+
+-   TP: TP-02
+-   Leírás: hozzáadás funkció tesztelése
+-   Bemenet: `TEXT1` = Fank ; `NUMBER2` = -1
+-   Művelet: nyomjuk meg az `Submit` gombot
+-   Elvárt kimenet: Helytelen értéket adtunk meg, így egy külön hibaoldalra lettünk átirányítva
+    
 
 ### 2.3. Törlés funkció tesztesetei
 
@@ -97,6 +116,14 @@ készült. Felelőse: `Oberhauser Attila`
 -   3. lépés: Megnyomam a Submit gombot
 -   4. lépés: A listában megjelent a Hawaii pizza nevű étel 1300-as árral
 
+#### 3.1.2. TC-02
+
+-   TP: TP-01
+-   1. lépés: A névhez a 'Fank' szöveget beírtam
+-   2. lépés: Az árhoz -1-et adtam meg
+-   3. lépés: Megnyomam a Submit gombot
+-   4. lépés: Egy hibaoldalra lettem átirányítva, az új étel nem rögzült a listán
+
 ### 3.2. Módosítás funkció tesztriportjai
 
 #### 3.2.1. TC-01
@@ -107,6 +134,16 @@ készült. Felelőse: `Oberhauser Attila`
 -   2. lépés: Az árat átírtam 1301-re
 -   3. lépés: megnyomtam a Submit gombot
 -   4. lépés: Az ételekhez visszatérve a Hawaii pizza ára 1301-re módosult	
+
+#### 3.2.2. TC-02
+
+-   TP: TP-02
+-   Leírás: a módosítás funkció tesztelése
+-   1. lépés: Rányomtam a módosítás gombra a Hawaii pizza neve mellett
+-   2. lépés: Az árat átírtam -1-re
+-   3. lépés: megnyomtam a Submit gombot
+-   4. lépés: Egy hibaoldalra lettem átirányítva, az étel adatai nem módosultak
+
 
 ### 3.3. Törlés funkció tesztriportjai
 
