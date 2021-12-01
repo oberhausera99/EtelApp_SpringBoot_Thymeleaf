@@ -24,10 +24,10 @@ public class KosarDAO extends JdbcDaoSupport{
         setDataSource(dataSource);
     }
 	
-	public void rendelesRogzit(User user, Etel etel) {
+	public void rendelesRogzit(User user, Etel etel, String cim) {
 		String sql = "INSERT INTO rendeles(nev, ar, felhasznalonev, szallitasiCim) VALUES (?, ?, ?, ?)";
 		getJdbcTemplate().update(sql, new Object[]{
-				etel.getNev(), etel.getAr(), user.getUName(), ""
+				etel.getNev(), etel.getAr(), user.getUName(), cim
 		});
 	}
 }

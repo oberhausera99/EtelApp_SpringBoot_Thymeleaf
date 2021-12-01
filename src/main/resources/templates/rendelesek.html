@@ -45,6 +45,7 @@
                 <th class="col-1 text-center" scope="col">Ár</th>
                 <th class="col-1 text-center" scope="col">Érkezik körülbelül</th>
                 <th class="col-1 text-center" scope="col">Rendelte</th>
+                <th class="col-1 text-center" scope="col">Cím</th>
                 <th class="col-1 text-center" scope="col">Törlés</th>
             </tr>
             </thead>
@@ -55,6 +56,7 @@
                 <td class="text-center" th:text="${rendeles.ar}"></td>
                 <td class="text-center" th:text="${rendeles.erkezesiIdo}"></td>
                 <td class="text-center" th:text="${rendeles.felhnev}"></td>
+                <td class="text-center" th:text="${rendeles.szallitasiCim}"></td>
                 <td><a th:href="@{/deleterendeles/{id}(id=${rendeles.id})}"> <button>Törlés</button> </a></td>
             </tr>
             </tbody>

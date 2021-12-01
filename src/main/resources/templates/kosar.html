@@ -78,7 +78,7 @@
     </a>
 </div>
 
-<form method="post">
+<form method="post" action="/megrendel">
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -92,13 +92,11 @@
         <br/>
         <br/>
         <label for="name"><b>Szállítási cím</b></label>
-            <input type="text" class="form-control" placeholder="Irányítószám, település, utca, házszám" name="adress" id="adress" required>
+            <input type="text" class="form-control" placeholder="Irányítószám, település, utca, házszám" name="cim" id="adress" required>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vissza</button>
-        <a href="/megrendel">
-        <button type="button" class="btn btn-primary">Tovább</button>
-        </a>
+        <button type="submit" class="btn btn-primary">Tovább</button>
       </div>
     </div>
   </div>

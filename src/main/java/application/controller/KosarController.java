@@ -39,14 +39,17 @@ public class KosarController {
 		return "redirect:/kosar";
 	}
 	
-	@GetMapping(value = "/megrendel")
-	public String getMegrendel(HttpSession session) {
+	@PostMapping(value = "/megrendel")
+	public String getMegrendel(HttpSession session, @RequestParam(value = "cim", required=false) String cim) {
 		Kosar kosar = ((Kosar)session.getAttribute("kosar"));
 		User user = ((User)session.getAttribute("user"));
+	
+		if(cim == null)
+			cim = "";
 		
 		for(Entry<Etel, Integer> entry : kosar.getEtelek().entrySet()) {
 			for(int i = 0; i < entry.getValue(); i++) {
-				kosarDao.rendelesRogzit(user, entry.getKey());
+				kosarDao.rendelesRogzit(user, entry.getKey(), cim);
 			}
 		}
 		if (kosar.getEtelek().isEmpty()) {
