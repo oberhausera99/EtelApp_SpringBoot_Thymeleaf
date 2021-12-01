@@ -23,7 +23,7 @@ készült. Felelőse: `Oberhauser Attila`
 
 -   Azonosító: TP-02
 -   Tesztesetek: TC-01
--   Leírás: Törlés funkció tesztelése
+-   Leírás: Módosítás funkció tesztelése
     0.  lépés: Nyissuk meg az alkalmazást, és jelentkezzünk be egy
         adminisztrátor jogosultságú fiókba. Navigáljunk a menühöz és
         kattintsunk a módosítani kívánt étel típusára
@@ -58,29 +58,63 @@ készült. Felelőse: `Oberhauser Attila`
 
 -   TP: TP-01
 -   Leírás: hozzáadás funkció tesztelése
--   Bemenet: `TEXT1` = Hawaii pizza ; `NUMBER2` = 1256
+-   Bemenet: `TEXT1` = Hawaii pizza ; `NUMBER2` = 1300
 -   Művelet: nyomjuk meg az `Submit` gombot
 -   Elvárt kimenet: az ételek listája tartalmazza a következő értékeket:
-    `Név` = Hawaii pizza, `Ár` = 1256.
+    `Név` = Hawaii pizza, `Ár` = 1300.
 
 ### 2.2. Módosítás funkció tesztesetei
 
 #### 2.2.1. TC-01
 
 -   TP: TP-02
--   Leírás: négyzetre emelés funkció tesztelése
--   Bemenet: `TEXT1` = Hawaii pizza, `NUMBER1` = 1257
+-   Leírás: Módosítás funkció tesztelése
+-   Bemenet: `TEXT1` = Hawaii pizza, `NUMBER1` = 1301
 -   Művelet: nyomjuk meg az `Submit` gombot
--   Elvárt kimenet: a Hawaii pizza nevű étel ára 1257-re módosult.
+-   Elvárt kimenet: a Hawaii pizza nevű étel ára 1301-re módosult.
 
 ### 2.3. Törlés funkció tesztesetei
 
 #### 2.3.1. TC-01
 
 -   TP: TP-03
--   Leírás: négyzetre emelés funkció tesztelése
+-   Leírás: Törlés funkció tesztelése
 -   Művelet: nyomjuk meg a Hawaii pizza nevű étel sorában lévő az
     `Törlés` gombot
 -   Elvárt kimenet: a Hawaii pizza nevű étel többé nem található meg az
     ételek közt
+
+3. Tesztriportok (TR)
+-------------------
+
+### 3.1. Hozzáadás funkció tesztriportjai
+
+#### 3.1.1. TC-01
+
+-   TP: TP-01
+-   1. lépés: A névhez a 'Hawaii pizza' szöveget beírtam
+-   2. lépés: Az árhoz 1300-at adtam meg
+-   3. lépés: Megnyomam a Submit gombot
+-   4. lépés: A listában megjelent a Hawaii pizza nevű étel 1300-as árral
+
+### 3.2. Módosítás funkció tesztriportjai
+
+#### 3.2.1. TC-01
+
+-   TP: TP-02
+-   Leírás: a módosítás funkció tesztelése
+-   1. lépés: Rányomtam a módosítás gombra a Hawaii pizza neve mellett
+-   2. lépés: Az árat átírtam 1301-re
+-   3. lépés: megnyomtam a Submit gombot
+-   4. lépés: Az ételekhez visszatérve a Hawaii pizza ára 1301-re módosult	
+
+### 3.3. Törlés funkció tesztriportjai
+
+#### 3.3.1. TC-01
+
+-   TP: TP-03
+-   Leírás: A törlés funkció tesztelése
+-   1. lépés: Megnyomtam a Hawaii pizza neve mellett lévő törlés gombot
+-   2. lépés: Az ételekhez visszatérve látszik, hogy a Hawaii pizza törlésre került
+
 
