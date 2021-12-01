@@ -2,11 +2,6 @@
 
 Az alábbi tesztdokumentum az Étel(etel-ib153i-5-2021) projekthez tartozó Értesítés sikeres rendelésről 9.3.12 funkcióihoz készült. Felelőse: Nagy Eliot 
 
-``` 
-A tesztelési dokumentáció áttekinthetőségének érdekében egy jegyzőkönyv egy adott témához tartozó funkciókat tartalmazza 
-(pl. vektorműveletek) és ne az adott projekttaghoz tartozó összes funkció tesztelését belesűrítve egy fájlba.
-``` 
-
 ## 1. Teszteljárások (TP)
 
 ### 1.1. Rendelés a kosárból 
