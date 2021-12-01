@@ -38,7 +38,9 @@ Az étel lényege, hogy az ügyfelek a legjobb ételekhez jussanak, legkisebb k�
 | 2.14 | Nagy György  | 2021-11-10 | Elfogadott   | Fuvar hibák javítása     |
 | 3.1 | Nagy Dominik | 2021-11-29 | Előterjesztett   | Fuvarok gui módosítás    |
 | 3.2 | Nagy Eliot | 2021-11-30 | Előterjesztett   | Meetingek beírása   |
-
+| 3.3 | Nagy György | 2021-11-30 | Tervezet  | Fuvar új funkció  |
+| 3.4 | Nagy György | 2021-12-01 | Előterjesztett | Fuvar kiosztása automatikusan rendeles után  |
+| 3.5 | Nagy Eliot | 2021-12-01 | Előterjesztett | Táblák biztonsági mentése |
 
 
 
