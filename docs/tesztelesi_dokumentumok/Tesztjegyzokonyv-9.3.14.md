@@ -74,8 +74,48 @@ Az alábbi tesztdokumentum az étel projekthez tartozó 9.3.14 kapcsolatfelvéte
 - Elvárt kimenet: a kiválasztott rekord törlésre került
 
 
+##3. Tesztriportok
+
+### 3.1 Hozzáadás funkció tesztriportjai
+
+#### 3.1.1 TR-01 (TC-01)
+- TP: TP-01
+    0. lépés: Bejelentkezek Teszt felhasználóval
+    1. lépés: Elmegyek a kapcsolat oldalra
+    2. lépés: Beírom a szövegdobozba a 'tetszik az oldal' szöveget
+    3. lépés: Értéket adok neki
+    4. lépés: Helyes eredményt kaptam: a vélemény és az értékelés felkerült a kapcsolat oldalra
 
 
+#### 3.1.2 TR-02 (TC-02)
+- TP: TP-01
+    1. lépés: Elmegyek a kapcsolat oldalra
+    2. lépés: Helyes eredményt kaptam: nem tudok véleményt adni mert nem vagyok bejelentkezve
 
 
-    
+#### 3.1.3 TR-03 (TC-03)
+- TP: TP-01
+    0. lépés: Bejelentkezek Admin felhasználóval
+    1. lépés: Elmegyek a kapcsolat oldalra
+    2. lépés: Helyes eredményt kaptam: nem tudok véleményt adni mert admin -nal vagyok bejelentkezve.
+
+### 3.2 Törlés funkció tesztriportjai
+
+#### 3.2.1 TR-01 (TC-01)
+- TP: TP-02
+    0. lépés: Bejelentkezek Teszt felhasználóval
+    1. lépés: Elmegyek a kapcsolat oldalra
+    2. lépés: Helyes eredményt kaptam: nem történik semmi, mert nincs megfelelő jogosultságom.
+
+#### 3.2.2 TR-02 (TC-02)
+- TP: TP-02
+    1. lépés: Elmegyek a kapcsolat oldalra
+    2. lépés: Helyes eredményt kaptam: nem történik semmi, mert nincs megfelelő jogosultságom.
+
+
+#### 3.2.3 TR-03 (TC-03)
+- TP: TP-02
+    0. lépés: Bejelentkezek Admin felhasználóval
+    1. lépés: Elmegyek a kapcsolat oldalra
+    2. lépés: Kiválasztok egy véleményt és a 'Törlés' gombra kattintok
+    3. lépés: Helyes eredményt kaptam: A vélemény törlésre került.
