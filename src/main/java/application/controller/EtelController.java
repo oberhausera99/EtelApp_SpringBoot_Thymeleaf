@@ -78,10 +78,14 @@ public class EtelController {
 
 	 @PostMapping(value = "/addetel")
 	public String addEtel(@RequestParam("nev") String nev, @RequestParam("ar") int ar) {
+		if(ar <= 0) {
+			return "arhiba.html";
+		} else {
 		Etel etel = new Etel(nev, ar);
 		etelDAO.insertEtel(etel);
 
 		return "redirect:/index";
+		}
 	}
 	 
 
@@ -90,7 +94,8 @@ public class EtelController {
 		etelDAO.deleteEtel(nev);
 	
 		return "redirect:/index";
-	}
+		}
+
 
 	@GetMapping(value = "/editetel/{nev}")
 	public String editEtel(@PathVariable("nev") String nev, Model model) {
@@ -102,8 +107,12 @@ public class EtelController {
 
 	@PostMapping(value = "/updateetel/{nev}")
 	public String updateEtel(@PathVariable("nev") String nev, @RequestParam("ar") int ar) {
+		if(ar <= 0) {
+			return "arhiba.html";
+		} else {
 		etelDAO.updateEtel(nev, ar);
 
 		return "redirect:/index";
 	} 
+	}
 }
