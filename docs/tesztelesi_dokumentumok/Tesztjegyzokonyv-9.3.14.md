@@ -74,7 +74,7 @@ Az alábbi tesztdokumentum az étel projekthez tartozó 9.3.14 kapcsolatfelvéte
 - Elvárt kimenet: a kiválasztott rekord törlésre került
 
 
-##3. Tesztriportok
+## 3. Tesztriportok
 
 ### 3.1 Hozzáadás funkció tesztriportjai
 
