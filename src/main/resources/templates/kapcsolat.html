@@ -79,7 +79,7 @@
             <td th:text="${kapcsolat.felhasznalo}"></td>
             <td th:text="${kapcsolat.velemeny}"></td>
             <td th:text="${kapcsolat.ertekeles}"></td>
-            <td id="torolTd">
+            <td class="torolTd">
             <form th:action="@{/deletevelemeny/{id}(id=${kapcsolat.id})}" method="post">
                 <button  type="submit" class="btn-sm btn-dark details">Törlés</button>
             </form>
@@ -137,8 +137,15 @@
         if(getCookieValue("bejelentkezve") != 2){
             document.getElementById("futar").hidden = true;
             document.getElementById("fuvar").hidden = true;
-            document.getElementById("torolTd").style.display = "none";
             document.getElementById("torolTh").style.display = "none";
+            document.getElementById("torolTh").style.visibility = "hidden";
+
+            var divsToHide = document.getElementsByClassName("torolTd");
+            for(var i = 0; i < divsToHide.length; i++){
+                divsToHide[i].style.visibility = "hidden";
+                divsToHide[i].style.display = "none";
+            }
+
         }
     </script>
 </main>
